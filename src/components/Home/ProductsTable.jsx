@@ -1,5 +1,17 @@
 import React from "react";
-import { Typography, Box, Grid, Button } from "@mui/material";
+import {
+  Typography,
+  Box,
+  Grid,
+  Button,
+  TableHead,
+  TableBody,
+  Table,
+  TableCell,
+  TableContainer,
+  TableRow,
+  Paper,
+} from "@mui/material";
 import InfoIcon from "@mui/icons-material/Info";
 import Rating from "@mui/material/Rating";
 import Tooltip from "@mui/material/Tooltip";
@@ -39,710 +51,751 @@ export default function ProductsTable() {
   const [value, setValue] = React.useState(2);
   return (
     <>
-      <Box
-        sx={{
-          backgroundColor: "white",
-          paddingTop: "20px",
-          borderRadius: "20px",
-          paddingBottom: "20px",
-        }}
-      >
-        <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
+      <Box>
+        <TableContainer
+          component={Paper}
+          sx={{
+            padding: {
+              xs: "10px",
+              sm: "10px",
+              md: "40px",
+              lg: "40px",
+              xl: "40px",
+            },
+            marginTop: "40px",
+            width: "95%",
+            margin: "auto",
+            borderRadius: "20px",
+          }}
         >
-          <Box sx={style}>
-            <Box
-              sx={{
-                paddingBottom: "20px",
-                paddingTop: "20px",
-                paddingLeft: "20px",
-                paddingRight: "20px",
-              }}
-            >
-              <Box sx={{ textAlign: "right" }}>
-                <CloseIcon
-                  onClick={handleClose}
-                  style={{ cursor: "pointer" }}
-                />
-              </Box>
+          <Table aria-label="simple table" sx={{ overflowX: "hidden" }}>
+            <TableHead sx={{ backgroundColor: "#F6F7F8" }}>
+              <TableRow>
+                <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
+                  <Typography
+                    sx={{
+                      fontWeight: "400",
+                      fontSize: "16px",
+                      textAlign: "center",
+                      color: "#8B8FA3",
+                    }}
+                  >
+                    Order ID
+                  </Typography>
+                </TableCell>
+                <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
+                  <Typography
+                    sx={{
+                      fontWeight: "400",
+                      fontSize: "16px",
+                      textAlign: "center",
+                      color: "#8B8FA3",
+                    }}
+                  >
+                    Product
+                  </Typography>
+                </TableCell>
+                <TableCell>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      textAlign: "center",
+                      width: "60%",
+                      margin: "auto",
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        fontWeight: "400",
+                        fontSize: "16px",
 
-              <Typography
-                id="modal-modal-title"
-                sx={{
-                  textAlign: "center",
-                  marginTop: "-30px",
-                  fontSize: "20px",
-                  fontWeight: "600",
-                }}
-              >
-                Comment
-              </Typography>
+                        color: "#8B8FA3",
+                      }}
+                    >
+                      Customer Rating
+                    </Typography>
+                    <Box>
+                      <Tooltip
+                        title="Feedback from Form Submission"
+                        placement="top-start"
+                      >
+                        <InfoIcon
+                          sx={{
+                            color: "#7335FD",
+                            marginLeft: "10px",
+                            marginTop: "0px",
+                          }}
+                        />
+                      </Tooltip>
+                    </Box>
+                  </Box>
+                </TableCell>
+                <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
+                  <Typography
+                    sx={{
+                      fontWeight: "400",
+                      fontSize: "16px",
+                      textAlign: "center",
+                      color: "#8B8FA3",
+                    }}
+                  >
+                    Submission Date
+                  </Typography>
+                </TableCell>
+                <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
+                  <Box sx={{ display: "flex", textAlign: "center" }}>
+                    <Typography
+                      sx={{
+                        fontWeight: "400",
+                        fontSize: "16px",
+                        marginLeft: "20px",
+                        color: "#8B8FA3",
+                      }}
+                    >
+                      Customer Info
+                    </Typography>
+                    <Box>
+                      <Tooltip
+                        title="Name and Email address of your customer"
+                        placement="top-start"
+                      >
+                        <InfoIcon
+                          sx={{
+                            color: "#7335FD",
+                            marginLeft: "10px",
+                            marginTop: "0px",
+                          }}
+                        />
+                      </Tooltip>
+                    </Box>
+                  </Box>
+                </TableCell>
+                <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
+                  <Typography
+                    sx={{
+                      fontWeight: "400",
+                      fontSize: "16px",
+                      textAlign: "center",
+                      color: "#8B8FA3",
+                    }}
+                  >
+                    Review Status
+                  </Typography>
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell>
+                  {" "}
+                  <Typography
+                    sx={{
+                      fontWeight: "400",
+                      fontSize: "16px",
+                      textAlign: "center",
+                      color: "",
+                    }}
+                  >
+                    118-986254-235656
+                  </Typography>
+                </TableCell>
+                <TableCell>
+                  {" "}
+                  <Box
+                    sx={{
+                      display: "flex",
+                      width: {
+                        xs: "73%",
+                        sm: "90%",
+                        md: "99%",
+                        lg: "99%",
+                        xl: "99%",
+                      },
+                      margin: "auto",
+                    }}
+                  >
+                    <Box
+                      component="img"
+                      sx={{
+                        height: "50px",
+                        width: "50px",
+                        marginRight: "10px",
+                      }}
+                      alt="Your logo."
+                      src={productImage}
+                    />
+                    <Box>
+                      <Typography>
+                        Moon Lamp RGB Glow Remote Controlled...
+                      </Typography>
+                      <Typography sx={{ color: "#646464" }}>
+                        SKU: GlobeUSA2
+                      </Typography>
+                    </Box>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box
+                    sx={{
+                      width: {
+                        xs: "47%",
+                        sm: "50%",
+                        md: "66%",
+                        lg: "60%",
+                        xl: "60%",
+                      },
+                      margin: "auto",
+                    }}
+                  >
+                    <Rating
+                      name="simple-controlled"
+                      value={value}
+                      onChange={(event, newValue) => {
+                        setValue(newValue);
+                      }}
+                      size="large"
+                    />
+                    <Button
+                      variant="contained"
+                      sx={{
+                        color: "white",
+                        backgroundColor: "black",
+                        borderRadius: "10px",
+                        marginTop: "10px",
+                        textTransform: "capitalize",
+                        paddingLeft: "25px",
+                        paddingRight: "25px",
+                      }}
+                      onClick={handleOpen}
+                    >
+                      View Comment
+                    </Button>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box sx={{ textAlign: "center" }}>
+                    <Typography
+                      sx={{
+                        fontWeight: "400",
+                        fontSize: "16px",
+                        textAlign: "center",
+                        color: "",
+                      }}
+                    >
+                      Sep 10, 2022
+                    </Typography>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box sx={{ textAlign: "center" }}>
+                    <Box sx={{ textAlign: "center" }}>
+                      <Tooltip title="Enable in Billing" placement="top-start">
+                        <Box
+                          component="img"
+                          sx={{
+                            height: "60px",
+                            width: "40px",
+                            marginRight: "10px",
+                          }}
+                          alt="Your logo."
+                          src={lock}
+                        />
+                      </Tooltip>
+                    </Box>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box sx={{ textAlign: "center" }}>
+                    <Button
+                      variant="contained"
+                      sx={{
+                        color: "white",
+                        backgroundColor: "#FDA700",
+                        borderRadius: "10px",
+                        marginTop: "10px",
+                        textTransform: "capitalize",
+                        paddingLeft: "35px",
+                        paddingRight: "35px",
+                      }}
+                    >
+                      Pending
+                    </Button>
+                  </Box>
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>
+                  {" "}
+                  <Typography
+                    sx={{
+                      fontWeight: "400",
+                      fontSize: "16px",
+                      textAlign: "center",
+                      color: "",
+                    }}
+                  >
+                    118-986254-235656
+                  </Typography>
+                </TableCell>
+                <TableCell>
+                  {" "}
+                  <Box
+                    sx={{
+                      display: "flex",
+                      width: {
+                        xs: "73%",
+                        sm: "90%",
+                        md: "99%",
+                        lg: "99%",
+                        xl: "99%",
+                      },
+                      margin: "auto",
+                    }}
+                  >
+                    <Box
+                      component="img"
+                      sx={{
+                        height: "50px",
+                        width: "50px",
+                        marginRight: "10px",
+                      }}
+                      alt="Your logo."
+                      src={productImage}
+                    />
+                    <Box>
+                      <Typography>
+                        Moon Lamp RGB Glow Remote Controlled...
+                      </Typography>
+                      <Typography sx={{ color: "#646464" }}>
+                        SKU: GlobeUSA2
+                      </Typography>
+                    </Box>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box
+                    sx={{
+                      width: {
+                        xs: "47%",
+                        sm: "50%",
+                        md: "66%",
+                        lg: "60%",
+                        xl: "60%",
+                      },
+                      margin: "auto",
+                    }}
+                  >
+                    <Rating
+                      name="simple-controlled"
+                      value={value}
+                      onChange={(event, newValue) => {
+                        setValue(newValue);
+                      }}
+                      size="large"
+                    />
+                    <Button
+                      variant="contained"
+                      sx={{
+                        color: "white",
+                        backgroundColor: "black",
+                        borderRadius: "10px",
+                        marginTop: "10px",
+                        textTransform: "capitalize",
+                        paddingLeft: "25px",
+                        paddingRight: "25px",
+                      }}
+                      onClick={handleOpen}
+                    >
+                      View Comment
+                    </Button>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box sx={{ textAlign: "center" }}>
+                    <Typography
+                      sx={{
+                        fontWeight: "400",
+                        fontSize: "16px",
+                        textAlign: "center",
+                        color: "",
+                      }}
+                    >
+                      Sep 10, 2022
+                    </Typography>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box sx={{ textAlign: "center" }}>
+                    <Box sx={{ textAlign: "center" }}>
+                      <Tooltip title="Enable in Billing" placement="top-start">
+                        <Box
+                          component="img"
+                          sx={{
+                            height: "60px",
+                            width: "40px",
+                            marginRight: "10px",
+                          }}
+                          alt="Your logo."
+                          src={lock}
+                        />
+                      </Tooltip>
+                    </Box>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box sx={{ textAlign: "center" }}>
+                    <Button
+                      variant="contained"
+                      sx={{
+                        color: "white",
+                        backgroundColor: "#FDA700",
+                        borderRadius: "10px",
+                        marginTop: "10px",
+                        textTransform: "capitalize",
+                        paddingLeft: "35px",
+                        paddingRight: "35px",
+                      }}
+                    >
+                      Pending
+                    </Button>
+                  </Box>
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>
+                  {" "}
+                  <Typography
+                    sx={{
+                      fontWeight: "400",
+                      fontSize: "16px",
+                      textAlign: "center",
+                      color: "",
+                    }}
+                  >
+                    118-986254-235656
+                  </Typography>
+                </TableCell>
+                <TableCell>
+                  {" "}
+                  <Box
+                    sx={{
+                      display: "flex",
+                      width: {
+                        xs: "73%",
+                        sm: "90%",
+                        md: "99%",
+                        lg: "99%",
+                        xl: "99%",
+                      },
+                      margin: "auto",
+                    }}
+                  >
+                    <Box
+                      component="img"
+                      sx={{
+                        height: "50px",
+                        width: "50px",
+                        marginRight: "10px",
+                      }}
+                      alt="Your logo."
+                      src={productImage}
+                    />
+                    <Box>
+                      <Typography>
+                        Moon Lamp RGB Glow Remote Controlled...
+                      </Typography>
+                      <Typography sx={{ color: "#646464" }}>
+                        SKU: GlobeUSA2
+                      </Typography>
+                    </Box>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box
+                    sx={{
+                      width: {
+                        xs: "47%",
+                        sm: "50%",
+                        md: "66%",
+                        lg: "60%",
+                        xl: "60%",
+                      },
+                      margin: "auto",
+                    }}
+                  >
+                    <Rating
+                      name="simple-controlled"
+                      value={value}
+                      onChange={(event, newValue) => {
+                        setValue(newValue);
+                      }}
+                      size="large"
+                    />
+                    <Button
+                      variant="contained"
+                      sx={{
+                        color: "white",
+                        backgroundColor: "black",
+                        borderRadius: "10px",
+                        marginTop: "10px",
+                        textTransform: "capitalize",
+                        paddingLeft: "25px",
+                        paddingRight: "25px",
+                      }}
+                      onClick={handleOpen}
+                    >
+                      View Comment
+                    </Button>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box sx={{ textAlign: "center" }}>
+                    <Typography
+                      sx={{
+                        fontWeight: "400",
+                        fontSize: "16px",
+                        textAlign: "center",
+                        color: "",
+                      }}
+                    >
+                      Sep 10, 2022
+                    </Typography>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box sx={{ textAlign: "center" }}>
+                    <Box sx={{ textAlign: "center" }}>
+                      <Tooltip title="Enable in Billing" placement="top-start">
+                        <Box
+                          component="img"
+                          sx={{
+                            height: "60px",
+                            width: "40px",
+                            marginRight: "10px",
+                          }}
+                          alt="Your logo."
+                          src={lock}
+                        />
+                      </Tooltip>
+                    </Box>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box sx={{ textAlign: "center" }}>
+                    <Button
+                      variant="contained"
+                      sx={{
+                        color: "white",
+                        backgroundColor: "#FDA700",
+                        borderRadius: "10px",
+                        marginTop: "10px",
+                        textTransform: "capitalize",
+                        paddingLeft: "35px",
+                        paddingRight: "35px",
+                      }}
+                    >
+                      Pending
+                    </Button>
+                  </Box>
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>
+                  {" "}
+                  <Typography
+                    sx={{
+                      fontWeight: "400",
+                      fontSize: "16px",
+                      textAlign: "center",
+                      color: "",
+                    }}
+                  >
+                    118-986254-235656
+                  </Typography>
+                </TableCell>
+                <TableCell>
+                  {" "}
+                  <Box
+                    sx={{
+                      display: "flex",
+                      width: {
+                        xs: "73%",
+                        sm: "90%",
+                        md: "99%",
+                        lg: "99%",
+                        xl: "99%",
+                      },
+                      margin: "auto",
+                    }}
+                  >
+                    <Box
+                      component="img"
+                      sx={{
+                        height: "50px",
+                        width: "50px",
+                        marginRight: "10px",
+                      }}
+                      alt="Your logo."
+                      src={productImage}
+                    />
+                    <Box>
+                      <Typography>
+                        Moon Lamp RGB Glow Remote Controlled...
+                      </Typography>
+                      <Typography sx={{ color: "#646464" }}>
+                        SKU: GlobeUSA2
+                      </Typography>
+                    </Box>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box
+                    sx={{
+                      width: {
+                        xs: "47%",
+                        sm: "50%",
+                        md: "66%",
+                        lg: "60%",
+                        xl: "60%",
+                      },
+                      margin: "auto",
+                    }}
+                  >
+                    <Rating
+                      name="simple-controlled"
+                      value={value}
+                      onChange={(event, newValue) => {
+                        setValue(newValue);
+                      }}
+                      size="large"
+                    />
+                    <Button
+                      variant="contained"
+                      sx={{
+                        color: "white",
+                        backgroundColor: "black",
+                        borderRadius: "10px",
+                        marginTop: "10px",
+                        textTransform: "capitalize",
+                        paddingLeft: "25px",
+                        paddingRight: "25px",
+                      }}
+                      onClick={handleOpen}
+                    >
+                      View Comment
+                    </Button>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box sx={{ textAlign: "center" }}>
+                    <Typography
+                      sx={{
+                        fontWeight: "400",
+                        fontSize: "16px",
+                        textAlign: "center",
+                        color: "",
+                      }}
+                    >
+                      Sep 10, 2022
+                    </Typography>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box sx={{ textAlign: "center" }}>
+                    <Box sx={{ textAlign: "center" }}>
+                      <Tooltip title="Enable in Billing" placement="top-start">
+                        <Box
+                          component="img"
+                          sx={{
+                            height: "60px",
+                            width: "40px",
+                            marginRight: "10px",
+                          }}
+                          alt="Your logo."
+                          src={lock}
+                        />
+                      </Tooltip>
+                    </Box>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box sx={{ textAlign: "center" }}>
+                    <Button
+                      variant="contained"
+                      sx={{
+                        color: "white",
+                        backgroundColor: "#7335FD",
+                        borderRadius: "10px",
+                        marginTop: "10px",
+                        textTransform: "capitalize",
+                        paddingLeft: "35px",
+                        paddingRight: "35px",
+                      }}
+                    >
+                      Verified
+                    </Button>
+                  </Box>
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+          <Box sx={{ width: "97%", margin: "auto", paddingTop: "20px" }}>
+            <TablePagination
+              component="div"
+              count={100}
+              page={page}
+              onPageChange={handleChangePage}
+              rowsPerPage={rowsPerPage}
+              onRowsPerPageChange={handleChangeRowsPerPage}
+            />
+          </Box>
+        </TableContainer>
+      </Box>
+
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Box
+            sx={{
+              paddingBottom: "20px",
+              paddingTop: "20px",
+              paddingLeft: "20px",
+              paddingRight: "20px",
+            }}
+          >
+            <Box sx={{ textAlign: "right" }}>
+              <CloseIcon onClick={handleClose} style={{ cursor: "pointer" }} />
             </Box>
-            <Divider />
+
             <Typography
+              id="modal-modal-title"
               sx={{
                 textAlign: "center",
-                paddingTop: "20px",
-                paddingBottom: "50px",
+                marginTop: "-30px",
                 fontSize: "20px",
+                fontWeight: "600",
               }}
             >
-              Great product, wish it was smaller
+              Comment
             </Typography>
           </Box>
-        </Modal>
-        <Box sx={{ width: "95%", margin: "auto", paddingTop: "20px" }}>
-          <Box
+          <Divider />
+          <Typography
             sx={{
-              backgroundColor: "#F6F7F8",
+              textAlign: "center",
               paddingTop: "20px",
-              paddingBottom: "20px",
-              borderRadius: "3px",
+              paddingBottom: "50px",
+              fontSize: "20px",
             }}
           >
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Typography
-                  sx={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    textAlign: "center",
-                    color: "#8B8FA3",
-                  }}
-                >
-                  Order ID
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Typography
-                  sx={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    textAlign: "center",
-                    color: "#8B8FA3",
-                  }}
-                >
-                  Product
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ display: "flex", width: {xs:"50%", sm:"50%", md:"70%", lg:"70%", xl:"70%"}, margin: "auto" }}>
-                  <Typography
-                    sx={{
-                      fontWeight: "400",
-                      fontSize: "16px",
-
-                      color: "#8B8FA3",
-                    }}
-                  >
-                    Customer Rating
-                  </Typography>
-                  <Box>
-                    <Tooltip
-                      title="Feedback from Form Submission"
-                      placement="top-start"
-                    >
-                      <InfoIcon
-                        sx={{
-                          color: "#7335FD",
-                          marginLeft: "10px",
-                          marginTop: "0px",
-                        }}
-                      />
-                    </Tooltip>
-                  </Box>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Typography
-                  sx={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    textAlign: "center",
-                    color: "#8B8FA3",
-                  }}
-                >
-                  Submission Date
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ display: "flex",  width: {xs:"50%", sm:"50%", md:"70%", lg:"70%", xl:"70%"}, margin: "auto" }}>
-                  <Typography
-                    sx={{
-                      fontWeight: "400",
-                      fontSize: "16px",
-                      marginLeft: "20px",
-                      color: "#8B8FA3",
-                    }}
-                  >
-                    Customer Info
-                  </Typography>
-                  <Box>
-                    <Tooltip
-                      title="Name and Email address of your customer"
-                      placement="top-start"
-                    >
-                      <InfoIcon
-                        sx={{
-                          color: "#7335FD",
-                          marginLeft: "10px",
-                          marginTop: "0px",
-                        }}
-                      />
-                    </Tooltip>
-                  </Box>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Typography
-                  sx={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    textAlign: "center",
-                    color: "#8B8FA3",
-                  }}
-                >
-                  Review Status
-                </Typography>
-              </Grid>
-            </Grid>
-          </Box>
+            Great product, wish it was smaller
+          </Typography>
         </Box>
-        <Box sx={{ width: "95%", margin: "auto", paddingTop: "20px" }}>
-          <Box
-            sx={{
-              backgroundColor: "",
-              paddingTop: "20px",
-              paddingBottom: "20px",
-              borderRadius: "3px",
-            }}
-          >
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Typography
-                  sx={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    textAlign: "center",
-                    color: "",
-                  }}
-                >
-                  118-986254-235656
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ display: "flex", width:{xs:"73%", sm:"90%", md:"99%", lg:"99%", xl:"99%"}, margin: "auto" }}>
-                  <Box
-                    component="img"
-                    sx={{
-                      height: "50px",
-                      width: "50px",
-                      marginRight: "10px",
-                    }}
-                    alt="Your logo."
-                    src={productImage}
-                  />
-                  <Box>
-                    <Typography>
-                      Moon Lamp RGB Glow Remote Controlled...
-                    </Typography>
-                    <Typography sx={{ color: "#646464" }}>
-                      SKU: GlobeUSA2
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ width: {xs:"47%", sm:"50%", md:"66%", lg:"66%", xl:"66%"}, margin: "auto" }}>
-                  <Rating
-                    name="simple-controlled"
-                    value={value}
-                    onChange={(event, newValue) => {
-                      setValue(newValue);
-                    }}
-                    size="large"
-                  />
-                  <Button
-                    variant="contained"
-                    sx={{
-                      color: "white",
-                      backgroundColor: "black",
-                      borderRadius: "10px",
-                      marginTop: "10px",
-                      textTransform: "capitalize",
-                      paddingLeft: "25px",
-                      paddingRight: "25px",
-                    }}
-                    onClick={handleOpen}
-                  >
-                    View Comment
-                  </Button>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Typography
-                  sx={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    textAlign: "center",
-                    color: "",
-                  }}
-                >
-                  Sep 10, 2022
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ textAlign: "center" }}>
-                  <Tooltip title="Enable in Billing" placement="top-start">
-                    <Box
-                      component="img"
-                      sx={{
-                        height: "60px",
-                        width: "40px",
-                        marginRight: "10px",
-                      }}
-                      alt="Your logo."
-                      src={lock}
-                    />
-                  </Tooltip>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ textAlign: "center" }}>
-                  <Button
-                    variant="contained"
-                    sx={{
-                      color: "white",
-                      backgroundColor: "#FDA700",
-                      borderRadius: "10px",
-                      marginTop: "10px",
-                      textTransform: "capitalize",
-                      paddingLeft: "35px",
-                      paddingRight: "35px",
-                    }}
-                  >
-                    Pending
-                  </Button>
-                </Box>
-              </Grid>
-            </Grid>
-          </Box>
-        </Box>
-
-        <Box
-          sx={{
-            width: "95%",
-            height: "1px",
-            backgroundColor: "#DDE1E9",
-            marginTop: "15px",
-            margin: "auto",
-          }}
-        ></Box>
-         <Box sx={{ width: "95%", margin: "auto", paddingTop: "20px" }}>
-          <Box
-            sx={{
-              backgroundColor: "",
-              paddingTop: "20px",
-              paddingBottom: "20px",
-              borderRadius: "3px",
-            }}
-          >
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Typography
-                  sx={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    textAlign: "center",
-                    color: "",
-                  }}
-                >
-                  118-986254-235656
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ display: "flex", width:{xs:"73%", sm:"90%", md:"99%", lg:"99%", xl:"99%"}, margin: "auto" }}>
-                  <Box
-                    component="img"
-                    sx={{
-                      height: "50px",
-                      width: "50px",
-                      marginRight: "10px",
-                    }}
-                    alt="Your logo."
-                    src={productImage}
-                  />
-                  <Box>
-                    <Typography>
-                      Moon Lamp RGB Glow Remote Controlled...
-                    </Typography>
-                    <Typography sx={{ color: "#646464" }}>
-                      SKU: GlobeUSA2
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ width: {xs:"47%", sm:"50%", md:"66%", lg:"66%", xl:"66%"}, margin: "auto" }}>
-                  <Rating
-                    name="simple-controlled"
-                    value={value}
-                    onChange={(event, newValue) => {
-                      setValue(newValue);
-                    }}
-                    size="large"
-                  />
-                  <Button
-                    variant="contained"
-                    sx={{
-                      color: "white",
-                      backgroundColor: "black",
-                      borderRadius: "10px",
-                      marginTop: "10px",
-                      textTransform: "capitalize",
-                      paddingLeft: "25px",
-                      paddingRight: "25px",
-                    }}
-                    onClick={handleOpen}
-                  >
-                    View Comment
-                  </Button>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Typography
-                  sx={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    textAlign: "center",
-                    color: "",
-                  }}
-                >
-                  Sep 10, 2022
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ textAlign: "center" }}>
-                  <Tooltip title="Enable in Billing" placement="top-start">
-                    <Box
-                      component="img"
-                      sx={{
-                        height: "60px",
-                        width: "40px",
-                        marginRight: "10px",
-                      }}
-                      alt="Your logo."
-                      src={lock}
-                    />
-                  </Tooltip>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ textAlign: "center" }}>
-                  <Button
-                    variant="contained"
-                    sx={{
-                      color: "white",
-                      backgroundColor: "#FDA700",
-                      borderRadius: "10px",
-                      marginTop: "10px",
-                      textTransform: "capitalize",
-                      paddingLeft: "35px",
-                      paddingRight: "35px",
-                    }}
-                  >
-                    Pending
-                  </Button>
-                </Box>
-              </Grid>
-            </Grid>
-          </Box>
-        </Box>
-
-        <Box
-          sx={{
-            width: "95%",
-            height: "1px",
-            backgroundColor: "#DDE1E9",
-            marginTop: "15px",
-            margin: "auto",
-          }}
-        ></Box>
-    <Box sx={{ width: "95%", margin: "auto", paddingTop: "20px" }}>
-          <Box
-            sx={{
-              backgroundColor: "",
-              paddingTop: "20px",
-              paddingBottom: "20px",
-              borderRadius: "3px",
-            }}
-          >
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Typography
-                  sx={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    textAlign: "center",
-                    color: "",
-                  }}
-                >
-                  118-986254-235656
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ display: "flex", width:{xs:"73%", sm:"90%", md:"99%", lg:"99%", xl:"99%"}, margin: "auto" }}>
-                  <Box
-                    component="img"
-                    sx={{
-                      height: "50px",
-                      width: "50px",
-                      marginRight: "10px",
-                    }}
-                    alt="Your logo."
-                    src={productImage}
-                  />
-                  <Box>
-                    <Typography>
-                      Moon Lamp RGB Glow Remote Controlled...
-                    </Typography>
-                    <Typography sx={{ color: "#646464" }}>
-                      SKU: GlobeUSA2
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ width: {xs:"47%", sm:"50%", md:"66%", lg:"66%", xl:"66%"}, margin: "auto" }}>
-                  <Rating
-                    name="simple-controlled"
-                    value={value}
-                    onChange={(event, newValue) => {
-                      setValue(newValue);
-                    }}
-                    size="large"
-                  />
-                  <Button
-                    variant="contained"
-                    sx={{
-                      color: "white",
-                      backgroundColor: "black",
-                      borderRadius: "10px",
-                      marginTop: "10px",
-                      textTransform: "capitalize",
-                      paddingLeft: "25px",
-                      paddingRight: "25px",
-                    }}
-                    onClick={handleOpen}
-                  >
-                    View Comment
-                  </Button>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Typography
-                  sx={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    textAlign: "center",
-                    color: "",
-                  }}
-                >
-                  Sep 10, 2022
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ textAlign: "center" }}>
-                  <Tooltip title="Enable in Billing" placement="top-start">
-                    <Box
-                      component="img"
-                      sx={{
-                        height: "60px",
-                        width: "40px",
-                        marginRight: "10px",
-                      }}
-                      alt="Your logo."
-                      src={lock}
-                    />
-                  </Tooltip>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ textAlign: "center" }}>
-                  <Button
-                    variant="contained"
-                    sx={{
-                      color: "white",
-                      backgroundColor: "#FDA700",
-                      borderRadius: "10px",
-                      marginTop: "10px",
-                      textTransform: "capitalize",
-                      paddingLeft: "35px",
-                      paddingRight: "35px",
-                    }}
-                  >
-                    Pending
-                  </Button>
-                </Box>
-              </Grid>
-            </Grid>
-          </Box>
-        </Box>
-
-        <Box
-          sx={{
-            width: "95%",
-            height: "1px",
-            backgroundColor: "#DDE1E9",
-            marginTop: "15px",
-            margin: "auto",
-          }}
-        ></Box>
-     <Box sx={{ width: "95%", margin: "auto", paddingTop: "20px" }}>
-          <Box
-            sx={{
-              backgroundColor: "",
-              paddingTop: "20px",
-              paddingBottom: "20px",
-              borderRadius: "3px",
-            }}
-          >
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Typography
-                  sx={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    textAlign: "center",
-                    color: "",
-                  }}
-                >
-                  118-986254-235656
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ display: "flex", width:{xs:"73%", sm:"90%", md:"99%", lg:"99%", xl:"99%"}, margin: "auto" }}>
-                  <Box
-                    component="img"
-                    sx={{
-                      height: "50px",
-                      width: "50px",
-                      marginRight: "10px",
-                    }}
-                    alt="Your logo."
-                    src={productImage}
-                  />
-                  <Box>
-                    <Typography>
-                      Moon Lamp RGB Glow Remote Controlled...
-                    </Typography>
-                    <Typography sx={{ color: "#646464" }}>
-                      SKU: GlobeUSA2
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ width: {xs:"47%", sm:"50%", md:"66%", lg:"66%", xl:"66%"}, margin: "auto" }}>
-                  <Rating
-                    name="simple-controlled"
-                    value={value}
-                    onChange={(event, newValue) => {
-                      setValue(newValue);
-                    }}
-                    size="large"
-                  />
-                  <Button
-                    variant="contained"
-                    sx={{
-                      color: "white",
-                      backgroundColor: "black",
-                      borderRadius: "10px",
-                      marginTop: "10px",
-                      textTransform: "capitalize",
-                      paddingLeft: "25px",
-                      paddingRight: "25px",
-                    }}
-                    onClick={handleOpen}
-                  >
-                    View Comment
-                  </Button>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Typography
-                  sx={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    textAlign: "center",
-                    color: "",
-                  }}
-                >
-                  Sep 10, 2022
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ textAlign: "center" }}>
-                  <Tooltip title="Enable in Billing" placement="top-start">
-                    <Box
-                      component="img"
-                      sx={{
-                        height: "60px",
-                        width: "40px",
-                        marginRight: "10px",
-                      }}
-                      alt="Your logo."
-                      src={lock}
-                    />
-                  </Tooltip>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{ textAlign: "center" }}>
-                <Button
-                    variant="contained"
-                    sx={{
-                      color: "white",
-                      backgroundColor: "#7335FD",
-                      borderRadius: "10px",
-                      marginTop: "10px",
-                      textTransform: "capitalize",
-                      paddingLeft: "35px",
-                      paddingRight: "35px",
-                    }}
-                  >
-                    Verified
-                  </Button>
-                </Box>
-              </Grid>
-            </Grid>
-          </Box>
-        </Box>
-
-        <Box
-          sx={{
-            width: "95%",
-            height: "1px",
-            backgroundColor: "#DDE1E9",
-            marginTop: "15px",
-            margin: "auto",
-          }}
-        ></Box>
-
-        <Box sx={{ width: "97%", margin: "auto", paddingTop: "20px" }}>
-          <TablePagination
-            component="div"
-            count={100}
-            page={page}
-            onPageChange={handleChangePage}
-            rowsPerPage={rowsPerPage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
-          />
-        </Box>
-      </Box>
+      </Modal>
     </>
   );
 }
