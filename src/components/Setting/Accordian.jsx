@@ -47,10 +47,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 export default function CustomizedAccordions() {
   const [expanded, setExpanded] = React.useState("panel1");
 
-  const handleChange = (panel) => (
-    event,
-    newExpanded
-  ) => {
+  const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
 
@@ -65,7 +62,7 @@ export default function CustomizedAccordions() {
             Is my data private and secure?
           </Typography>
         </AccordionSummary>
-        <AccordionDetails sx={{backgroundColor:"#F6F7F8"}}>
+        <AccordionDetails sx={{ backgroundColor: "#F6F7F8" }}>
           <Typography>
             We take privacy and security extremely seriously. Your datais never
             viewed by our team, unless requested by you. Sensitive data is

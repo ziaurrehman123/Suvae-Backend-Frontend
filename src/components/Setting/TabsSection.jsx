@@ -5,7 +5,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import AccountSection from "./AccountSection"
+import AccountSection from "./AccountSection";
 import BillingSection from "./BillingSection";
 import BillingHistory from "./BillingHistory";
 import { AmazonSetting } from "./AmazonSetting";
@@ -33,32 +33,31 @@ function TabPanel(props) {
 TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired
+  value: PropTypes.any.isRequired,
 };
 
 function a11yProps(index) {
   return {
     id: `wrapped-tab-${index}`,
-    "aria-controls": `wrapped-tabpanel-${index}`
+    "aria-controls": `wrapped-tabpanel-${index}`,
   };
 }
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-   
   },
   style: {
     border: "1px solid rgba(145, 146, 148, 0.3)",
     color: "rgba(30, 30, 30, 0.45)",
-    borderRadius:"10px",
+    borderRadius: "10px",
     textAlign: "center",
     textDecoration: "none",
     display: "inline-block",
     fontSize: "20px",
-    textTransform:"capitalize",
-    fontWeight:"600",
-    margin:"10px",
+    textTransform: "capitalize",
+    fontWeight: "600",
+    margin: "10px",
     "&.Mui-selected": {
       backgroundColor: "#5541D8",
       border: "none",
@@ -67,9 +66,9 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
       textDecoration: "none",
       display: "inline-block",
-      fontSize: "16px"
-    }
-  }
+      fontSize: "16px",
+    },
+  },
 }));
 
 export default function TabsSection() {
@@ -82,7 +81,6 @@ export default function TabsSection() {
 
   return (
     <div className={classes.root}>
-        
       <Tabs
         value={value}
         onChange={handleChange}
@@ -107,25 +105,25 @@ export default function TabsSection() {
           {...a11yProps("three")}
           className={classes.style}
         />
-         <Tab
+        <Tab
           value="four"
           label="Billing History"
           {...a11yProps("three")}
           className={classes.style}
         />
       </Tabs>
-      
+
       <TabPanel value={value} index="one">
-       <AccountSection />
+        <AccountSection />
       </TabPanel>
       <TabPanel value={value} index="two">
-       <AmazonSetting />
+        <AmazonSetting />
       </TabPanel>
       <TabPanel value={value} index="three">
-      <BillingSection />
+        <BillingSection />
       </TabPanel>
       <TabPanel value={value} index="four">
-      <BillingHistory />
+        <BillingHistory />
       </TabPanel>
     </div>
   );

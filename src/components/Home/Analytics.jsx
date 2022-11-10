@@ -72,7 +72,6 @@ export default function Analytics() {
     setAnchorEl(null);
   };
   const [age, setAge] = React.useState("");
-
   const handleChange = (event) => {
     setAge(event.target.value);
   };
@@ -101,7 +100,13 @@ export default function Analytics() {
                   <Box
                     sx={{
                       border: "2px solid black",
-                      width: {xs:"70%", sm:"50", md:"30", lg:"30%", xl:"30%"},
+                      width: {
+                        xs: "70%",
+                        sm: "50",
+                        md: "30",
+                        lg: "30%",
+                        xl: "30%",
+                      },
                       textAlign: "left",
                       marginLeft: "auto",
                       borderRadius: "7px",

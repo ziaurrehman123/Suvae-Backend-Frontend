@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 5,
     borderRadius: 10,
   },
-  
+
 }));
 
 export default function SearchSection() {
@@ -46,7 +46,7 @@ export default function SearchSection() {
           paddingBottom: "1px",
         }}
       >
-        <Box sx={{width:{xs:"100%", sm:"70%", md:"70%", lg:"40%", xl:"40%"}}}>
+        <Box sx={{ width: { xs: "100%", sm: "70%", md: "70%", lg: "40%", xl: "40%" } }}>
           <Box
             sx={{
               backgroundColor: "white",
@@ -62,7 +62,7 @@ export default function SearchSection() {
               placeholder="Search all"
             />
             <SearchIcon
-              sx={{ fontSize: 45, marginLeft: {xs:"32px", sm:"69px", md:"20px", lg:"12px", xl:"16px"}, color: "#7335FD" }}
+              sx={{ fontSize: 45, marginLeft: { xs: "32px", sm: "69px", md: "20px", lg: "12px", xl: "16px" }, color: "#7335FD" }}
             />
           </Box>
         </Box>

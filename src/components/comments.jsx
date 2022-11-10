@@ -30,7 +30,13 @@ export default function CommentsSection() {
         >
           <Box
             sx={{
-              width: { xs: "100%", sm: "100%", md: "80%", lg: "46%", xl: "46%" },
+              width: {
+                xs: "100%",
+                sm: "100%",
+                md: "80%",
+                lg: "46%",
+                xl: "46%",
+              },
               margin: "auto",
             }}
           >
@@ -59,7 +65,7 @@ export default function CommentsSection() {
                     lg: "75%",
                     xl: "75%",
                   },
-                  borderRadius:"20px",
+                  borderRadius: "20px",
                   margin: "auto",
                 }}
               >
@@ -79,10 +85,16 @@ export default function CommentsSection() {
                     <Typography
                       sx={{
                         textAlign: "center",
-                        fontSize: {xs:"16px", sm:"16px", md:"20px", lg:"24px", xl:"24px"},
+                        fontSize: {
+                          xs: "16px",
+                          sm: "16px",
+                          md: "20px",
+                          lg: "24px",
+                          xl: "24px",
+                        },
                         fontWeight: "700",
                         color: "#272B36",
-                        fontFamily:"Merriweather",
+                        fontFamily: "Merriweather",
                       }}
                     >
                       Anything we can improve?
@@ -90,7 +102,7 @@ export default function CommentsSection() {
                   </Box>
                   <Box sx={{ marginTop: "30px" }}>
                     <Box sx={{ textAlign: "center" }}>
-                    <TextareaAutosize
+                      <TextareaAutosize
                         minRows={5}
                         placeholder="OPTIONAL"
                         style={{
@@ -99,7 +111,7 @@ export default function CommentsSection() {
                           borderRadius: "4px",
                           paddingTop: "50px",
                           border: "1px solid lightgray",
-                          height:"60px",
+                          height: "60px",
                         }}
                       />
                     </Box>

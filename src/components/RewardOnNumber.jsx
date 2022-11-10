@@ -29,7 +29,13 @@ export default function RewardOnNumberSection() {
         >
           <Box
             sx={{
-              width: { xs: "100%", sm: "100%", md: "80%", lg: "45%", xl: "45%" },
+              width: {
+                xs: "100%",
+                sm: "100%",
+                md: "80%",
+                lg: "45%",
+                xl: "45%",
+              },
               margin: "auto",
             }}
           >
@@ -58,7 +64,7 @@ export default function RewardOnNumberSection() {
                     lg: "75%",
                     xl: "75%",
                   },
-                  borderRadius:"20px",
+                  borderRadius: "20px",
                   margin: "auto",
                 }}
               >
@@ -78,17 +84,23 @@ export default function RewardOnNumberSection() {
                     <Typography
                       sx={{
                         textAlign: "center",
-                        fontSize: {xs:"16px", sm:"16px", md:"20px", lg:"24px", xl:"24px"},
+                        fontSize: {
+                          xs: "16px",
+                          sm: "16px",
+                          md: "20px",
+                          lg: "24px",
+                          xl: "24px",
+                        },
                         fontWeight: "700",
                         color: "#272B36",
-                        fontFamily:"Merriweather",
+                        fontFamily: "Merriweather",
                       }}
                     >
                       Please provide your phone number
                     </Typography>
                   </Box>
                   <Box sx={{ marginTop: "30px" }}>
-                  <TextField
+                    <TextField
                       id="outlined-basic"
                       variant="outlined"
                       placeholder="PHONE NUMBER"

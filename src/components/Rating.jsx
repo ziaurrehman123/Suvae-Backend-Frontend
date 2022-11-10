@@ -13,15 +13,13 @@ export default function RatingSection() {
   const starAry = [0, 1, 2, 3, 4];
   let navigate = useNavigate();
   const onNextButtonClick = () => {
-    if(currentLevel===3 || currentLevel===2 || currentLevel===1){
+    if (currentLevel === 3 || currentLevel === 2 || currentLevel === 1) {
       let path = `/suggestion`;
-    navigate(path);
-    }
-    else{
+      navigate(path);
+    } else {
       let path = `/comments`;
       navigate(path);
     }
-    
   };
   return (
     <>
@@ -117,14 +115,22 @@ export default function RatingSection() {
                           <div
                             className="cursor-pointer"
                             onClick={() => SetLevel(level + 1)}
-                            onMouseEnter={()=>SetLevel(level+1)}
-                            onMouseLeave={()=>SetLevel("")}
+                            onMouseEnter={() => SetLevel(level + 1)}
+                            onMouseLeave={() => SetLevel("")}
                           >
                             {level < currentLevel && (
-                              <img src={StarOnImg} className="h-85 w-85" alt="starOn" />
+                              <img
+                                src={StarOnImg}
+                                className="h-85 w-85"
+                                alt="starOn"
+                              />
                             )}
                             {level >= currentLevel && (
-                              <img src={StarOffImg} className="h-85 w-85" alt="staroff" />
+                              <img
+                                src={StarOffImg}
+                                className="h-85 w-85"
+                                alt="staroff"
+                              />
                             )}
                           </div>
                         );

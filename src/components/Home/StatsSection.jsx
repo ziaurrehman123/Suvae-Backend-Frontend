@@ -6,7 +6,7 @@ import Tooltip from "@mui/material/Tooltip";
 export default function StatsSection() {
   return (
     <>
-      <Box sx={{marginTop:"20px"}}>
+      <Box sx={{ marginTop: "20px" }}>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
             <Box
@@ -33,8 +33,7 @@ export default function StatsSection() {
                       Submissions
                     </Typography>
                     <Tooltip
-                      title="All of the times the form has been 
-sucessfully submitted"
+                      title="All of the times the form has been sucessfully submitted"
                       placement="top-start"
                     >
                       <InfoIcon

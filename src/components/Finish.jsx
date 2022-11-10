@@ -32,7 +32,13 @@ export default function FinishSection() {
         >
           <Box
             sx={{
-              width: { xs: "100%", sm: "100%", md: "80%", lg: "52%", xl: "52%" },
+              width: {
+                xs: "100%",
+                sm: "100%",
+                md: "80%",
+                lg: "52%",
+                xl: "52%",
+              },
               margin: "auto",
             }}
           >
@@ -61,7 +67,7 @@ export default function FinishSection() {
                     lg: "75%",
                     xl: "75%",
                   },
-                  borderRadius:"20px",
+                  borderRadius: "20px",
                   margin: "auto",
                 }}
               >
@@ -91,10 +97,10 @@ export default function FinishSection() {
                         fontWeight: "700",
                         color: "#272B36",
                         fontFamily: "Merriweather",
-                        paddingTop:"30px",
+                        paddingTop: "30px",
                       }}
                     >
-                     You’re Finished
+                      You’re Finished
                     </Typography>
                     <Typography
                       sx={{
@@ -109,12 +115,24 @@ export default function FinishSection() {
                         fontWeight: "700",
                         fontFamily: "Merriweather",
                         color: "rgba(39, 43, 54, 0.6)",
-                        paddingTop:"10px",
+                        paddingTop: "10px",
                       }}
                     >
-                     We would really appreciate if you would leave us a review on Amazon!
+                      We would really appreciate if you would leave us a review
+                      on Amazon!
                     </Typography>
-                    <Box sx={{ width: {xs:"90%", sm:"90%", md:"70%", lg:"50%", xl:"50%"}, margin: "auto" }}>
+                    <Box
+                      sx={{
+                        width: {
+                          xs: "90%",
+                          sm: "90%",
+                          md: "70%",
+                          lg: "50%",
+                          xl: "50%",
+                        },
+                        margin: "auto",
+                      }}
+                    >
                       <Button
                         variant="contained"
                         sx={{
@@ -130,7 +148,7 @@ export default function FinishSection() {
                       </Button>
                     </Box>
                   </Box>
-                  <Box sx={{ marginTop: "30px", paddingBottom:"40px" }}>
+                  <Box sx={{ marginTop: "30px", paddingBottom: "40px" }}>
                     <Button
                       variant="contained"
                       sx={{
@@ -145,9 +163,8 @@ export default function FinishSection() {
                       }}
                       onClick={onFinishButtonClick}
                     >
-                     Submit
+                      Submit
                     </Button>
-                    
                   </Box>
                 </Box>
               </Box>

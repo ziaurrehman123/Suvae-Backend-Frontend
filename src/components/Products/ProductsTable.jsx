@@ -8,29 +8,16 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import { styled } from "@mui/material/styles";
 import {
-  Divider,
   Box,
   Button,
-  Grid,
-  Link,
   Typography,
-  TextField,
-  Tabs,
   TableHead,
-  Tab,
-  Modal,
-  CircularProgress,
   TableBody,
   Table,
   TableCell,
   TableContainer,
-  InputLabel,
-  FormControl,
-  MenuItem,
-  Select,
   TableRow,
   Paper,
-  Fade,
 } from "@mui/material";
 
 const IOSSwitch = styled((props) => (
@@ -131,7 +118,7 @@ export default function ProductsTable() {
         </Typography>
         <SearchSection />
       </Box>
-   
+
       <Box>
         <TableContainer
           component={Paper}
@@ -143,13 +130,12 @@ export default function ProductsTable() {
               lg: "40px",
               xl: "40px",
             },
-            marginTop:"40px",
-            width:"95%",
-            margin:"auto",
-            borderRadius:"20px",
+            marginTop: "40px",
+            width: "95%",
+            margin: "auto",
+            borderRadius: "20px",
           }}
         >
-         
           <Table aria-label="simple table" sx={{ overflowX: "hidden" }}>
             <TableHead sx={{ backgroundColor: "#F6F7F8" }}>
               <TableRow>
@@ -169,7 +155,8 @@ export default function ProductsTable() {
                   <Box
                     sx={{
                       display: "flex",
-                     width:"50%", margin:"auto",
+                      width: "50%",
+                      margin: "auto",
                     }}
                   >
                     <Typography
@@ -202,7 +189,8 @@ export default function ProductsTable() {
                   <Box
                     sx={{
                       display: "flex",
-                      width:"50%", margin:"auto",
+                      width: "50%",
+                      margin: "auto",
                     }}
                   >
                     <Typography
@@ -247,116 +235,120 @@ export default function ProductsTable() {
             </TableHead>
             <TableBody>
               <TableRow>
-                <TableCell>     <Box sx={{ display: "flex", width:"60%", margin:"auto"  }}>
-                  <Box
-                    component="img"
-                    sx={{
-                      height: "50px",
-                      width: "50px",
-                      marginRight: "10px",
-                    }}
-                    alt="Your logo."
-                    src={productImage}
-                  />
-                  <Box>
-                    <Typography>
-                      Moon Lamp RGB 
-                    </Typography>
-                  </Box>
-                </Box></TableCell>
-                <TableCell> <Box sx={{ textAlign: "center" }}>
-                  <FormControlLabel
-                    control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
-                  />
-                </Box></TableCell>
                 <TableCell>
-                <Box sx={{ textAlign: "center" }}>
-                  <Button
-                    variant="contained"
-                    sx={{
-                      color: "white",
-                      backgroundColor: "#7335FD",
-                      borderRadius: "2px",
-                      marginTop: "10px",
-                      textTransform: "capitalize",
-                      paddingLeft: "35px",
-                      paddingRight: "35px",
-                    }}
-                  >
-                    View
-                  </Button>
-                </Box>
+                  {" "}
+                  <Box sx={{ display: "flex", width: "60%", margin: "auto" }}>
+                    <Box
+                      component="img"
+                      sx={{
+                        height: "50px",
+                        width: "50px",
+                        marginRight: "10px",
+                      }}
+                      alt="Your logo."
+                      src={productImage}
+                    />
+                    <Box>
+                      <Typography>Moon Lamp RGB</Typography>
+                    </Box>
+                  </Box>
                 </TableCell>
                 <TableCell>
-                <Box sx={{ textAlign: "center" }}>
-                  <Typography>0</Typography>
-                </Box>
+                  {" "}
+                  <Box sx={{ textAlign: "center" }}>
+                    <FormControlLabel
+                      control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
+                    />
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box sx={{ textAlign: "center" }}>
+                    <Button
+                      variant="contained"
+                      sx={{
+                        color: "white",
+                        backgroundColor: "#7335FD",
+                        borderRadius: "2px",
+                        marginTop: "10px",
+                        textTransform: "capitalize",
+                        paddingLeft: "35px",
+                        paddingRight: "35px",
+                      }}
+                    >
+                      View
+                    </Button>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box sx={{ textAlign: "center" }}>
+                    <Typography>0</Typography>
+                  </Box>
                 </TableCell>
               </TableRow>
-        
-              <TableRow>
-                <TableCell>     <Box sx={{ display: "flex", width:"60%", margin:"auto"  }}>
-                  <Box
-                    component="img"
-                    sx={{
-                      height: "50px",
-                      width: "50px",
-                      marginRight: "10px",
-                    }}
-                    alt="Your logo."
-                    src={productImage}
-                  />
-                  <Box>
-                    <Typography>
-                      Moon Lamp RGB 
-                    </Typography>
-                  </Box>
-                </Box></TableCell>
-                <TableCell> <Box sx={{ textAlign: "center" }}>
-                  <FormControlLabel
-                    control={<IOSSwitch sx={{ m: 1 }} />}
-                  />
-                </Box></TableCell>
-                <TableCell>
-                <Box sx={{ textAlign: "center" }}>
-                  <Button
-                    variant="outlined"
-                    sx={{
-                      color: "#8B8FA3",
-                      border: "1px solid #8B8FA3",
 
-                      borderRadius: "2px",
-                      marginTop: "10px",
-                      textTransform: "capitalize",
-                      paddingLeft: "35px",
-                      paddingRight: "35px",
-                    }}
-                  >
-                    Setup
-                  </Button>
-                </Box>
+              <TableRow>
+                <TableCell>
+                  {" "}
+                  <Box sx={{ display: "flex", width: "60%", margin: "auto" }}>
+                    <Box
+                      component="img"
+                      sx={{
+                        height: "50px",
+                        width: "50px",
+                        marginRight: "10px",
+                      }}
+                      alt="Your logo."
+                      src={productImage}
+                    />
+                    <Box>
+                      <Typography>Moon Lamp RGB</Typography>
+                    </Box>
+                  </Box>
                 </TableCell>
                 <TableCell>
-                <Box sx={{ textAlign: "center" }}>
-                  <Typography>0</Typography>
-                </Box>
+                  {" "}
+                  <Box sx={{ textAlign: "center" }}>
+                    <FormControlLabel control={<IOSSwitch sx={{ m: 1 }} />} />
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box sx={{ textAlign: "center" }}>
+                    <Button
+                      variant="outlined"
+                      sx={{
+                        color: "#8B8FA3",
+                        border: "1px solid #8B8FA3",
+
+                        borderRadius: "2px",
+                        marginTop: "10px",
+                        textTransform: "capitalize",
+                        paddingLeft: "35px",
+                        paddingRight: "35px",
+                      }}
+                    >
+                      Setup
+                    </Button>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box sx={{ textAlign: "center" }}>
+                    <Typography>0</Typography>
+                  </Box>
                 </TableCell>
               </TableRow>
-        
             </TableBody>
           </Table>
           <Box sx={{ width: "97%", margin: "auto", paddingTop: "20px" }}>
-          <TablePagination
-            component="div"
-            count={100}
-            page={page}
-            onPageChange={handleChangePage}
-            rowsPerPage={rowsPerPage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
-          />
-        </Box>
+            <TablePagination
+              component="div"
+              count={100}
+              page={page}
+              onPageChange={handleChangePage}
+              rowsPerPage={rowsPerPage}
+              onRowsPerPageChange={handleChangeRowsPerPage}
+            />
+          </Box>
         </TableContainer>
-        
       </Box>
     </>
   );

@@ -19,7 +19,7 @@ export default function Header() {
   };
   return (
     <>
-      <Box sx={{ backgroundColor: "white",  }}>
+      <Box sx={{ backgroundColor: "white" }}>
         <Box
           sx={{
             width: "98%",
@@ -34,7 +34,6 @@ export default function Header() {
               marginLeft: "auto",
             }}
           >
-           
             <Box sx={{ display: "flex" }}>
               <Button
                 variant="contained"
@@ -62,7 +61,13 @@ export default function Header() {
                   width: "2px",
                   height: "42px",
                   backgroundColor: "#DBDBDB",
-                  marginLeft:  {xs:"10px", sm:"10px", md:"10px", lg:"20px", xl:"20px"},
+                  marginLeft: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "10px",
+                    lg: "20px",
+                    xl: "20px",
+                  },
                 }}
               ></Box>
               <Box
@@ -70,7 +75,13 @@ export default function Header() {
                 sx={{
                   height: "40px",
                   width: "35px",
-                  marginLeft:  {xs:"10px", sm:"10px", md:"10px", lg:"20px", xl:"20px"},
+                  marginLeft: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "10px",
+                    lg: "20px",
+                    xl: "20px",
+                  },
                 }}
                 alt="Your logo."
                 src={notificationBtn}
@@ -80,7 +91,13 @@ export default function Header() {
                   width: "2px",
                   height: "42px",
                   backgroundColor: "#DBDBDB",
-                  marginLeft: {xs:"10px", sm:"10px", md:"10px", lg:"20px", xl:"20px"},
+                  marginLeft: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "10px",
+                    lg: "20px",
+                    xl: "20px",
+                  },
                 }}
               ></Box>
               <Box sx={{ display: "flex" }}>

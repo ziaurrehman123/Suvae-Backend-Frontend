@@ -45,7 +45,7 @@ export default function BillingHistory() {
           paddingTop: "20px",
           borderRadius: "20px",
           paddingBottom: "20px",
-          marginTop:"40px",
+          marginTop: "40px",
         }}
       >
         <Modal
@@ -130,18 +130,16 @@ export default function BillingHistory() {
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-               
-                  <Typography
-                    sx={{
-                      fontWeight: "400",
-                      fontSize: "16px",
-                    textAlign:"center",
-                      color: "#8B8FA3",
-                    }}
-                  >
-                    Order ID
-                  </Typography>
-              
+                <Typography
+                  sx={{
+                    fontWeight: "400",
+                    fontSize: "16px",
+                    textAlign: "center",
+                    color: "#8B8FA3",
+                  }}
+                >
+                  Order ID
+                </Typography>
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
                 <Typography
@@ -156,18 +154,17 @@ export default function BillingHistory() {
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-                <Box sx={{  textAlign:"center" }}>
+                <Box sx={{ textAlign: "center" }}>
                   <Typography
                     sx={{
                       fontWeight: "400",
                       fontSize: "16px",
-                    
+
                       color: "#8B8FA3",
                     }}
                   >
-                   Category
+                    Category
                   </Typography>
-                  
                 </Box>
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
@@ -204,11 +201,11 @@ export default function BillingHistory() {
                     color: "",
                   }}
                 >
-               10/06/2022
+                  10/06/2022
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-              <Typography
+                <Typography
                   sx={{
                     fontWeight: "400",
                     fontSize: "16px",
@@ -220,7 +217,7 @@ export default function BillingHistory() {
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-              <Typography
+                <Typography
                   sx={{
                     fontWeight: "400",
                     fontSize: "16px",
@@ -232,7 +229,19 @@ export default function BillingHistory() {
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-              <Box sx={{ display: "flex", width: {xs:"70%", sm:"80%", md:"99%", lg:"99%", xl:"99%"}, margin: "auto" }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    width: {
+                      xs: "70%",
+                      sm: "80%",
+                      md: "99%",
+                      lg: "99%",
+                      xl: "99%",
+                    },
+                    margin: "auto",
+                  }}
+                >
                   <Box
                     component="img"
                     sx={{
@@ -255,37 +264,36 @@ export default function BillingHistory() {
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
                 <Box sx={{ textAlign: "center" }}>
-                <Typography
-                  sx={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    textAlign: "center",
-                    color: "",
-                  }}
-                >
-                  Verified Review
-                </Typography>
+                  <Typography
+                    sx={{
+                      fontWeight: "400",
+                      fontSize: "16px",
+                      textAlign: "center",
+                      color: "",
+                    }}
+                  >
+                    Verified Review
+                  </Typography>
                 </Box>
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
                 <Box sx={{ textAlign: "center" }}>
-                <Typography
-                  sx={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    textAlign: "center",
-                    color: "",
-                  }}
-                >
-                 $.49
-                </Typography>
+                  <Typography
+                    sx={{
+                      fontWeight: "400",
+                      fontSize: "16px",
+                      textAlign: "center",
+                      color: "",
+                    }}
+                  >
+                    $.49
+                  </Typography>
                 </Box>
               </Grid>
             </Grid>
           </Box>
         </Box>
 
-       
         <Box
           sx={{
             width: "95%",
@@ -296,7 +304,7 @@ export default function BillingHistory() {
           }}
         ></Box>
 
-<Box sx={{ width: "95%", margin: "auto", paddingTop: "20px" }}>
+        <Box sx={{ width: "95%", margin: "auto", paddingTop: "20px" }}>
           <Box
             sx={{
               backgroundColor: "",
@@ -315,11 +323,11 @@ export default function BillingHistory() {
                     color: "",
                   }}
                 >
-               10/06/2022
+                  10/06/2022
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-              <Typography
+                <Typography
                   sx={{
                     fontWeight: "400",
                     fontSize: "16px",
@@ -331,7 +339,7 @@ export default function BillingHistory() {
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-              <Typography
+                <Typography
                   sx={{
                     fontWeight: "400",
                     fontSize: "16px",
@@ -343,7 +351,19 @@ export default function BillingHistory() {
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
-              <Box sx={{ display: "flex", width: {xs:"70%", sm:"80%", md:"99%", lg:"99%", xl:"99%"}, margin: "auto" }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    width: {
+                      xs: "70%",
+                      sm: "80%",
+                      md: "99%",
+                      lg: "99%",
+                      xl: "99%",
+                    },
+                    margin: "auto",
+                  }}
+                >
                   <Box
                     component="img"
                     sx={{
@@ -366,37 +386,36 @@ export default function BillingHistory() {
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
                 <Box sx={{ textAlign: "center" }}>
-                <Typography
-                  sx={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    textAlign: "center",
-                    color: "",
-                  }}
-                >
-                  Verified Review
-                </Typography>
+                  <Typography
+                    sx={{
+                      fontWeight: "400",
+                      fontSize: "16px",
+                      textAlign: "center",
+                      color: "",
+                    }}
+                  >
+                    Verified Review
+                  </Typography>
                 </Box>
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
                 <Box sx={{ textAlign: "center" }}>
-                <Typography
-                  sx={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    textAlign: "center",
-                    color: "",
-                  }}
-                >
-                 $.49
-                </Typography>
+                  <Typography
+                    sx={{
+                      fontWeight: "400",
+                      fontSize: "16px",
+                      textAlign: "center",
+                      color: "",
+                    }}
+                  >
+                    $.49
+                  </Typography>
                 </Box>
               </Grid>
             </Grid>
           </Box>
         </Box>
 
-       
         <Box
           sx={{
             width: "95%",

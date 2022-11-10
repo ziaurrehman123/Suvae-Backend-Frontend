@@ -92,123 +92,136 @@ export default function Asidebar() {
             </Link>
           </Box>
           <Box sx={{ marginTop: "10px" }}>
-          <Link href="/products" sx={{ color: "white", textDecoration: "none" }}>
-            <Box
-              sx={{
-                display: "flex",
-                paddingBottom: "7px",
-                paddingTop: "4px",
-                width: "90%",
-                margin: "auto",
-                borderRadius: "10px",
-              }}
-              backgroundColor={
-                location.pathname === "/products" ? "#5541D8" : ""
-              }
+            <Link
+              href="/products"
+              sx={{ color: "white", textDecoration: "none" }}
             >
               <Box
-                component="img"
                 sx={{
-                  height: "35px",
-                  width: "35px",
-                  marginLeft: "20px",
-                  marginTop: "5px",
+                  display: "flex",
+                  paddingBottom: "7px",
+                  paddingTop: "4px",
+                  width: "90%",
+                  margin: "auto",
+                  borderRadius: "10px",
                 }}
-                alt="Your logo."
-                src={products}
-              />
-              <Typography
-                sx={{
-                  fontSize: "18px",
-                  fontWeight: "600",
-                  marginTop: "6px",
-                  marginLeft: "20px",
-                }}
-                color={location.pathname === "/products" ? "white" : "#8B8FA3"}
+                backgroundColor={
+                  location.pathname === "/products" ? "#5541D8" : ""
+                }
               >
-                Products
-              </Typography>
-            </Box>
+                <Box
+                  component="img"
+                  sx={{
+                    height: "35px",
+                    width: "35px",
+                    marginLeft: "20px",
+                    marginTop: "5px",
+                  }}
+                  alt="Your logo."
+                  src={products}
+                />
+                <Typography
+                  sx={{
+                    fontSize: "18px",
+                    fontWeight: "600",
+                    marginTop: "6px",
+                    marginLeft: "20px",
+                  }}
+                  color={
+                    location.pathname === "/products" ? "white" : "#8B8FA3"
+                  }
+                >
+                  Products
+                </Typography>
+              </Box>
             </Link>
           </Box>
           <Box sx={{ marginTop: "10px" }}>
-          <Link href="/dashboard" sx={{ color: "white", textDecoration: "none" }}>
-            <Box
-              sx={{
-                display: "flex",
-                paddingBottom: "7px",
-                paddingTop: "4px",
-                width: "90%",
-                margin: "auto",
-                borderRadius: "10px",
-              }}
-              backgroundColor={
-                location.pathname === "/dashboard" ? "#5541D8" : ""
-              }
+            <Link
+              href="/dashboard"
+              sx={{ color: "white", textDecoration: "none" }}
             >
               <Box
-                component="img"
                 sx={{
-                  height: "35px",
-                  width: "35px",
-                  marginLeft: "20px",
-                  marginTop: "5px",
+                  display: "flex",
+                  paddingBottom: "7px",
+                  paddingTop: "4px",
+                  width: "90%",
+                  margin: "auto",
+                  borderRadius: "10px",
                 }}
-                alt="Your logo."
-                src={dashboard}
-              />
-              <Typography
-                sx={{
-                  fontSize: "18px",
-                  fontWeight: "600",
-                  marginTop: "0px",
-                  marginLeft: "20px",
-                }}
-                color={location.pathname === "/dashboard" ? "white" : "#8B8FA3"}
+                backgroundColor={
+                  location.pathname === "/dashboard" ? "#5541D8" : ""
+                }
               >
-                Package Insert Gallery
-              </Typography>
-            </Box>
+                <Box
+                  component="img"
+                  sx={{
+                    height: "35px",
+                    width: "35px",
+                    marginLeft: "20px",
+                    marginTop: "5px",
+                  }}
+                  alt="Your logo."
+                  src={dashboard}
+                />
+                <Typography
+                  sx={{
+                    fontSize: "18px",
+                    fontWeight: "600",
+                    marginTop: "0px",
+                    marginLeft: "20px",
+                  }}
+                  color={
+                    location.pathname === "/dashboard" ? "white" : "#8B8FA3"
+                  }
+                >
+                  Package Insert Gallery
+                </Typography>
+              </Box>
             </Link>
           </Box>
           <Box sx={{ marginTop: "10px" }}>
-          <Link href="/setting" sx={{ color: "white", textDecoration: "none" }}>
-            <Box
-              sx={{
-                display: "flex",
-                paddingBottom: "7px",
-                paddingTop: "4px",
-                width: "90%",
-                margin: "auto",
-                borderRadius: "10px",
-              }}
-              backgroundColor={
-                location.pathname === "/setting" ? "#5541D8" : ""
-              }
+            <Link
+              href="/setting"
+              sx={{ color: "white", textDecoration: "none" }}
             >
               <Box
-                component="img"
                 sx={{
-                  height: "35px",
-                  width: "35px",
-                  marginLeft: "20px",
-                  marginTop: "5px",
+                  display: "flex",
+                  paddingBottom: "7px",
+                  paddingTop: "4px",
+                  width: "90%",
+                  margin: "auto",
+                  borderRadius: "10px",
                 }}
-                alt="Your logo."
-                src={setting}
-              />
-              <Typography
-                sx={{
-                  fontSize: "18px",
-                  fontWeight: "600",
-                  marginTop: "10px",
-                  marginLeft: "20px",
-                }}
-                color={location.pathname === "/setting" ? "white" : "#8B8FA3"}
+                backgroundColor={
+                  location.pathname === "/setting" ? "#5541D8" : ""
+                }
               >
-                Setting
-              </Typography>
-            </Box>
+                <Box
+                  component="img"
+                  sx={{
+                    height: "35px",
+                    width: "35px",
+                    marginLeft: "20px",
+                    marginTop: "5px",
+                  }}
+                  alt="Your logo."
+                  src={setting}
+                />
+                <Typography
+                  sx={{
+                    fontSize: "18px",
+                    fontWeight: "600",
+                    marginTop: "10px",
+                    marginLeft: "20px",
+                  }}
+                  color={location.pathname === "/setting" ? "white" : "#8B8FA3"}
+                >
+                  Setting
+                </Typography>
+              </Box>
             </Link>
           </Box>
         </Box>

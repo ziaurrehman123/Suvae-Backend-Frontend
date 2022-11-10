@@ -21,7 +21,6 @@ export default function Setting() {
             marginTop: "-10px",
           }}
         >
-          
           <SettingMain />
         </Box>
       </Box>

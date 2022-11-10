@@ -30,7 +30,13 @@ export default function SuggestionSection() {
         >
           <Box
             sx={{
-              width: { xs: "100%", sm: "100%", md: "80%", lg: "48%", xl: "48%" },
+              width: {
+                xs: "100%",
+                sm: "100%",
+                md: "80%",
+                lg: "48%",
+                xl: "48%",
+              },
               margin: "auto",
             }}
           >
@@ -59,7 +65,7 @@ export default function SuggestionSection() {
                     lg: "75%",
                     xl: "75%",
                   },
-                  borderRadius:"20px",
+                  borderRadius: "20px",
                   margin: "auto",
                 }}
               >
@@ -76,27 +82,39 @@ export default function SuggestionSection() {
                       margin: "auto",
                     }}
                   >
-                       <Typography
+                    <Typography
                       sx={{
                         textAlign: "center",
-                        fontSize: {xs:"16px", sm:"16px", md:"20px", lg:"24px", xl:"24px"},
+                        fontSize: {
+                          xs: "16px",
+                          sm: "16px",
+                          md: "20px",
+                          lg: "24px",
+                          xl: "24px",
+                        },
                         fontWeight: "700",
                         color: "#272B36",
-                        fontFamily:"Merriweather",
+                        fontFamily: "Merriweather",
                       }}
                     >
-                      Oh no! 
+                      Oh no!
                     </Typography>
                     <Typography
                       sx={{
                         textAlign: "center",
-                        fontSize: {xs:"16px", sm:"16px", md:"20px", lg:"24px", xl:"24px"},
+                        fontSize: {
+                          xs: "16px",
+                          sm: "16px",
+                          md: "20px",
+                          lg: "24px",
+                          xl: "24px",
+                        },
                         fontWeight: "700",
                         color: "#272B36",
-                        fontFamily:"Merriweather",
+                        fontFamily: "Merriweather",
                       }}
                     >
-How can we make it right?
+                      How can we make it right?
                     </Typography>
                   </Box>
                   <Box sx={{ marginTop: "30px" }}>
@@ -110,7 +128,7 @@ How can we make it right?
                           borderRadius: "4px",
                           paddingTop: "50px",
                           border: "1px solid lightgray",
-                          height:"60px",
+                          height: "60px",
                         }}
                       />
                     </Box>

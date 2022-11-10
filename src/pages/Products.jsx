@@ -21,7 +21,6 @@ export default function Products() {
             marginTop: "-10px",
           }}
         >
-          
           <ProductsTable />
         </Box>
       </Box>

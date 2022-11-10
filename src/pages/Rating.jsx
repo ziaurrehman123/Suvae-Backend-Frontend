@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 import logo from "../assets/images/logo2.png";
 import RatingCom from "../components/Rating";
 import Faqs from "../components/Faqs";
-import QuestionComp from "../components/QuestionComp"
+import QuestionComp from "../components/QuestionComp";
 import Footer from "../components/Footer";
 
 export default function Rating() {

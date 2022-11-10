@@ -130,11 +130,13 @@ export default function SignInComponent() {
                   />
                 </FormControl>
 
-                <Box sx={{display:"flex", marginTop:"20px"}}>
-                <Checkbox />
-                <Box sx={{marginLeft:"3px", marginTop:"10px"}}>
-                    <Typography sx={{fontSize:"16px"}}>Remember me </Typography>
-                </Box>
+                <Box sx={{ display: "flex", marginTop: "20px" }}>
+                  <Checkbox />
+                  <Box sx={{ marginLeft: "3px", marginTop: "10px" }}>
+                    <Typography sx={{ fontSize: "16px" }}>
+                      Remember me{" "}
+                    </Typography>
+                  </Box>
                 </Box>
                 <Button
                   variant="contained"
@@ -183,7 +185,7 @@ export default function SignInComponent() {
               </Box>
               <Box sx={{ marginTop: "30px" }}>
                 <Grid container spacing={2}>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                  <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
                     <Box
                       sx={{
                         width: "100%",

@@ -7,15 +7,15 @@ import progress3 from "../assets/images/progress3.png";
 import { useNavigate } from "react-router-dom";
 
 export default function RewardSection() {
-    let navigate = useNavigate();
-    const onTextButtonClick = () => {
-      let path = `/number`;
-      navigate(path);
-    };
-    const onEmailButtonClick = () => {
-        let path = `/email`;
-        navigate(path);
-      };
+  let navigate = useNavigate();
+  const onTextButtonClick = () => {
+    let path = `/number`;
+    navigate(path);
+  };
+  const onEmailButtonClick = () => {
+    let path = `/email`;
+    navigate(path);
+  };
   return (
     <>
       <Box>
@@ -33,7 +33,13 @@ export default function RewardSection() {
         >
           <Box
             sx={{
-              width: { xs: "100%", sm: "100%", md: "80%", lg: "47%", xl: "47%" },
+              width: {
+                xs: "100%",
+                sm: "100%",
+                md: "80%",
+                lg: "47%",
+                xl: "47%",
+              },
               margin: "auto",
             }}
           >
@@ -62,7 +68,7 @@ export default function RewardSection() {
                     lg: "75%",
                     xl: "75%",
                   },
-                  borderRadius:"20px",
+                  borderRadius: "20px",
                   margin: "auto",
                 }}
               >
@@ -82,17 +88,23 @@ export default function RewardSection() {
                     <Typography
                       sx={{
                         textAlign: "center",
-                        fontSize: {xs:"16px", sm:"16px", md:"20px", lg:"24px", xl:"24px"},
+                        fontSize: {
+                          xs: "16px",
+                          sm: "16px",
+                          md: "20px",
+                          lg: "24px",
+                          xl: "24px",
+                        },
                         fontWeight: "700",
                         color: "#272B36",
-                        fontFamily:"Merriweather",
+                        fontFamily: "Merriweather",
                       }}
                     >
                       Where should we send the reward?
                     </Typography>
                   </Box>
                   <Box sx={{ marginTop: "30px" }}>
-                  <Button
+                    <Button
                       variant="contained"
                       sx={{
                         background:

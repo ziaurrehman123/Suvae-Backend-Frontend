@@ -67,7 +67,6 @@ export const AmazonSetting = () => {
   const handleClose2 = () => setOpen2(false);
   const [open1, setOpen1] = React.useState(false);
 
-
   function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -87,8 +86,6 @@ export const AmazonSetting = () => {
       </div>
     );
   }
-
-
 
   const handleOpen1 = () => {
     setOpen1(true);
@@ -423,388 +420,399 @@ export const AmazonSetting = () => {
         </Box>
       </Modal>
       <Box sx={{ width: "90%", margin: "auto", paddingTop: "50px" }}>
-      <Typography
+        <Typography
+          sx={{
+            fontSize: "16px",
+            fontWeight: "400",
+            color: "#716E6F",
+            paddingTop: "20px",
+            paddingBottom: "20px",
+          }}
+        >
+          This is how your Amazon Seller Account syncs with Suvae.
+        </Typography>
+        <Box>
+          <TableContainer
+            component={Paper}
+            sx={{
+              padding: {
+                xs: "10px",
+                sm: "10px",
+                md: "40px",
+                lg: "40px",
+                xl: "40px",
+              },
+            }}
+          >
+            <Typography
               sx={{
-                fontSize: "16px",
-                fontWeight: "400",
-                color: "#716E6F",
-                paddingTop: "20px",
+                fontSize: "18px",
+                fontWeight: "600",
+                color: "#7335FD",
                 paddingBottom: "20px",
               }}
             >
-              This is how your Amazon Seller Account syncs with Suvae.
+              Amazon Seller Accounts
             </Typography>
-            <Box>
-              <TableContainer component={Paper} sx={{ padding: {xs:"10px", sm:"10px", md:"40px",lg:"40px", xl:"40px"} }}>
-                <Typography
-                  sx={{
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    color: "#7335FD",
-                    paddingBottom: "20px",
-                  }}
-                >
-                  Amazon Seller Accounts
-                </Typography>
-                <Table aria-label="simple table" sx={{ overflowX: "hidden" }}>
-                  <TableHead sx={{ backgroundColor: "#F6F7F8" }}>
-                    <TableRow>
-                      <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
-                        No
-                      </TableCell>
-                      <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
-                        Account Name
-                      </TableCell>
-                      <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
-                        Market
-                      </TableCell>
-                      <TableCell
-                        sx={{ fontSize: "16px", color: "#8B8FA3" }}
-                      ></TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    <TableRow>
-                      <TableCell>1</TableCell>
-                      <TableCell>Newt</TableCell>
-                      <TableCell>
-                        <Box
+            <Table aria-label="simple table" sx={{ overflowX: "hidden" }}>
+              <TableHead sx={{ backgroundColor: "#F6F7F8" }}>
+                <TableRow>
+                  <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
+                    No
+                  </TableCell>
+                  <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
+                    Account Name
+                  </TableCell>
+                  <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
+                    Market
+                  </TableCell>
+                  <TableCell
+                    sx={{ fontSize: "16px", color: "#8B8FA3" }}
+                  ></TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  <TableCell>1</TableCell>
+                  <TableCell>Newt</TableCell>
+                  <TableCell>
+                    <Box
+                      sx={{
+                        display: {
+                          xs: "inline-block",
+                          sm: "inline-block",
+                          md: "flex",
+                          lg: "flex",
+                          xl: "flex",
+                        },
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          marginTop: {
+                            xs: "5px",
+                            sm: "5px",
+                            md: "0px",
+                            lg: "0px",
+                            xl: "0px",
+                          },
+                        }}
+                      >
+                        <img
+                          src={`${flag1}`}
+                          alt="flag1"
+                          style={{ marginRight: "10px" }}
+                        />
+                      </Box>
+                      <Box
+                        sx={{
+                          marginTop: {
+                            xs: "5px",
+                            sm: "5px",
+                            md: "0px",
+                            lg: "0px",
+                            xl: "0px",
+                          },
+                        }}
+                      >
+                        <img
+                          src={`${flag2}`}
+                          alt="flag2"
+                          style={{ marginRight: "10px" }}
+                        />
+                      </Box>
+                      <Box
+                        sx={{
+                          marginTop: {
+                            xs: "5px",
+                            sm: "5px",
+                            md: "0px",
+                            lg: "0px",
+                            xl: "0px",
+                          },
+                        }}
+                      >
+                        <img
+                          src={`${flag3}`}
+                          alt="flag3"
+                          style={{ marginRight: "10px" }}
+                        />
+                      </Box>
+                    </Box>
+                  </TableCell>
+                  <TableCell>
+                    {" "}
+                    <Box sx={{ width: "100%", marginRight: "auto" }}>
+                      <FormControl fullWidth>
+                        <InputLabel id="demo-simple-select-label"></InputLabel>
+                        <Select
+                          labelId="demo-simple-select-label"
+                          id="demo-simple-select"
+                          value={age}
+                          onChange={handleChange}
                           sx={{
-                            display: {
-                              xs: "inline-block",
-                              sm: "inline-block",
-                              md: "flex",
-                              lg: "flex",
-                              xl: "flex",
+                            width: {
+                              xs: "100%",
+                              sm: "100%",
+                              md: "50%",
+                              lg: "25%",
+                              xl: "25%",
                             },
+                            marginLeft: "auto",
+                            height: "40px",
                           }}
                         >
-                          <Box
-                            sx={{
-                              marginTop: {
-                                xs: "5px",
-                                sm: "5px",
-                                md: "0px",
-                                lg: "0px",
-                                xl: "0px",
-                              },
-                            }}
-                          >
-                            <img
-                              src={`${flag1}`}
-                              alt="flag1"
-                              style={{ marginRight: "10px" }}
-                            />
-                          </Box>
-                          <Box
-                            sx={{
-                              marginTop: {
-                                xs: "5px",
-                                sm: "5px",
-                                md: "0px",
-                                lg: "0px",
-                                xl: "0px",
-                              },
-                            }}
-                          >
-                            <img
-                              src={`${flag2}`}
-                              alt="flag2"
-                              style={{ marginRight: "10px" }}
-                            />
-                          </Box>
-                          <Box
-                            sx={{
-                              marginTop: {
-                                xs: "5px",
-                                sm: "5px",
-                                md: "0px",
-                                lg: "0px",
-                                xl: "0px",
-                              },
-                            }}
-                          >
-                            <img
-                              src={`${flag3}`}
-                              alt="flag3"
-                              style={{ marginRight: "10px" }}
-                            />
-                          </Box>
-                        </Box>
-                      </TableCell>
-                      <TableCell>
-                        {" "}
-                        <Box sx={{ width: "100%", marginRight: "auto" }}>
-                          <FormControl fullWidth>
-                            <InputLabel id="demo-simple-select-label"></InputLabel>
-                            <Select
-                              labelId="demo-simple-select-label"
-                              id="demo-simple-select"
-                              value={age}
-                              onChange={handleChange}
-                              sx={{
-                                width: {
-                                  xs: "100%",
-                                  sm: "100%",
-                                  md: "50%",
-                                  lg: "25%",
-                                  xl: "25%",
-                                },
-                                marginLeft: "auto",
-                                height: "40px",
-                              }}
-                            >
-                              <MenuItem>Account Details</MenuItem>
-                              <MenuItem>Delete Account</MenuItem>
-                            </Select>
-                          </FormControl>
-                        </Box>
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>2</TableCell>
-                      <TableCell>Avisso</TableCell>
-                      <TableCell>
-                        {" "}
-                        <Box
+                          <MenuItem>Account Details</MenuItem>
+                          <MenuItem>Delete Account</MenuItem>
+                        </Select>
+                      </FormControl>
+                    </Box>
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>2</TableCell>
+                  <TableCell>Avisso</TableCell>
+                  <TableCell>
+                    {" "}
+                    <Box
+                      sx={{
+                        display: {
+                          xs: "inline-block",
+                          sm: "inline-block",
+                          md: "flex",
+                          lg: "flex",
+                          xl: "flex",
+                        },
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          marginTop: {
+                            xs: "5px",
+                            sm: "5px",
+                            md: "0px",
+                            lg: "0px",
+                            xl: "0px",
+                          },
+                        }}
+                      >
+                        <img
+                          src={`${flag1}`}
+                          alt="flag1"
+                          style={{ marginRight: "10px" }}
+                        />
+                      </Box>
+                      <Box
+                        sx={{
+                          marginTop: {
+                            xs: "5px",
+                            sm: "5px",
+                            md: "0px",
+                            lg: "0px",
+                            xl: "0px",
+                          },
+                        }}
+                      >
+                        <img
+                          src={`${flag2}`}
+                          alt="flag2"
+                          style={{ marginRight: "10px" }}
+                        />
+                      </Box>
+                      <Box
+                        sx={{
+                          marginTop: {
+                            xs: "5px",
+                            sm: "5px",
+                            md: "0px",
+                            lg: "0px",
+                            xl: "0px",
+                          },
+                        }}
+                      >
+                        <img
+                          src={`${flag3}`}
+                          alt="flag3"
+                          style={{ marginRight: "10px" }}
+                        />
+                      </Box>
+                    </Box>
+                  </TableCell>
+                  <TableCell>
+                    <Box sx={{ width: "100%", marginRight: "auto" }}>
+                      <FormControl fullWidth>
+                        <InputLabel id="demo-simple-select-label"></InputLabel>
+                        <Select
+                          labelId="demo-simple-select-label"
+                          id="demo-simple-select"
+                          value={age}
+                          onChange={handleChange}
                           sx={{
-                            display: {
-                              xs: "inline-block",
-                              sm: "inline-block",
-                              md: "flex",
-                              lg: "flex",
-                              xl: "flex",
+                            width: {
+                              xs: "100%",
+                              sm: "100%",
+                              md: "100%",
+                              lg: "25%",
+                              xl: "25%",
                             },
+                            marginLeft: "auto",
+                            height: "40px",
                           }}
                         >
-                          <Box
-                            sx={{
-                              marginTop: {
-                                xs: "5px",
-                                sm: "5px",
-                                md: "0px",
-                                lg: "0px",
-                                xl: "0px",
-                              },
-                            }}
-                          >
-                            <img
-                              src={`${flag1}`}
-                              alt="flag1"
-                              style={{ marginRight: "10px" }}
-                            />
-                          </Box>
-                          <Box
-                            sx={{
-                              marginTop: {
-                                xs: "5px",
-                                sm: "5px",
-                                md: "0px",
-                                lg: "0px",
-                                xl: "0px",
-                              },
-                            }}
-                          >
-                            <img
-                              src={`${flag2}`}
-                              alt="flag2"
-                              style={{ marginRight: "10px" }}
-                            />
-                          </Box>
-                          <Box
-                            sx={{
-                              marginTop: {
-                                xs: "5px",
-                                sm: "5px",
-                                md: "0px",
-                                lg: "0px",
-                                xl: "0px",
-                              },
-                            }}
-                          >
-                            <img
-                              src={`${flag3}`}
-                              alt="flag3"
-                              style={{ marginRight: "10px" }}
-                            />
-                          </Box>
-                        </Box>
-                      </TableCell>
-                      <TableCell>
-                        <Box sx={{ width: "100%", marginRight: "auto" }}>
-                          <FormControl fullWidth>
-                            <InputLabel id="demo-simple-select-label"></InputLabel>
-                            <Select
-                              labelId="demo-simple-select-label"
-                              id="demo-simple-select"
-                              value={age}
-                              onChange={handleChange}
-                              sx={{
-                                width: {
-                                  xs: "100%",
-                                  sm: "100%",
-                                  md: "100%",
-                                  lg: "25%",
-                                  xl: "25%",
-                                },
-                                marginLeft: "auto",
-                                height: "40px",
-                              }}
-                            >
-                              <MenuItem>Account Details</MenuItem>
-                              <MenuItem>Delete Account</MenuItem>
-                            </Select>
-                          </FormControl>
-                        </Box>
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>3</TableCell>
-                      <TableCell>Europe Avviso</TableCell>
-                      <TableCell>
-                        {" "}
-                        <Box
+                          <MenuItem>Account Details</MenuItem>
+                          <MenuItem>Delete Account</MenuItem>
+                        </Select>
+                      </FormControl>
+                    </Box>
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>3</TableCell>
+                  <TableCell>Europe Avviso</TableCell>
+                  <TableCell>
+                    {" "}
+                    <Box
+                      sx={{
+                        display: {
+                          xs: "inline-block",
+                          sm: "inline-block",
+                          md: "flex",
+                          lg: "flex",
+                          xl: "flex",
+                        },
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          marginTop: {
+                            xs: "5px",
+                            sm: "5px",
+                            md: "0px",
+                            lg: "0px",
+                            xl: "0px",
+                          },
+                        }}
+                      >
+                        <img
+                          src={`${flag4}`}
+                          alt="flag4"
+                          style={{ marginRight: "10px" }}
+                        />
+                      </Box>
+                      <Box
+                        sx={{
+                          marginTop: {
+                            xs: "5px",
+                            sm: "5px",
+                            md: "0px",
+                            lg: "0px",
+                            xl: "0px",
+                          },
+                        }}
+                      >
+                        <img
+                          src={`${flag5}`}
+                          alt="flag5"
+                          style={{ marginRight: "10px" }}
+                        />
+                      </Box>
+                      <Box
+                        sx={{
+                          marginTop: {
+                            xs: "5px",
+                            sm: "5px",
+                            md: "0px",
+                            lg: "0px",
+                            xl: "0px",
+                          },
+                        }}
+                      >
+                        <img
+                          src={`${flag6}`}
+                          alt="flag6"
+                          style={{ marginRight: "10px" }}
+                        />
+                      </Box>
+                      <Box
+                        sx={{
+                          marginTop: {
+                            xs: "5px",
+                            sm: "5px",
+                            md: "0px",
+                            lg: "0px",
+                            xl: "0px",
+                          },
+                        }}
+                      >
+                        <img
+                          src={`${flag7}`}
+                          alt="flag7"
+                          style={{ marginRight: "10px" }}
+                        />
+                      </Box>
+                      <Box
+                        sx={{
+                          marginTop: {
+                            xs: "5px",
+                            sm: "5px",
+                            md: "0px",
+                            lg: "0px",
+                            xl: "0px",
+                          },
+                        }}
+                      >
+                        <img
+                          src={`${flag8}`}
+                          alt="flag8"
+                          style={{ marginRight: "10px" }}
+                        />
+                      </Box>
+                    </Box>
+                  </TableCell>
+                  <TableCell>
+                    <Box sx={{ width: "100%", marginRight: "auto" }}>
+                      <FormControl fullWidth>
+                        <InputLabel id="demo-simple-select-label"></InputLabel>
+                        <Select
+                          labelId="demo-simple-select-label"
+                          id="demo-simple-select"
+                          value={age}
+                          onChange={handleChange}
                           sx={{
-                            display: {
-                              xs: "inline-block",
-                              sm: "inline-block",
-                              md: "flex",
-                              lg: "flex",
-                              xl: "flex",
+                            width: {
+                              xs: "100%",
+                              sm: "100%",
+                              md: "100%",
+                              lg: "25%",
+                              xl: "25%",
                             },
+                            marginLeft: "auto",
+                            height: "40px",
                           }}
                         >
-                          <Box
-                            sx={{
-                              marginTop: {
-                                xs: "5px",
-                                sm: "5px",
-                                md: "0px",
-                                lg: "0px",
-                                xl: "0px",
-                              },
-                            }}
-                          >
-                            <img
-                              src={`${flag4}`}
-                              alt="flag4"
-                              style={{ marginRight: "10px" }}
-                            />
-                          </Box>
-                          <Box
-                            sx={{
-                              marginTop: {
-                                xs: "5px",
-                                sm: "5px",
-                                md: "0px",
-                                lg: "0px",
-                                xl: "0px",
-                              },
-                            }}
-                          >
-                            <img
-                              src={`${flag5}`}
-                              alt="flag5"
-                              style={{ marginRight: "10px" }}
-                            />
-                          </Box>
-                          <Box
-                            sx={{
-                              marginTop: {
-                                xs: "5px",
-                                sm: "5px",
-                                md: "0px",
-                                lg: "0px",
-                                xl: "0px",
-                              },
-                            }}
-                          >
-                            <img
-                              src={`${flag6}`}
-                              alt="flag6"
-                              style={{ marginRight: "10px" }}
-                            />
-                          </Box>
-                          <Box
-                            sx={{
-                              marginTop: {
-                                xs: "5px",
-                                sm: "5px",
-                                md: "0px",
-                                lg: "0px",
-                                xl: "0px",
-                              },
-                            }}
-                          >
-                            <img
-                              src={`${flag7}`}
-                              alt="flag7"
-                              style={{ marginRight: "10px" }}
-                            />
-                          </Box>
-                          <Box
-                            sx={{
-                              marginTop: {
-                                xs: "5px",
-                                sm: "5px",
-                                md: "0px",
-                                lg: "0px",
-                                xl: "0px",
-                              },
-                            }}
-                          >
-                            <img
-                              src={`${flag8}`}
-                              alt="flag8"
-                              style={{ marginRight: "10px" }}
-                            />
-                          </Box>
-                        </Box>
-                      </TableCell>
-                      <TableCell>
-                        <Box sx={{ width: "100%", marginRight: "auto" }}>
-                          <FormControl fullWidth>
-                            <InputLabel id="demo-simple-select-label"></InputLabel>
-                            <Select
-                              labelId="demo-simple-select-label"
-                              id="demo-simple-select"
-                              value={age}
-                              onChange={handleChange}
-                              sx={{
-                                width: {
-                                  xs: "100%",
-                                  sm: "100%",
-                                  md: "100%",
-                                  lg: "25%",
-                                  xl: "25%",
-                                },
-                                marginLeft: "auto",
-                                height: "40px",
-                              }}
-                            >
-                              <MenuItem>Account Details</MenuItem>
-                              <MenuItem>Delete Account</MenuItem>
-                            </Select>
-                          </FormControl>
-                        </Box>
-                      </TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-                <Button
-                  variant="contained"
-                  sx={{
-                    backgroundColor: "#7335FD",
-                    fontSize: "14px",
-                    textTransform: "capitalize",
-                    marginTop: "30px",
-                  }}
-                  onClick={handleOpen2}
-                >
-                  Add New
-                </Button>
-              </TableContainer>
-            </Box>
+                          <MenuItem>Account Details</MenuItem>
+                          <MenuItem>Delete Account</MenuItem>
+                        </Select>
+                      </FormControl>
+                    </Box>
+                  </TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: "#7335FD",
+                fontSize: "14px",
+                textTransform: "capitalize",
+                marginTop: "30px",
+              }}
+              onClick={handleOpen2}
+            >
+              Add New
+            </Button>
+          </TableContainer>
+        </Box>
       </Box>
     </div>
   );
