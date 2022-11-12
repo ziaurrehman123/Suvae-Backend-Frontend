@@ -10,6 +10,65 @@ import Tooltip from "@mui/material/Tooltip";
 import Modal from "@mui/material/Modal";
 import CloseIcon from "@mui/icons-material/Close";
 import Divider from "@mui/material/Divider";
+import { makeStyles } from "@material-ui/core";
+
+//styling
+const useStyles = makeStyles((theme) => ({
+  firstOuterBox: {
+    backgroundColor: "white", padding: "20px"
+  },
+  firstInnerBox: {
+    backgroundColor: "#F6F6F6", height: "200px"
+  },
+  firstBoxMainContent: {
+    display: "flex", padding: "20px"
+  },
+  iconBox: {
+    width: "50px",
+    height: "50px",
+    backgroundColor: "#E6E0F2",
+    borderRadius: "50px",
+    textAlign: "center",
+  },
+  billingIcon:{
+    height: "25px",
+    width: "25px",
+    position: "relative",
+    top: "10px",
+  },
+  secondBoxMain:{
+    display: "flex",
+    paddingTop: "20px",
+    paddingBottom: "20px",
+    paddingLeft: "20px",
+  },
+  secondBoxMainContent:{
+    width: "50px",
+    height: "50px",
+    backgroundColor: "#E6E0F2",
+    borderRadius: "50px",
+    textAlign: "center",
+  },
+  billingIcon2:{
+    height: "20px",
+    width: "20px",
+    position: "relative",
+    top: "15px",
+  },
+  thirdBoxContent:{
+    width: "50px",
+    height: "50px",
+    backgroundColor: "#E6E0F2",
+    borderRadius: "50px",
+    textAlign: "center",
+  },
+  thirdBoxMain:{
+    display: "flex",
+    paddingTop: "20px",
+    paddingBottom: "20px",
+    paddingLeft: "20px",
+  }
+}));
 
 const style = {
   position: "absolute",
@@ -74,6 +133,7 @@ const IOSSwitch = styled((props) => (
 }));
 
 export default function BillingSection() {
+  const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -158,26 +218,15 @@ export default function BillingSection() {
         >
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={6} lg={5} xl={5}>
-              <Box sx={{ backgroundColor: "white", padding: "20px" }}>
-                <Box sx={{ backgroundColor: "#F6F6F6", height: "200px" }}>
-                  <Box sx={{ display: "flex", padding: "20px" }}>
+              <Box className={classes.firstOuterBox}>
+                <Box className={classes.firstInnerBox}>
+                  <Box className={classes.firstBoxMainContent}>
                     <Box
-                      sx={{
-                        width: "50px",
-                        height: "50px",
-                        backgroundColor: "#E6E0F2",
-                        borderRadius: "50px",
-                        textAlign: "center",
-                      }}
+                      className={classes.iconBox}
                     >
                       <Box
                         component="img"
-                        sx={{
-                          height: "25px",
-                          width: "25px",
-                          position: "relative",
-                          top: "10px",
-                        }}
+                      className={classes.billingIcon}
                         alt="Your logo."
                         src={billingIcon1}
                       />
@@ -214,30 +263,14 @@ export default function BillingSection() {
             <Grid item xs={12} sm={6} md={6} lg={7} xl={7}>
               <Box sx={{ backgroundColor: "white" }}>
                 <Box
-                  sx={{
-                    display: "flex",
-                    paddingTop: "20px",
-                    paddingBottom: "20px",
-                    paddingLeft: "20px",
-                  }}
+                className={classes.secondBoxMain}
                 >
                   <Box
-                    sx={{
-                      width: "50px",
-                      height: "50px",
-                      backgroundColor: "#E6E0F2",
-                      borderRadius: "50px",
-                      textAlign: "center",
-                    }}
+                  className={classes.secondBoxMainContent}
                   >
                     <Box
                       component="img"
-                      sx={{
-                        height: "20px",
-                        width: "20px",
-                        position: "relative",
-                        top: "15px",
-                      }}
+                   className={classes.billingIcon2}
                       alt="Your logo."
                       src={billingIcon2}
                     />
@@ -269,21 +302,10 @@ export default function BillingSection() {
               </Box>
               <Box sx={{ backgroundColor: "white", marginTop: "30px" }}>
                 <Box
-                  sx={{
-                    display: "flex",
-                    paddingTop: "20px",
-                    paddingBottom: "20px",
-                    paddingLeft: "20px",
-                  }}
+                 className={classes.thirdBoxMain}
                 >
-                  <Box
-                    sx={{
-                      width: "50px",
-                      height: "50px",
-                      backgroundColor: "#E6E0F2",
-                      borderRadius: "50px",
-                      textAlign: "center",
-                    }}
+                  <Box  
+                  className={classes.thirdBoxContent}
                   >
                     <Box
                       component="img"
