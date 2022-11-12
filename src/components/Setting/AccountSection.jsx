@@ -6,8 +6,25 @@ import InputAdornment from "@mui/material/InputAdornment";
 import FormControl from "@mui/material/FormControl";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import { makeStyles } from "@material-ui/core";
+
+//styling
+const useStyles = makeStyles((theme) => ({
+  accountSectionMain: {
+    width: "40%",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+    margin: "auto",
+    backgroundColor: "white",
+    paddingTop: "30px",
+    paddingBottom: "30px",
+    borderRadius: "20px",
+  }
+}));
 
 export default function AccouontSection() {
+  const classes = useStyles();
   const [values, setValues] = React.useState({
     amount: "",
     password: "",
@@ -34,14 +51,7 @@ export default function AccouontSection() {
   return (
     <Box sx={{ marginTop: "50px" }}>
       <Box
-        sx={{
-          width: { xs: "100%", sm: "60%", md: "40%", lg: "40%", xl: "40%" },
-          margin: "auto",
-          backgroundColor: "white",
-          paddingTop: "30px",
-          paddingBottom: "30px",
-          borderRadius: "20px",
-        }}
+        className={classes.accountSectionMain}
       >
         <Typography
           sx={{

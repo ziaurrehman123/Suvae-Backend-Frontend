@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, } from "@mui/material";
+import { makeStyles } from "@material-ui/core";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -21,6 +22,46 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import dayjs from "dayjs";
+//styling
+const useStyles = makeStyles((theme) => ({
+  mainComponent: {
+    backgroundColor: "white",
+    marginTop: "60px",
+    height: "550px",
+    borderRadius: "20px",
+  },
+  analyticsComponent: {
+    width: "90%", margin: "auto", paddingBottom: "20px"
+  },
+  dateRangeInput: {
+    border: "2px solid black",
+    width: "30%",
+    [theme.breakpoints.down("sm")]: {
+      width: "70%",
+    },
+    textAlign: "left",
+    marginLeft: "auto",
+    borderRadius: "7px",
+  },
+  dateInput: {
+    marginTop: "10px"
+  },
+  btnsBox: {
+    marginTop: "20px", textAlign: "right"
+  },
+  cancelBtn: {
+    borderColor: "#7335FD",
+    marginRight: "10px",
+    color: "#7335FD",
+    fontWeight: "600",
+    textTransform: "capitalize",
+  },
+  applyBtn: {
+    backgroundColor: "#7335FD",
+    textTransform: "capitalize",
+    fontWeight: "600",
+  }
+}));
 
 ChartJS.register(
   CategoryScale,
@@ -63,6 +104,7 @@ export const data = {
 };
 
 export default function Analytics() {
+  const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -80,14 +122,9 @@ export default function Analytics() {
   return (
     <>
       <Box
-        sx={{
-          backgroundColor: "white",
-          marginTop: "60px",
-          height: "550px",
-          borderRadius: "20px",
-        }}
+        className={classes.mainComponent}
       >
-        <Box sx={{ width: "90%", margin: "auto", paddingBottom: "20px" }}>
+        <Box className={classes.analyticsComponent}>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
               <Typography sx={{ fontSize: "22px", fontWeight: "500" }}>
@@ -98,19 +135,7 @@ export default function Analytics() {
               <Box sx={{ textAlign: "right" }}>
                 <Box>
                   <Box
-                    sx={{
-                      border: "2px solid black",
-                      width: {
-                        xs: "70%",
-                        sm: "50",
-                        md: "30",
-                        lg: "30%",
-                        xl: "30%",
-                      },
-                      textAlign: "left",
-                      marginLeft: "auto",
-                      borderRadius: "7px",
-                    }}
+                    className={classes.dateRangeInput}
                   >
                     <div>
                       <IconButton
@@ -145,7 +170,7 @@ export default function Analytics() {
                         onClose={handleClose}
                       >
                         <MenuItem onClick={handleClose}>
-                          <Box sx={{ width: "100%" }}>
+                          <Box>
                             <Typography
                               sx={{ fontSize: "12px", fontWeight: "700" }}
                             >
@@ -170,75 +195,68 @@ export default function Analytics() {
                             <Box>
                               <Grid container spacing={3}>
                                 <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
-                                  <Typography
-                                    sx={{
-                                      fontSize: "12px",
-                                      fontWeight: "700",
-                                      marginTop: "10px",
-                                    }}
-                                  >
-                                    Start Date
-                                  </Typography>
-                                  <LocalizationProvider
-                                    dateAdapter={AdapterDayjs}
-                                  >
-                                    <DatePicker
-                                      value={value}
-                                      onChange={(newValue) => {
-                                        setValue(newValue);
+                                  <Box className={classes.dateInput}>
+                                    <Typography
+                                      sx={{
+                                        fontSize: "12px",
+                                        fontWeight: "700",
+
                                       }}
-                                      renderInput={(params) => (
-                                        <TextField {...params} />
-                                      )}
-                                    />
-                                  </LocalizationProvider>
+                                    >
+                                      Start Date
+                                  </Typography>
+                                    <LocalizationProvider
+                                      dateAdapter={AdapterDayjs}
+                                    >
+                                      <DatePicker
+                                        value={value}
+                                        onChange={(newValue) => {
+                                          setValue(newValue);
+                                        }}
+                                        renderInput={(params) => (
+                                          <TextField {...params} />
+                                        )}
+                                      />
+                                    </LocalizationProvider>
+                                  </Box>
                                 </Grid>
                                 <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
-                                  <Typography
-                                    sx={{
-                                      fontSize: "12px",
-                                      fontWeight: "700",
-                                      marginTop: "10px",
-                                    }}
-                                  >
-                                    End Date
-                                  </Typography>
-                                  <LocalizationProvider
-                                    dateAdapter={AdapterDayjs}
-                                  >
-                                    <DatePicker
-                                      value={value}
-                                      onChange={(newValue) => {
-                                        setValue(newValue);
+                                  <Box className={classes.dateInput}>
+                                    <Typography
+                                      sx={{
+                                        fontSize: "12px",
+                                        fontWeight: "700",
                                       }}
-                                      renderInput={(params) => (
-                                        <TextField {...params} />
-                                      )}
-                                    />
-                                  </LocalizationProvider>
+                                    >
+                                      End Date
+                                  </Typography>
+                                    <LocalizationProvider
+                                      dateAdapter={AdapterDayjs}
+                                    >
+                                      <DatePicker
+                                        value={value}
+                                        onChange={(newValue) => {
+                                          setValue(newValue);
+                                        }}
+                                        renderInput={(params) => (
+                                          <TextField {...params} />
+                                        )}
+                                      />
+                                    </LocalizationProvider>
+                                  </Box>
                                 </Grid>
                               </Grid>
                             </Box>
-                            <Box sx={{ marginTop: "20px", textAlign: "right" }}>
+                            <Box className={classes.btnsBox}>
                               <Button
                                 variant="outlined"
-                                sx={{
-                                  borderColor: "#7335FD",
-                                  marginRight: "10px",
-                                  color: "#7335FD",
-                                  fontWeight: "600",
-                                  textTransform: "capitalize",
-                                }}
+                                className={classes.cancelBtn}
                               >
                                 Cancel
                               </Button>
                               <Button
                                 variant="contained"
-                                sx={{
-                                  backgroundColor: "#7335FD",
-                                  textTransform: "capitalize",
-                                  fontWeight: "600",
-                                }}
+                                className={classes.applyBtn}
                               >
                                 Apply
                               </Button>

@@ -20,6 +20,52 @@ import TablePagination from "@mui/material/TablePagination";
 import Modal from "@mui/material/Modal";
 import CloseIcon from "@mui/icons-material/Close";
 import Divider from "@mui/material/Divider";
+import { makeStyles } from "@material-ui/core";
+
+//styling
+const useStyles = makeStyles((theme) => ({
+  tableInnerContent: {
+    padding: "40px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "10px",
+    },
+    marginTop: "40px",
+  },
+  tableheadingRow: {
+    backgroundColor: "#F6F7F8",
+  },
+  tableCellheading: {
+    fontWeight: "400",
+    fontSize: "16px",
+    textAlign: "center",
+    color: "#8B8FA3",
+  },
+  tableCellContent: {
+    fontWeight: "400",
+    fontSize: "16px",
+    textAlign: "center",
+  },
+  productContent: {
+    display: "flex",
+    width: "99%",
+    [theme.breakpoints.down("sm")]: {
+      width: "73%",
+    },
+    margin: "auto",
+  },
+  productImage: {
+    height: "50px",
+    width: "50px",
+    marginRight: "10px",
+  },
+  ratingBox: {
+    width: "60%",
+    [theme.breakpoints.down("sm")]: {
+      width: "47%",
+    },
+    margin: "auto",
+  }
+}));
 
 const style = {
   position: "absolute",
@@ -33,6 +79,7 @@ const style = {
 };
 
 export default function ProductsTable() {
+  const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -53,43 +100,26 @@ export default function ProductsTable() {
       <Box>
         <TableContainer
           component={Paper}
+          className={classes.tableInnerContent}
           sx={{
-            padding: {
-              xs: "10px",
-              sm: "10px",
-              md: "40px",
-              lg: "40px",
-              xl: "40px",
-            },
-            marginTop: "40px",
             width: "95%",
             margin: "auto",
             borderRadius: "20px",
           }}
         >
           <Table aria-label="simple table" sx={{ overflowX: "hidden" }}>
-            <TableHead sx={{ backgroundColor: "#F6F7F8" }}>
+            <TableHead className={classes.tableheadingRow}>
               <TableRow>
                 <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
                   <Typography
-                    sx={{
-                      fontWeight: "400",
-                      fontSize: "16px",
-                      textAlign: "center",
-                      color: "#8B8FA3",
-                    }}
+                    className={classes.tableCellheading}
                   >
                     Order ID
                   </Typography>
                 </TableCell>
                 <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
                   <Typography
-                    sx={{
-                      fontWeight: "400",
-                      fontSize: "16px",
-                      textAlign: "center",
-                      color: "#8B8FA3",
-                    }}
+                    className={classes.tableCellheading}
                   >
                     Product
                   </Typography>
@@ -104,12 +134,7 @@ export default function ProductsTable() {
                     }}
                   >
                     <Typography
-                      sx={{
-                        fontWeight: "400",
-                        fontSize: "16px",
-
-                        color: "#8B8FA3",
-                      }}
+                      className={classes.tableCellheading}
                     >
                       Customer Rating
                     </Typography>
@@ -131,12 +156,7 @@ export default function ProductsTable() {
                 </TableCell>
                 <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
                   <Typography
-                    sx={{
-                      fontWeight: "400",
-                      fontSize: "16px",
-                      textAlign: "center",
-                      color: "#8B8FA3",
-                    }}
+                    className={classes.tableCellheading}
                   >
                     Submission Date
                   </Typography>
@@ -144,12 +164,7 @@ export default function ProductsTable() {
                 <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
                   <Box sx={{ display: "flex", textAlign: "center" }}>
                     <Typography
-                      sx={{
-                        fontWeight: "400",
-                        fontSize: "16px",
-                        marginLeft: "20px",
-                        color: "#8B8FA3",
-                      }}
+                      className={classes.tableCellheading}
                     >
                       Customer Info
                     </Typography>
@@ -171,12 +186,7 @@ export default function ProductsTable() {
                 </TableCell>
                 <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
                   <Typography
-                    sx={{
-                      fontWeight: "400",
-                      fontSize: "16px",
-                      textAlign: "center",
-                      color: "#8B8FA3",
-                    }}
+                    className={classes.tableCellheading}
                   >
                     Review Status
                   </Typography>
@@ -188,12 +198,7 @@ export default function ProductsTable() {
                 <TableCell>
                   {" "}
                   <Typography
-                    sx={{
-                      fontWeight: "400",
-                      fontSize: "16px",
-                      textAlign: "center",
-                      color: "",
-                    }}
+                    className={classes.tableCellContent}
                   >
                     118-986254-235656
                   </Typography>
@@ -201,25 +206,11 @@ export default function ProductsTable() {
                 <TableCell>
                   {" "}
                   <Box
-                    sx={{
-                      display: "flex",
-                      width: {
-                        xs: "73%",
-                        sm: "90%",
-                        md: "99%",
-                        lg: "99%",
-                        xl: "99%",
-                      },
-                      margin: "auto",
-                    }}
+                    className={classes.productContent}
                   >
                     <Box
                       component="img"
-                      sx={{
-                        height: "50px",
-                        width: "50px",
-                        marginRight: "10px",
-                      }}
+                      className={classes.productImage}
                       alt="Your logo."
                       src={productImage}
                     />
@@ -235,16 +226,7 @@ export default function ProductsTable() {
                 </TableCell>
                 <TableCell>
                   <Box
-                    sx={{
-                      width: {
-                        xs: "47%",
-                        sm: "50%",
-                        md: "66%",
-                        lg: "60%",
-                        xl: "60%",
-                      },
-                      margin: "auto",
-                    }}
+                    className={classes.ratingBox}
                   >
                     <Rating
                       name="simple-controlled"
@@ -274,12 +256,7 @@ export default function ProductsTable() {
                 <TableCell>
                   <Box sx={{ textAlign: "center" }}>
                     <Typography
-                      sx={{
-                        fontWeight: "400",
-                        fontSize: "16px",
-                        textAlign: "center",
-                        color: "",
-                      }}
+                      className={classes.tableCellContent}
                     >
                       Sep 10, 2022
                     </Typography>
@@ -291,11 +268,7 @@ export default function ProductsTable() {
                       <Tooltip title="Enable in Billing" placement="top-start">
                         <Box
                           component="img"
-                          sx={{
-                            height: "60px",
-                            width: "40px",
-                            marginRight: "10px",
-                          }}
+
                           alt="Your logo."
                           src={lock}
                         />
@@ -326,12 +299,7 @@ export default function ProductsTable() {
                 <TableCell>
                   {" "}
                   <Typography
-                    sx={{
-                      fontWeight: "400",
-                      fontSize: "16px",
-                      textAlign: "center",
-                      color: "",
-                    }}
+                    className={classes.tableCellContent}
                   >
                     118-986254-235656
                   </Typography>
@@ -339,25 +307,11 @@ export default function ProductsTable() {
                 <TableCell>
                   {" "}
                   <Box
-                    sx={{
-                      display: "flex",
-                      width: {
-                        xs: "73%",
-                        sm: "90%",
-                        md: "99%",
-                        lg: "99%",
-                        xl: "99%",
-                      },
-                      margin: "auto",
-                    }}
+                    className={classes.productContent}
                   >
                     <Box
                       component="img"
-                      sx={{
-                        height: "50px",
-                        width: "50px",
-                        marginRight: "10px",
-                      }}
+                      className={classes.productImage}
                       alt="Your logo."
                       src={productImage}
                     />
@@ -373,16 +327,7 @@ export default function ProductsTable() {
                 </TableCell>
                 <TableCell>
                   <Box
-                    sx={{
-                      width: {
-                        xs: "47%",
-                        sm: "50%",
-                        md: "66%",
-                        lg: "60%",
-                        xl: "60%",
-                      },
-                      margin: "auto",
-                    }}
+                    className={classes.ratingBox}
                   >
                     <Rating
                       name="simple-controlled"
@@ -412,12 +357,7 @@ export default function ProductsTable() {
                 <TableCell>
                   <Box sx={{ textAlign: "center" }}>
                     <Typography
-                      sx={{
-                        fontWeight: "400",
-                        fontSize: "16px",
-                        textAlign: "center",
-                        color: "",
-                      }}
+                      className={classes.tableCellContent}
                     >
                       Sep 10, 2022
                     </Typography>
@@ -429,11 +369,7 @@ export default function ProductsTable() {
                       <Tooltip title="Enable in Billing" placement="top-start">
                         <Box
                           component="img"
-                          sx={{
-                            height: "60px",
-                            width: "40px",
-                            marginRight: "10px",
-                          }}
+
                           alt="Your logo."
                           src={lock}
                         />
@@ -464,12 +400,7 @@ export default function ProductsTable() {
                 <TableCell>
                   {" "}
                   <Typography
-                    sx={{
-                      fontWeight: "400",
-                      fontSize: "16px",
-                      textAlign: "center",
-                      color: "",
-                    }}
+                    className={classes.tableCellContent}
                   >
                     118-986254-235656
                   </Typography>
@@ -477,25 +408,11 @@ export default function ProductsTable() {
                 <TableCell>
                   {" "}
                   <Box
-                    sx={{
-                      display: "flex",
-                      width: {
-                        xs: "73%",
-                        sm: "90%",
-                        md: "99%",
-                        lg: "99%",
-                        xl: "99%",
-                      },
-                      margin: "auto",
-                    }}
+                    className={classes.productContent}
                   >
                     <Box
                       component="img"
-                      sx={{
-                        height: "50px",
-                        width: "50px",
-                        marginRight: "10px",
-                      }}
+                      className={classes.productImage}
                       alt="Your logo."
                       src={productImage}
                     />
@@ -511,16 +428,7 @@ export default function ProductsTable() {
                 </TableCell>
                 <TableCell>
                   <Box
-                    sx={{
-                      width: {
-                        xs: "47%",
-                        sm: "50%",
-                        md: "66%",
-                        lg: "60%",
-                        xl: "60%",
-                      },
-                      margin: "auto",
-                    }}
+                    className={classes.ratingBox}
                   >
                     <Rating
                       name="simple-controlled"
@@ -550,12 +458,7 @@ export default function ProductsTable() {
                 <TableCell>
                   <Box sx={{ textAlign: "center" }}>
                     <Typography
-                      sx={{
-                        fontWeight: "400",
-                        fontSize: "16px",
-                        textAlign: "center",
-                        color: "",
-                      }}
+                      className={classes.tableCellContent}
                     >
                       Sep 10, 2022
                     </Typography>
@@ -567,11 +470,7 @@ export default function ProductsTable() {
                       <Tooltip title="Enable in Billing" placement="top-start">
                         <Box
                           component="img"
-                          sx={{
-                            height: "60px",
-                            width: "40px",
-                            marginRight: "10px",
-                          }}
+
                           alt="Your logo."
                           src={lock}
                         />
@@ -602,12 +501,7 @@ export default function ProductsTable() {
                 <TableCell>
                   {" "}
                   <Typography
-                    sx={{
-                      fontWeight: "400",
-                      fontSize: "16px",
-                      textAlign: "center",
-                      color: "",
-                    }}
+                    className={classes.tableCellContent}
                   >
                     118-986254-235656
                   </Typography>
@@ -615,25 +509,11 @@ export default function ProductsTable() {
                 <TableCell>
                   {" "}
                   <Box
-                    sx={{
-                      display: "flex",
-                      width: {
-                        xs: "73%",
-                        sm: "90%",
-                        md: "99%",
-                        lg: "99%",
-                        xl: "99%",
-                      },
-                      margin: "auto",
-                    }}
+                    className={classes.productContent}
                   >
                     <Box
                       component="img"
-                      sx={{
-                        height: "50px",
-                        width: "50px",
-                        marginRight: "10px",
-                      }}
+                      className={classes.productImage}
                       alt="Your logo."
                       src={productImage}
                     />
@@ -649,16 +529,7 @@ export default function ProductsTable() {
                 </TableCell>
                 <TableCell>
                   <Box
-                    sx={{
-                      width: {
-                        xs: "47%",
-                        sm: "50%",
-                        md: "66%",
-                        lg: "60%",
-                        xl: "60%",
-                      },
-                      margin: "auto",
-                    }}
+                    className={classes.ratingBox}
                   >
                     <Rating
                       name="simple-controlled"
@@ -688,12 +559,7 @@ export default function ProductsTable() {
                 <TableCell>
                   <Box sx={{ textAlign: "center" }}>
                     <Typography
-                      sx={{
-                        fontWeight: "400",
-                        fontSize: "16px",
-                        textAlign: "center",
-                        color: "",
-                      }}
+                      className={classes.tableCellContent}
                     >
                       Sep 10, 2022
                     </Typography>
@@ -705,11 +571,7 @@ export default function ProductsTable() {
                       <Tooltip title="Enable in Billing" placement="top-start">
                         <Box
                           component="img"
-                          sx={{
-                            height: "60px",
-                            width: "40px",
-                            marginRight: "10px",
-                          }}
+
                           alt="Your logo."
                           src={lock}
                         />
@@ -736,6 +598,7 @@ export default function ProductsTable() {
                   </Box>
                 </TableCell>
               </TableRow>
+
             </TableBody>
           </Table>
           <Box sx={{ width: "97%", margin: "auto", paddingTop: "20px" }}>

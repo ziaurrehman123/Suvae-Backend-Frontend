@@ -19,6 +19,8 @@ import {
   TableRow,
   Paper,
 } from "@mui/material";
+import { makeStyles } from "@material-ui/core";
+
 
 const IOSSwitch = styled((props) => (
   <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -71,18 +73,39 @@ const IOSSwitch = styled((props) => (
   },
 }));
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 500,
-  bgcolor: "background.paper",
-  boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-  borderRadius: "10px",
-};
+//styling
+const useStyles = makeStyles((theme) => ({
+  divider: {
+    width: "100%", backgroundColor: "#D6DAE1", height: "1px"
+  },
+  tableInnerContent: {
+    padding: "40px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "10px",
+    },
+    marginTop: "40px",
+  },
+  tableheadingRow: {
+    backgroundColor: "#F6F7F8",
+  },
+  tableCellheading: {
+    fontWeight: "400",
+    fontSize: "16px",
+    textAlign: "center",
+    color: "#8B8FA3",
+  },
+  tableCellContent: {
+    fontWeight: "400",
+    fontSize: "16px",
+    textAlign: "center",
+  },
+  productContent: {
+    display: "flex", width: "60%", margin: "auto"
+  }
+}));
 
 export default function ProductsTable() {
+  const classes = useStyles();
   const [page, setPage] = React.useState(2);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -104,7 +127,7 @@ export default function ProductsTable() {
           Products
         </Typography>
         <Box
-          sx={{ width: "100%", backgroundColor: "#D6DAE1", height: "1px" }}
+          className={classes.divider}
         ></Box>
         <Typography
           sx={{
@@ -123,30 +146,18 @@ export default function ProductsTable() {
         <TableContainer
           component={Paper}
           sx={{
-            padding: {
-              xs: "10px",
-              sm: "10px",
-              md: "40px",
-              lg: "40px",
-              xl: "40px",
-            },
-            marginTop: "40px",
             width: "95%",
-            margin: "auto",
             borderRadius: "20px",
+            margin: "auto",
           }}
+          className={classes.tableInnerContent}
         >
           <Table aria-label="simple table" sx={{ overflowX: "hidden" }}>
-            <TableHead sx={{ backgroundColor: "#F6F7F8" }}>
+            <TableHead className={classes.tableheadingRow}>
               <TableRow>
                 <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
                   <Typography
-                    sx={{
-                      fontWeight: "400",
-                      fontSize: "16px",
-                      textAlign: "center",
-                      color: "#8B8FA3",
-                    }}
+                    className={classes.tableCellheading}
                   >
                     Product
                   </Typography>
@@ -160,12 +171,7 @@ export default function ProductsTable() {
                     }}
                   >
                     <Typography
-                      sx={{
-                        fontWeight: "400",
-                        fontSize: "16px",
-
-                        color: "#8B8FA3",
-                      }}
+                      className={classes.tableCellheading}
                     >
                       Form Submissions
                     </Typography>
@@ -194,12 +200,7 @@ export default function ProductsTable() {
                     }}
                   >
                     <Typography
-                      sx={{
-                        fontWeight: "400",
-                        fontSize: "16px",
-                        marginLeft: "20px",
-                        color: "#8B8FA3",
-                      }}
+                      className={classes.tableCellheading}
                     >
                       Form Incentive
                     </Typography>
@@ -221,12 +222,7 @@ export default function ProductsTable() {
                 </TableCell>
                 <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
                   <Typography
-                    sx={{
-                      fontWeight: "400",
-                      fontSize: "16px",
-                      textAlign: "center",
-                      color: "#8B8FA3",
-                    }}
+                    className={classes.tableCellheading}
                   >
                     Reviews Collected
                   </Typography>
@@ -237,7 +233,7 @@ export default function ProductsTable() {
               <TableRow>
                 <TableCell>
                   {" "}
-                  <Box sx={{ display: "flex", width: "60%", margin: "auto" }}>
+                  <Box className={classes.productContent}>
                     <Box
                       component="img"
                       sx={{
@@ -289,7 +285,7 @@ export default function ProductsTable() {
               <TableRow>
                 <TableCell>
                   {" "}
-                  <Box sx={{ display: "flex", width: "60%", margin: "auto" }}>
+                  <Box className={classes.productContent}>
                     <Box
                       component="img"
                       sx={{
@@ -308,7 +304,9 @@ export default function ProductsTable() {
                 <TableCell>
                   {" "}
                   <Box sx={{ textAlign: "center" }}>
-                    <FormControlLabel control={<IOSSwitch sx={{ m: 1 }} />} />
+                    <FormControlLabel
+                      control={<IOSSwitch sx={{ m: 1 }} />}
+                    />
                   </Box>
                 </TableCell>
                 <TableCell>

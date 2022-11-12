@@ -39,12 +39,6 @@ export default function StepsSection() {
                       <Box sx={{ textAlign: "center" }}>
                         <Box
                           component="img"
-                          sx={{
-                            height: "35px",
-                            width: "35px",
-                            marginLeft: "20px",
-                            marginTop: "5px",
-                          }}
                           alt="Your logo."
                           src={step1}
                         />
@@ -60,9 +54,6 @@ export default function StepsSection() {
                         <Box
                           component="img"
                           sx={{
-                            height: "35px",
-                            width: "35px",
-                            marginLeft: "20px",
                             marginTop: "5px",
                           }}
                           alt="Your logo."
@@ -89,12 +80,6 @@ export default function StepsSection() {
                       <Box sx={{ textAlign: "center" }}>
                         <Box
                           component="img"
-                          sx={{
-                            height: "35px",
-                            width: "35px",
-                            marginLeft: "20px",
-                            marginTop: "5px",
-                          }}
                           alt="Your logo."
                           src={step2}
                         />
@@ -110,9 +95,6 @@ export default function StepsSection() {
                         <Box
                           component="img"
                           sx={{
-                            height: "35px",
-                            width: "35px",
-                            marginLeft: "20px",
                             marginTop: "5px",
                           }}
                           alt="Your logo."
@@ -139,12 +121,6 @@ export default function StepsSection() {
                       <Box sx={{ textAlign: "center" }}>
                         <Box
                           component="img"
-                          sx={{
-                            height: "35px",
-                            width: "35px",
-                            marginLeft: "20px",
-                            marginTop: "5px",
-                          }}
                           alt="Your logo."
                           src={step3}
                         />
@@ -162,7 +138,7 @@ export default function StepsSection() {
                             fontSize: "18px",
                             fontWeight: "600",
                             color: "#7569C8",
-                            marginTop: "10px",
+                            marginTop: "5px",
                           }}
                         >
                           Set Up
@@ -187,12 +163,6 @@ export default function StepsSection() {
                     <Box sx={{ textAlign: "center" }}>
                       <Box
                         component="img"
-                        sx={{
-                          height: "35px",
-                          width: "35px",
-                          marginLeft: "20px",
-                          marginTop: "5px",
-                        }}
                         alt="Your logo."
                         src={step4}
                       />
@@ -210,7 +180,7 @@ export default function StepsSection() {
                           fontSize: "18px",
                           fontWeight: "600",
                           color: "#7569C8",
-                          marginTop: "10px",
+                          marginTop: "5px",
                         }}
                       >
                         <Box

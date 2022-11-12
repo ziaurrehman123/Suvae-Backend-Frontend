@@ -7,9 +7,7 @@ import {
   Grid,
   Link,
   TextField,
-  Tabs,
   TableHead,
-  Tab,
   Modal,
   CircularProgress,
   TableBody,
@@ -40,6 +38,56 @@ import CloseIcon from "@mui/icons-material/Close";
 import CustomizedAccordions from "./Accordian";
 import RegionSelector from "./RegionSelector";
 import AccountDetials from "./AccountDetails";
+import { makeStyles } from "@material-ui/core";
+
+//styling
+const useStyles = makeStyles((theme) => ({
+  step1Image:{
+    width: "40%", margin: "auto"
+  },
+  stepInnerConnect:{
+      width: "90%",
+      margin: "auto",
+      paddingTop: "30px",
+      paddingBottom: "20px",
+  },
+  accountDetailsBox:{
+    paddingTop: "40px", width: "90%", margin: "auto"
+  },
+  accountDetailsinnerBox:{
+    paddingTop: "20px", width: "90%", margin: "auto", paddingBottom:"30px"
+  },
+  accountDetailsFormBox:{
+    width: "80%", margin: "auto"
+  },
+  tableInnerContent: {
+    padding: "40px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "10px",
+    },
+    marginTop: "40px",
+  },
+  flagsBox:{
+    display:"flex",
+    [theme.breakpoints.down("sm")]: {
+      display:"inline-block",
+    },
+  },
+  flagsBoxContent:{
+    marginTop:"0px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop:"5px",
+    },
+  },
+  selectBtnStyle:{
+    width: "40%",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+    marginLeft: "auto",
+    height: "40px",
+  }
+}));
 
 const style = {
   position: "absolute",
@@ -53,6 +101,7 @@ const style = {
   borderRadius: "5px",
 };
 export const AmazonSetting = () => {
+  const classes = useStyles();
   const [age, setAge] = React.useState("");
   const timerRef = React.useRef();
   const [query, setQuery] = React.useState("idle");
@@ -154,18 +203,13 @@ export const AmazonSetting = () => {
             </Grid>
           </Box>
           <Divider
-            sx={{ width: "100%", marginTop: "20px", marginBottom: "20px" }}
+            sx={{ marginTop: "20px", marginBottom: "20px" }}
           />
           <Box sx={{ width: "40%", margin: "auto" }}>
             <img src={`${step2}`} alt="step1" />
           </Box>
           <Box
-            sx={{
-              width: "90%",
-              margin: "auto",
-              paddingTop: "30px",
-              paddingBottom: "20px",
-            }}
+             className={classes.stepInnerConnect}
           >
             <Typography
               sx={{ fontSize: "14px", color: "#1E090E", fontWeight: "500" }}
@@ -263,18 +307,13 @@ export const AmazonSetting = () => {
             </Grid>
           </Box>
           <Divider
-            sx={{ width: "100%", marginTop: "20px", marginBottom: "20px" }}
+           sx={{ marginTop: "20px", marginBottom: "20px" }}
           />
-          <Box sx={{ width: "40%", margin: "auto" }}>
+          <Box className={classes.step1Image}>
             <img src={`${step1}`} alt="step1" />
           </Box>
           <Box
-            sx={{
-              width: "90%",
-              margin: "auto",
-              paddingTop: "30px",
-              paddingBottom: "20px",
-            }}
+           className={classes.stepInnerConnect}
           >
             <Typography sx={{ fontSize: "14px", color: "#1E090E" }}>
               Select your Amazon seller Central region and primary marketplace.
@@ -324,7 +363,7 @@ export const AmazonSetting = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Box sx={{ paddingTop: "40px", width: "90%", margin: "auto" }}>
+          <Box className={classes.accountDetailsBox}>
             <Grid container spacing={2}>
               <Grid xs={3} sm={3} md={3} lg={3} xl={3}></Grid>
               <Grid xs={6} sm={6} md={6} lg={6} xl={6}>
@@ -355,14 +394,11 @@ export const AmazonSetting = () => {
           />
 
           <Box
-            sx={{
-              width: "90%",
-              margin: "auto",
-              paddingTop: "30px",
-              paddingBottom: "20px",
-            }}
+           className={classes.accountDetailsinnerBox}
           >
-            <Box sx={{ width: "80%", margin: "auto" }}>
+            <Box 
+            className={classes.accountDetailsFormBox}
+            >
               <Typography
                 sx={{
                   fontSize: "14px",
@@ -434,15 +470,7 @@ export const AmazonSetting = () => {
         <Box>
           <TableContainer
             component={Paper}
-            sx={{
-              padding: {
-                xs: "10px",
-                sm: "10px",
-                md: "40px",
-                lg: "40px",
-                xl: "40px",
-              },
-            }}
+            className={classes.tableInnerContent}
           >
             <Typography
               sx={{
@@ -477,26 +505,10 @@ export const AmazonSetting = () => {
                   <TableCell>Newt</TableCell>
                   <TableCell>
                     <Box
-                      sx={{
-                        display: {
-                          xs: "inline-block",
-                          sm: "inline-block",
-                          md: "flex",
-                          lg: "flex",
-                          xl: "flex",
-                        },
-                      }}
+                      className={classes.flagsBox}
                     >
                       <Box
-                        sx={{
-                          marginTop: {
-                            xs: "5px",
-                            sm: "5px",
-                            md: "0px",
-                            lg: "0px",
-                            xl: "0px",
-                          },
-                        }}
+                        className={classes.flagsBoxContent}
                       >
                         <img
                           src={`${flag1}`}
@@ -505,15 +517,7 @@ export const AmazonSetting = () => {
                         />
                       </Box>
                       <Box
-                        sx={{
-                          marginTop: {
-                            xs: "5px",
-                            sm: "5px",
-                            md: "0px",
-                            lg: "0px",
-                            xl: "0px",
-                          },
-                        }}
+                         className={classes.flagsBoxContent}
                       >
                         <img
                           src={`${flag2}`}
@@ -522,15 +526,7 @@ export const AmazonSetting = () => {
                         />
                       </Box>
                       <Box
-                        sx={{
-                          marginTop: {
-                            xs: "5px",
-                            sm: "5px",
-                            md: "0px",
-                            lg: "0px",
-                            xl: "0px",
-                          },
-                        }}
+                          className={classes.flagsBoxContent}
                       >
                         <img
                           src={`${flag3}`}
@@ -550,17 +546,7 @@ export const AmazonSetting = () => {
                           id="demo-simple-select"
                           value={age}
                           onChange={handleChange}
-                          sx={{
-                            width: {
-                              xs: "100%",
-                              sm: "100%",
-                              md: "50%",
-                              lg: "25%",
-                              xl: "25%",
-                            },
-                            marginLeft: "auto",
-                            height: "40px",
-                          }}
+                          className={classes.selectBtnStyle}
                         >
                           <MenuItem>Account Details</MenuItem>
                           <MenuItem>Delete Account</MenuItem>
@@ -573,28 +559,11 @@ export const AmazonSetting = () => {
                   <TableCell>2</TableCell>
                   <TableCell>Avisso</TableCell>
                   <TableCell>
-                    {" "}
-                    <Box
-                      sx={{
-                        display: {
-                          xs: "inline-block",
-                          sm: "inline-block",
-                          md: "flex",
-                          lg: "flex",
-                          xl: "flex",
-                        },
-                      }}
+                  <Box
+                      className={classes.flagsBox}
                     >
                       <Box
-                        sx={{
-                          marginTop: {
-                            xs: "5px",
-                            sm: "5px",
-                            md: "0px",
-                            lg: "0px",
-                            xl: "0px",
-                          },
-                        }}
+                        className={classes.flagsBoxContent}
                       >
                         <img
                           src={`${flag1}`}
@@ -603,15 +572,7 @@ export const AmazonSetting = () => {
                         />
                       </Box>
                       <Box
-                        sx={{
-                          marginTop: {
-                            xs: "5px",
-                            sm: "5px",
-                            md: "0px",
-                            lg: "0px",
-                            xl: "0px",
-                          },
-                        }}
+                       className={classes.flagsBoxContent}
                       >
                         <img
                           src={`${flag2}`}
@@ -620,15 +581,7 @@ export const AmazonSetting = () => {
                         />
                       </Box>
                       <Box
-                        sx={{
-                          marginTop: {
-                            xs: "5px",
-                            sm: "5px",
-                            md: "0px",
-                            lg: "0px",
-                            xl: "0px",
-                          },
-                        }}
+                        className={classes.flagsBoxContent}
                       >
                         <img
                           src={`${flag3}`}
@@ -647,17 +600,7 @@ export const AmazonSetting = () => {
                           id="demo-simple-select"
                           value={age}
                           onChange={handleChange}
-                          sx={{
-                            width: {
-                              xs: "100%",
-                              sm: "100%",
-                              md: "100%",
-                              lg: "25%",
-                              xl: "25%",
-                            },
-                            marginLeft: "auto",
-                            height: "40px",
-                          }}
+                          className={classes.selectBtnStyle}
                         >
                           <MenuItem>Account Details</MenuItem>
                           <MenuItem>Delete Account</MenuItem>
@@ -670,28 +613,11 @@ export const AmazonSetting = () => {
                   <TableCell>3</TableCell>
                   <TableCell>Europe Avviso</TableCell>
                   <TableCell>
-                    {" "}
-                    <Box
-                      sx={{
-                        display: {
-                          xs: "inline-block",
-                          sm: "inline-block",
-                          md: "flex",
-                          lg: "flex",
-                          xl: "flex",
-                        },
-                      }}
+                  <Box
+                      className={classes.flagsBox}
                     >
                       <Box
-                        sx={{
-                          marginTop: {
-                            xs: "5px",
-                            sm: "5px",
-                            md: "0px",
-                            lg: "0px",
-                            xl: "0px",
-                          },
-                        }}
+                        className={classes.flagsBoxContent}
                       >
                         <img
                           src={`${flag4}`}
@@ -700,15 +626,7 @@ export const AmazonSetting = () => {
                         />
                       </Box>
                       <Box
-                        sx={{
-                          marginTop: {
-                            xs: "5px",
-                            sm: "5px",
-                            md: "0px",
-                            lg: "0px",
-                            xl: "0px",
-                          },
-                        }}
+                        className={classes.flagsBoxContent}
                       >
                         <img
                           src={`${flag5}`}
@@ -717,15 +635,7 @@ export const AmazonSetting = () => {
                         />
                       </Box>
                       <Box
-                        sx={{
-                          marginTop: {
-                            xs: "5px",
-                            sm: "5px",
-                            md: "0px",
-                            lg: "0px",
-                            xl: "0px",
-                          },
-                        }}
+                         className={classes.flagsBoxContent}
                       >
                         <img
                           src={`${flag6}`}
@@ -734,15 +644,7 @@ export const AmazonSetting = () => {
                         />
                       </Box>
                       <Box
-                        sx={{
-                          marginTop: {
-                            xs: "5px",
-                            sm: "5px",
-                            md: "0px",
-                            lg: "0px",
-                            xl: "0px",
-                          },
-                        }}
+                         className={classes.flagsBoxContent}
                       >
                         <img
                           src={`${flag7}`}
@@ -751,15 +653,7 @@ export const AmazonSetting = () => {
                         />
                       </Box>
                       <Box
-                        sx={{
-                          marginTop: {
-                            xs: "5px",
-                            sm: "5px",
-                            md: "0px",
-                            lg: "0px",
-                            xl: "0px",
-                          },
-                        }}
+                        className={classes.flagsBoxContent}
                       >
                         <img
                           src={`${flag8}`}
@@ -778,17 +672,7 @@ export const AmazonSetting = () => {
                           id="demo-simple-select"
                           value={age}
                           onChange={handleChange}
-                          sx={{
-                            width: {
-                              xs: "100%",
-                              sm: "100%",
-                              md: "100%",
-                              lg: "25%",
-                              xl: "25%",
-                            },
-                            marginLeft: "auto",
-                            height: "40px",
-                          }}
+                         className={classes.selectBtnStyle}
                         >
                           <MenuItem>Account Details</MenuItem>
                           <MenuItem>Delete Account</MenuItem>

@@ -2,27 +2,42 @@ import React from "react";
 import { Grid, Typography, Box } from "@mui/material";
 import InfoIcon from "@mui/icons-material/Info";
 import Tooltip from "@mui/material/Tooltip";
+import { makeStyles } from "@material-ui/core";
+
+//styling
+const useStyles = makeStyles((theme) => ({
+  statBox: {
+    backgroundColor: "white",
+    borderRadius: "10px",
+    paddingTop: "30px",
+    paddingBottom: "30px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    marginTop: "20px",
+  },
+  infoiconStyle: {
+    color: "#7335FD",
+    marginLeft: "20px",
+    marginTop: "4px",
+  },
+  statInnerBox: {
+    display: "flex", marginTop: "10px"
+  }
+}));
 
 export default function StatsSection() {
+  const classes = useStyles();
   return (
     <>
       <Box sx={{ marginTop: "20px" }}>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
             <Box
-              sx={{
-                backgroundColor: "white",
-                borderRadius: "10px",
-                paddingTop: "30px",
-                paddingBottom: "30px",
-                paddingLeft: "10px",
-                paddingRight: "10px",
-                marginTop: "20px",
-              }}
+              className={classes.statBox}
             >
               <Grid container>
                 <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
-                  <Box sx={{ display: "flex", marginTop: "10px" }}>
+                  <Box className={classes.statInnerBox}>
                     <Typography
                       sx={{
                         fontSize: "20px",
@@ -37,11 +52,7 @@ export default function StatsSection() {
                       placement="top-start"
                     >
                       <InfoIcon
-                        sx={{
-                          color: "#7335FD",
-                          marginLeft: "20px",
-                          marginTop: "4px",
-                        }}
+                        className={classes.infoiconStyle}
                       />
                     </Tooltip>
                   </Box>
@@ -58,19 +69,11 @@ export default function StatsSection() {
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
             <Box
-              sx={{
-                backgroundColor: "white",
-                borderRadius: "10px",
-                paddingTop: "30px",
-                paddingBottom: "30px",
-                paddingLeft: "10px",
-                paddingRight: "10px",
-                marginTop: "20px",
-              }}
+              className={classes.statBox}
             >
               <Grid container>
                 <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
-                  <Box sx={{ display: "flex", marginTop: "10px" }}>
+                  <Box className={classes.statInnerBox}>
                     <Typography
                       sx={{
                         fontSize: "20px",
@@ -85,11 +88,7 @@ export default function StatsSection() {
                       placement="top-start"
                     >
                       <InfoIcon
-                        sx={{
-                          color: "#7335FD",
-                          marginLeft: "20px",
-                          marginTop: "4px",
-                        }}
+                        className={classes.infoiconStyle}
                       />
                     </Tooltip>
                   </Box>
@@ -106,19 +105,11 @@ export default function StatsSection() {
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
             <Box
-              sx={{
-                backgroundColor: "white",
-                borderRadius: "10px",
-                paddingTop: "30px",
-                paddingBottom: "30px",
-                paddingLeft: "10px",
-                paddingRight: "10px",
-                marginTop: "20px",
-              }}
+              className={classes.statBox}
             >
               <Grid container>
                 <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
-                  <Box sx={{ display: "flex", marginTop: "10px" }}>
+                  <Box className={classes.statInnerBox}>
                     <Typography
                       sx={{
                         fontSize: "20px",
@@ -129,16 +120,11 @@ export default function StatsSection() {
                       Total time saved
                     </Typography>
                     <Tooltip
-                      title="Amount of time you saved by automating 
-your form submission process"
+                      title="Amount of time you saved by automating your form submission process"
                       placement="top-start"
                     >
                       <InfoIcon
-                        sx={{
-                          color: "#7335FD",
-                          marginLeft: "20px",
-                          marginTop: "4px",
-                        }}
+                        className={classes.infoiconStyle}
                       />
                     </Tooltip>
                   </Box>
