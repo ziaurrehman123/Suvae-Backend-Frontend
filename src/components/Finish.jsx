@@ -4,8 +4,56 @@ import heroImage from "../assets/images/heroImage.png";
 import formBg from "../assets/images/formBg.png";
 import lightBg from "../assets/images/lightBg.png";
 import { useNavigate } from "react-router-dom";
+import { makeStyles } from "@material-ui/core";
+
+//styling
+const useStyles = makeStyles((theme) => ({
+  heroImage: {
+    backgroundImage: `url(${heroImage})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "100%",
+    width: "100%",
+    paddingTop: "20px",
+    paddingBottom: "20px",
+  },
+  heroImageStyle: {
+    width: "52%",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+    margin: "auto",
+  },
+  formBackground: {
+    backgroundImage: `url(${formBg})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    paddingTop: "250px",
+    paddingBottom: "250px",
+  },
+  formBackgroundStyle: {
+    backgroundImage: `url(${lightBg})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    paddingTop: "30px",
+    paddingBottom: "30px",
+    width: "75%",
+    [theme.breakpoints.down("sm")]: {
+      width: "90%",
+    },
+    borderRadius: "20px",
+    margin: "auto",
+  },
+  formContentDiv: {
+    width: "80%", margin: "auto"
+  }
+}));
 
 export default function FinishSection() {
+  const classes = useStyles();
   let navigate = useNavigate();
   const onLinkButtonClick = () => {
     let path = `/reward`;
@@ -19,71 +67,19 @@ export default function FinishSection() {
     <>
       <Box>
         <Box
-          sx={{
-            backgroundImage: `url(${heroImage})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            height: "100%",
-            width: "100%",
-            paddingTop: "20px",
-            paddingBottom: "20px",
-          }}
+          className={classes.heroImage}
         >
           <Box
-            sx={{
-              width: {
-                xs: "100%",
-                sm: "100%",
-                md: "80%",
-                lg: "52%",
-                xl: "52%",
-              },
-              margin: "auto",
-            }}
+            className={classes.heroImageStyle}
           >
             <Box
-              sx={{
-                backgroundImage: `url(${formBg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                paddingTop: "250px",
-                paddingBottom: "250px",
-              }}
+              className={classes.formBackground}
             >
               <Box
-                sx={{
-                  backgroundImage: `url(${lightBg})`,
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  paddingTop: "10px",
-                  paddingBottom: "10px",
-                  width: {
-                    xs: "90%",
-                    sm: "90%",
-                    md: "90%",
-                    lg: "75%",
-                    xl: "75%",
-                  },
-                  borderRadius: "20px",
-                  margin: "auto",
-                }}
+                className={classes.formBackgroundStyle}
               >
-                <Box sx={{ width: "80%", margin: "auto" }}>
-                  <Box
-                    sx={{
-                      width: {
-                        xs: "90%",
-                        sm: "90%",
-                        md: "80%",
-                        lg: "100%",
-                        xl: "100%",
-                      },
-                      margin: "auto",
-                    }}
-                  >
+                <Box className={classes.formContentDiv}>
+                  <Box>
                     <Typography
                       sx={{
                         textAlign: "center",

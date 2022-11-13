@@ -6,8 +6,56 @@ import lightBg from "../assets/images/lightBg.png";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import progress2 from "../assets/images/progress2.png";
 import { useNavigate } from "react-router-dom";
+import { makeStyles } from "@material-ui/core";
+
+//styling
+const useStyles = makeStyles((theme) => ({
+  heroImage: {
+    backgroundImage: `url(${heroImage})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "100%",
+    width: "100%",
+    paddingTop: "40px",
+    paddingBottom: "40px",
+  },
+  heroImageStyle: {
+    width: "48%",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+    margin: "auto",
+  },
+  formBackground: {
+    backgroundImage: `url(${formBg})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    paddingTop: "200px",
+    paddingBottom: "200px",
+  },
+  formBackgroundStyle: {
+    backgroundImage: `url(${lightBg})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    paddingTop: "30px",
+    paddingBottom: "30px",
+    width: "75%",
+    [theme.breakpoints.down("sm")]: {
+      width: "90%",
+    },
+    borderRadius: "20px",
+    margin: "auto",
+  },
+  formContentDiv: {
+    width: "80%", margin: "auto"
+  }
+}));
 
 export default function SuggestionSection() {
+  const classes = useStyles();
   let navigate = useNavigate();
   const onNextButtonClick = () => {
     let path = `/suggestion_link`;
@@ -16,72 +64,20 @@ export default function SuggestionSection() {
   return (
     <>
       <Box>
-        <Box
-          sx={{
-            backgroundImage: `url(${heroImage})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            height: "100%",
-            width: "100%",
-            paddingTop: "40px",
-            paddingBottom: "40px",
-          }}
+      <Box
+          className={classes.heroImage}
         >
           <Box
-            sx={{
-              width: {
-                xs: "100%",
-                sm: "100%",
-                md: "80%",
-                lg: "48%",
-                xl: "48%",
-              },
-              margin: "auto",
-            }}
+            className={classes.heroImageStyle}
           >
             <Box
-              sx={{
-                backgroundImage: `url(${formBg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                paddingTop: "200px",
-                paddingBottom: "200px",
-              }}
+              className={classes.formBackground}
             >
               <Box
-                sx={{
-                  backgroundImage: `url(${lightBg})`,
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  paddingTop: "30px",
-                  paddingBottom: "30px",
-                  width: {
-                    xs: "90%",
-                    sm: "90%",
-                    md: "90%",
-                    lg: "75%",
-                    xl: "75%",
-                  },
-                  borderRadius: "20px",
-                  margin: "auto",
-                }}
+                className={classes.formBackgroundStyle}
               >
-                <Box sx={{ width: "80%", margin: "auto" }}>
-                  <Box
-                    sx={{
-                      width: {
-                        xs: "90%",
-                        sm: "90%",
-                        md: "80%",
-                        lg: "90%",
-                        xl: "90%",
-                      },
-                      margin: "auto",
-                    }}
-                  >
+                <Box className={classes.formContentDiv}>
+                  <Box >
                     <Typography
                       sx={{
                         textAlign: "center",
