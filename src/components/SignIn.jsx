@@ -15,13 +15,61 @@ import FormControl from "@mui/material/FormControl";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Image from "../assets/images/bg.png";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import google from "../assets/images/google.png";
 import facebook from "../assets/images/facebook.png";
 import Navbar from "../components/Navbar";
+import { makeStyles } from "@material-ui/core";
+
+//styling
+const useStyles = makeStyles((theme) => ({
+  rightSectionBg: {
+    backgroundImage: `url(${Image})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "100%",
+    width: "100%",
+  },
+  leftSectionContent:{
+    width: "55%",
+    [theme.breakpoints.down("sm")]: {
+      width: "90%",
+    },
+    margin: "auto",
+    paddingTop: "124px",
+  },
+  googleBtn:{
+    display: "flex",
+    width: "40%",
+    margin: "auto",
+    paddingTop: "10px",
+    paddingBottom: "10px",
+  },
+  facebookBtn:{
+    display: "flex",
+    width: "40%",
+    margin: "auto",
+    paddingTop: "10px",
+    paddingBottom: "10px",
+  },
+  facebookBtnBox:{
+    width: "100%",
+    backgroundColor: "lightgray",
+    textAlign: "center",
+    borderRadius: "5px",
+  },
+  googleBtnBox:{
+    width: "100%",
+    backgroundColor: "lightgray",
+    textAlign: "center",
+    borderRadius: "5px",
+  },
+
+}));
 
 export default function SignInComponent() {
+  const classes = useStyles();
   const [values, setValues] = React.useState({
     password: "",
     showPassword: false,
@@ -49,17 +97,7 @@ export default function SignInComponent() {
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
             <Box
-              sx={{
-                width: {
-                  sm: "90%",
-                  xs: "90%",
-                  md: "70%",
-                  lg: "55%",
-                  xl: "55%",
-                },
-                margin: "auto",
-                paddingTop: "124px",
-              }}
+             className={classes.leftSectionContent}
             >
               <Typography sx={{ fontWeight: "800", fontSize: "40px" }}>
                 Welcome Back
@@ -122,8 +160,8 @@ export default function SignInComponent() {
                           {values.showPassword ? (
                             <VisibilityOff />
                           ) : (
-                            <Visibility />
-                          )}
+                              <Visibility />
+                            )}
                         </IconButton>
                       </InputAdornment>
                     }
@@ -187,21 +225,10 @@ export default function SignInComponent() {
                 <Grid container spacing={2}>
                   <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
                     <Box
-                      sx={{
-                        width: "100%",
-                        backgroundColor: "#EFF2FC",
-                        textAlign: "center",
-                        borderRadius: "5px",
-                      }}
+                   className={classes.facebookBtnBox}
                     >
                       <Box
-                        sx={{
-                          display: "flex",
-                          width: "40%",
-                          margin: "auto",
-                          paddingTop: "10px",
-                          paddingBottom: "10px",
-                        }}
+                       className={classes.googleBtn}
                       >
                         <img src={`${google}`} height="20px" />
                         <Typography
@@ -214,21 +241,10 @@ export default function SignInComponent() {
                   </Grid>
                   <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
                     <Box
-                      sx={{
-                        width: "100%",
-                        backgroundColor: "#EFF2FC",
-                        textAlign: "center",
-                        borderRadius: "5px",
-                      }}
+                     className={classes.facebookBtnBox}
                     >
                       <Box
-                        sx={{
-                          display: "flex",
-                          width: "50%",
-                          margin: "auto",
-                          paddingTop: "10px",
-                          paddingBottom: "10px",
-                        }}
+                         className={classes.facebookBtn}
                       >
                         <img src={`${facebook}`} height="20px" />
                         <Typography
@@ -284,14 +300,7 @@ export default function SignInComponent() {
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
             <Box
-              sx={{
-                backgroundImage: `url(${Image})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: "100%",
-                width: "100%",
-              }}
+              className={classes.rightSectionBg}
             ></Box>
           </Grid>
         </Grid>
