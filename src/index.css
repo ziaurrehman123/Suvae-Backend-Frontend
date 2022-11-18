@@ -33,7 +33,7 @@ canvas {
 }
 .MuiTabs-flexContainer {
   display: flex;
-  width: 51%;
+  width: 63%;
   margin: auto;
 }
 .PrivateTabIndicator-colorSecondary-5 {
@@ -65,3 +65,34 @@ canvas {
   width: auto !important;
   overflow-x: auto;
 }
+._xsi02 img {
+  width: 700px !important;
+  height: 400px !important;
+  object-fit: cover;
+  overflow: hidden;
+}
+._xsi02._1uQwZ {
+  opacity: 0.6;
+  z-index: 2;
+  transform: scale(0.9) translateX(94px) !important;
+}
+
+
+._1Lxpd span {
+    z-index: 1000;
+    cursor: pointer;
+    position: relative;
+    left: 222px;
+    top: 351px;
+    font-size: 42px;
+}
+/* ._215Bn {
+  width: 699px !important;
+  height: 394px !important;
+  margin: 20px;
+}
+._2ocTZ {
+  color: cornflowerblue;
+  font-size: 2em;
+  padding: 0px !important;
+} */

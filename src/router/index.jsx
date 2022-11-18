@@ -18,6 +18,7 @@ import SuggestionLocation from "../pages/SuggestionLocation";
 import OfferUnavailable from "../pages/OfferUnavailable";
 import AlreadyUsedOrderNumber from "../pages/AlreadyUsedOrderNumber";
 import SystemUpdate from "../pages/SystemUpdate";
+import PackageInsertGallery from "../pages/PackageGallery";
 
 const Routers = () => {
   return (
@@ -44,6 +45,7 @@ const Routers = () => {
           element={<AlreadyUsedOrderNumber />}
         />
         <Route path="/system_update" element={<SystemUpdate />} />
+        <Route path="/dashboard" element={<PackageInsertGallery />} />
       </Routes>
     </>
   );

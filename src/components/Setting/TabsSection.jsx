@@ -9,6 +9,7 @@ import AccountSection from "./AccountSection";
 import BillingSection from "./BillingSection";
 import BillingHistory from "./BillingHistory";
 import { AmazonSetting } from "./AmazonSetting";
+import Misc from "../MiscComponent";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -99,16 +100,22 @@ export default function TabsSection() {
           {...a11yProps("two")}
           className={classes.style}
         />
-        <Tab
+            <Tab
           value="three"
-          label="Billing"
+          label="Misc"
           {...a11yProps("three")}
           className={classes.style}
         />
         <Tab
           value="four"
+          label="Billing"
+          {...a11yProps("four")}
+          className={classes.style}
+        />
+        <Tab
+          value="five"
           label="Billing History"
-          {...a11yProps("three")}
+          {...a11yProps("five")}
           className={classes.style}
         />
       </Tabs>
@@ -120,9 +127,12 @@ export default function TabsSection() {
         <AmazonSetting />
       </TabPanel>
       <TabPanel value={value} index="three">
-        <BillingSection />
+        <Misc />
       </TabPanel>
       <TabPanel value={value} index="four">
+        <BillingSection />
+      </TabPanel>
+      <TabPanel value={value} index="five">
         <BillingHistory />
       </TabPanel>
     </div>

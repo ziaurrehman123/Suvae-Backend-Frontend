@@ -3,7 +3,6 @@ import { Box, Typography, Grid, TextField } from "@mui/material";
 
 export default function AccountDetials() {
   const [select, setSelect] = useState("SE");
-  const onSelect = (code) => setSelect(code);
   console.log("SELECT", select);
   return (
     <Box sx={{ boxShadow: 1, marginTop: "30px", padding: "15px" }}>
