@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
   mainBox: {
     border: "1px solid black",
-    
+
   },
   buttonBox: {
     textAlign: "center",
@@ -109,7 +109,7 @@ export default function PackageGallery() {
                   <Box className={classes.mainBox}>
                     <Box sx={{ padding: "20px" }}>
                       <Typography sx={{ fontSize: "28px", fontWeight: "600" }}>
-                      EasyRebate.co
+                        EasyRebate.co
                       </Typography>
                       <Typography
                         sx={{
@@ -118,19 +118,19 @@ export default function PackageGallery() {
                           marginTop: "10px",
                         }}
                       >
-                    Include a QR Code or URL on your package inserts using the link above to direct your customer's to our form.
+                        Include a QR Code or URL on your package inserts using the link above to direct your customer's to our form.
                       </Typography>
                       <Box>
                         <ul>
                           <li
                             style={{ marginBottom: "10px", fontSize: "17px" }}
                           >
-                           Form submissions are viewable from your dashboard.
+                            Form submissions are viewable from your dashboard.
                           </li>
-                        
+
                         </ul>
                       </Box>
-                      <Box className={classes.buttonBox} sx={{marginTop:"45px"}}>
+                      <Box className={classes.buttonBox} sx={{ marginTop: "45px" }}>
                         <Button
                           variant="outlined"
                           sx={{
