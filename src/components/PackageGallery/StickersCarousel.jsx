@@ -117,14 +117,14 @@ const StickerCarousel = () => {
           size="small"
           onClick={() => ref.current?.goBack()}
         >
-          <KeyboardArrowLeftIcon style={{ fontSize: 30 }} />
+          <KeyboardArrowLeftIcon style={{ fontSize: 30, position:"relative", left:"40px" }} />
         </Fab>
         <Fab
           className="card-button right"
           size="small"
           onClick={() => ref.current?.goNext()}
         >
-          <KeyboardArrowRightIcon style={{ fontSize: 30 }} />
+          <KeyboardArrowRightIcon style={{ fontSize: 30, position:"relative", right:"150px"}} />
         </Fab>
       </div>
       <Pagination
