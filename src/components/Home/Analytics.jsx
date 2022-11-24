@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { Box, Grid, Typography, } from "@mui/material";
 import { makeStyles } from "@material-ui/core";
 import {
@@ -12,22 +12,18 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import faker from "faker";
-import MenuItem from "@mui/material/MenuItem";
-import { Menu, Button } from "@mui/material";
-import IconButton from "@mui/material/IconButton";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import Select from "@mui/material/Select";
-import TextField from "@mui/material/TextField";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { addDays } from 'date-fns';
+import 'react-date-range/dist/styles.css'; // main css file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+import { DateRangePicker } from 'react-date-range';
 import dayjs from "dayjs";
+
 //styling
 const useStyles = makeStyles((theme) => ({
   mainComponent: {
     backgroundColor: "white",
     marginTop: "60px",
-    height: "550px",
+    height: "872px",
     borderRadius: "20px",
   },
   analyticsComponent: {
@@ -104,6 +100,13 @@ export const data = {
 };
 
 export default function Analytics() {
+  const [state, setState] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: 'selection'
+    }
+  ]);
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const handleMenu = (event) => {
@@ -126,146 +129,25 @@ export default function Analytics() {
       >
         <Box className={classes.analyticsComponent}>
           <Grid container spacing={3}>
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid item xs={12} sm={12} md={6} lg={3} xl={3}>
               <Typography sx={{ fontSize: "22px", fontWeight: "500" }}>
                 Submission Analytics
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid item xs={12} sm={6} md={9} lg={9} xl={9}>
               <Box sx={{ textAlign: "right" }}>
                 <Box>
-                  <Box
-                    className={classes.dateRangeInput}
-                  >
-                    <div>
-                      <IconButton
-                        size="large"
-                        aria-label="account of current user"
-                        aria-controls="menu-appbar"
-                        aria-haspopup="true"
-                        onClick={handleMenu}
-                        color="inherit"
-                      >
-                        <Typography
-                          sx={{ fontSize: "15px", fontWeight: "700" }}
-                        >
-                          Last 30 days
-                        </Typography>
-                        <ArrowDropDownIcon sx={{ marginLeft: "60px" }} />
-                      </IconButton>
-                      <Menu
-                        sx={{ marginTop: "55px" }}
-                        id="menu-appbar"
-                        anchorEl={anchorEl}
-                        anchorOrigin={{
-                          vertical: "top",
-                          horizontal: "right",
-                        }}
-                        keepMounted
-                        transformOrigin={{
-                          vertical: "top",
-                          horizontal: "right",
-                        }}
-                        open={Boolean(anchorEl)}
-                        onClose={handleClose}
-                      >
-                        <MenuItem onClick={handleClose}>
-                          <Box>
-                            <Typography
-                              sx={{ fontSize: "12px", fontWeight: "700" }}
-                            >
-                              Date Range
-                            </Typography>
-                            <Select
-                              fullWidth
-                              value={age}
-                              onChange={handleChange}
-                              displayEmpty
-                              inputProps={{ "aria-label": "Without label" }}
-                            >
-                              <MenuItem value="">
-                                <em>This Week</em>
-                              </MenuItem>
-                              <MenuItem value={10}>Yesterday</MenuItem>
-                              <MenuItem value={20}>Last 7 Days</MenuItem>
-                              <MenuItem value={30}>Last Week</MenuItem>
-                              <MenuItem value={30}>Last 14 Days</MenuItem>
-                              <MenuItem value={30}>Last 30 Days</MenuItem>
-                            </Select>
-                            <Box>
-                              <Grid container spacing={3}>
-                                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
-                                  <Box className={classes.dateInput}>
-                                    <Typography
-                                      sx={{
-                                        fontSize: "12px",
-                                        fontWeight: "700",
-
-                                      }}
-                                    >
-                                      Start Date
-                                  </Typography>
-                                    <LocalizationProvider
-                                      dateAdapter={AdapterDayjs}
-                                    >
-                                      <DatePicker
-                                        value={value}
-                                        onChange={(newValue) => {
-                                          setValue(newValue);
-                                        }}
-                                        renderInput={(params) => (
-                                          <TextField {...params} />
-                                        )}
-                                      />
-                                    </LocalizationProvider>
-                                  </Box>
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
-                                  <Box className={classes.dateInput}>
-                                    <Typography
-                                      sx={{
-                                        fontSize: "12px",
-                                        fontWeight: "700",
-                                      }}
-                                    >
-                                      End Date
-                                  </Typography>
-                                    <LocalizationProvider
-                                      dateAdapter={AdapterDayjs}
-                                    >
-                                      <DatePicker
-                                        value={value}
-                                        onChange={(newValue) => {
-                                          setValue(newValue);
-                                        }}
-                                        renderInput={(params) => (
-                                          <TextField {...params} />
-                                        )}
-                                      />
-                                    </LocalizationProvider>
-                                  </Box>
-                                </Grid>
-                              </Grid>
-                            </Box>
-                            <Box className={classes.btnsBox}>
-                              <Button
-                                variant="outlined"
-                                className={classes.cancelBtn}
-                              >
-                                Cancel
-                              </Button>
-                              <Button
-                                variant="contained"
-                                className={classes.applyBtn}
-                              >
-                                Apply
-                              </Button>
-                            </Box>
-                          </Box>
-                        </MenuItem>
-                      </Menu>
-                    </div>
-                  </Box>
+                 
+             
+                      <DateRangePicker
+  onChange={item => setState([item.selection])}
+  showSelectionPreview={true}
+  moveRangeOnFirstSelection={false}
+  months={2}
+  ranges={state}
+  direction="horizontal"
+/>
+                    
                 </Box>
               </Box>
             </Grid>
