@@ -86,13 +86,8 @@ canvas {
     top: 351px;
     font-size: 42px;
 }
-/* ._215Bn {
-  width: 699px !important;
-  height: 394px !important;
-  margin: 20px;
+div#menu-appbar1 {
+  width: 48%;
+  margin-right: auto;
+  margin-top:40px;
 }
-._2ocTZ {
-  color: cornflowerblue;
-  font-size: 2em;
-  padding: 0px !important;
-} */

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Typography, Box, Button } from "@mui/material";
 import earningBtn from "../assets/images/earningBtn.png";
 import notificationBtn from "../assets/images/notification.png";
@@ -135,7 +135,7 @@ export default function Header() {
                     <ArrowDropDownIcon />
                   </IconButton>
                   <Menu
-                    id="menu-appbar"
+                    id="menu-appbar1"
                     anchorEl={anchorEl}
                     anchorOrigin={{
                       vertical: "top",
@@ -148,9 +148,11 @@ export default function Header() {
                     }}
                     open={Boolean(anchorEl)}
                     onClose={handleClose}
+                    className="logoutMenuu"
                   >
-                    <MenuItem onClick={handleClose}>Profile</MenuItem>
-                    <MenuItem onClick={handleClose}>My account</MenuItem>
+                    <MenuItem onClick={handleClose}>Help</MenuItem>
+                    <MenuItem onClick={handleClose}>Setting</MenuItem>
+                    <MenuItem onClick={handleClose}>Logout</MenuItem>
                   </Menu>
                 </div>
               </Box>
