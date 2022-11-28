@@ -16,7 +16,7 @@ export default function StepsSection() {
     <>
       <Box sx={{ width: "100%", margin: "auto" }}>
         <Typography
-          sx={{ fontSize: "36px", fontWeight: "700", marginTop: "20px" }}
+          sx={{ fontSize: "36px", fontWeight: "700", marginTop: "20px", fontFamily:"Poppins" }}
         >
           Dashboard
         </Typography>
@@ -44,9 +44,10 @@ export default function StepsSection() {
                         />
                         <Typography
                           sx={{
-                            fontSize: "22px",
+                            fontSize: "20px",
                             fontWeight: "500",
                             color: "white",
+                            fontFamily:"Poppins"
                           }}
                         >
                           Confirm Email
@@ -85,9 +86,10 @@ export default function StepsSection() {
                         />
                         <Typography
                           sx={{
-                            fontSize: "22px",
+                            fontSize: "20px",
                             fontWeight: "500",
                             color: "white",
+                            fontFamily:"Poppins"
                           }}
                         >
                           Add Marketplace
@@ -126,9 +128,10 @@ export default function StepsSection() {
                         />
                         <Typography
                           sx={{
-                            fontSize: "22px",
+                            fontSize: "20px",
                             fontWeight: "500",
                             color: "white",
+                            fontFamily:"Poppins"
                           }}
                         >
                           Create Package Insert
@@ -139,6 +142,7 @@ export default function StepsSection() {
                             fontWeight: "600",
                             color: "#7569C8",
                             marginTop: "5px",
+                            fontFamily:"Poppins"
                           }}
                         >
                           Set Up
@@ -168,9 +172,10 @@ export default function StepsSection() {
                       />
                       <Typography
                         sx={{
-                          fontSize: "22px",
+                          fontSize: "20px",
                           fontWeight: "500",
                           color: "white",
+                          fontFamily:"Poppins"
                         }}
                       >
                         Upload Promotional Codes
@@ -181,6 +186,7 @@ export default function StepsSection() {
                           fontWeight: "600",
                           color: "#7569C8",
                           marginTop: "5px",
+                          fontFamily:"Poppins"
                         }}
                       >
                         <Box

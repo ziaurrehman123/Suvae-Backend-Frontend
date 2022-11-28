@@ -43,6 +43,7 @@ export default function StatsSection() {
                         fontSize: "20px",
                         fontWeight: "600",
                         color: "#8B8FA3",
+                        fontFamily:"Poppins"
                       }}
                     >
                       Submissions
@@ -79,6 +80,7 @@ export default function StatsSection() {
                         fontSize: "20px",
                         fontWeight: "600",
                         color: "#8B8FA3",
+                        fontFamily:"Poppins"
                       }}
                     >
                       Reviews Acquired
@@ -115,6 +117,7 @@ export default function StatsSection() {
                         fontSize: "20px",
                         fontWeight: "600",
                         color: "#8B8FA3",
+                        fontFamily:"Poppins"
                       }}
                     >
                       Total time saved

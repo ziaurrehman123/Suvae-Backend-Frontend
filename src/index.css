@@ -91,3 +91,25 @@ div#menu-appbar1 {
   margin-right: auto;
   margin-top:40px;
 }
+input[type="text"] {
+  padding: 11px;
+  font-weight: 600;
+}
+.daterangepicker .ranges li.active {
+  background-color: #7335FD;
+  color: #fff;
+}
+.daterangepicker .drp-buttons .btn {
+  margin-left: 8px;
+  font-size: 14px;
+  background-color: #7335FD;
+  font-weight: bold;
+  padding: 7px 15px;
+  color: white;
+  border: none;
+}
+.daterangepicker td.active, .daterangepicker td.active:hover {
+  background-color: #7335FD;
+  border-color: transparent;
+  color: #fff;
+}
