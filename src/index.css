@@ -113,3 +113,41 @@ input[type="text"] {
   border-color: transparent;
   color: #fff;
 }
+span.MuiStepLabel-label.css-1hv8oq8-MuiStepLabel-label {
+  font-size: 21px;
+}
+.css-1vyamtt-MuiStepLabel-labelContainer {
+  width: 100%;
+  color: white !important;
+}
+.css-1hv8oq8-MuiStepLabel-label.Mui-active {
+  color: white !important;
+  font-weight: 500;
+}
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+  color: #7335FD !important;
+}
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
+  color: #8AD1C7 !important;
+}
+.css-a1sg1c-MuiButtonBase-root-MuiButton-root.Mui-disabled {
+  color: white !important;
+}
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgba(25, 118, 210, 0.04);
+  color: white !important;
+}
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+ color: #8AD1C7 !important;
+}
+.css-1hv8oq8-MuiStepLabel-label.Mui-completed {
+  color: white !important;
+  font-weight: 500;
+}
+
+.css-a1sg1c-MuiButtonBase-root-MuiButton-root {
+ color: #8AD1C7 !important;
+
+}

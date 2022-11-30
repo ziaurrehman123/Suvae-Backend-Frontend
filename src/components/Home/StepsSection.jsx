@@ -1,22 +1,75 @@
 import React from "react";
-import { Typography, Box, Grid } from "@mui/material";
-import step1 from "../../assets/images/step1.png";
-import step2 from "../../assets/images/step2.png";
-import step3 from "../../assets/images/step3.png";
-import step4 from "../../assets/images/step4.png";
-import completedStep from "../../assets/images/completedStep.png";
-import arrow from "../../assets/images/arrow.png";
+import { Typography, Box, Button } from "@mui/material";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepButton from "@mui/material/StepButton";
+
+const steps = [
+  "Confirm Email",
+  "Add Marketplace",
+  "Create Package Insert",
+  "Upload Promotional Codes",
+];
 
 export default function StepsSection() {
   const [showSteps, SetShowSteps] = React.useState(true);
   const onClickFinishSetup = () => {
     SetShowSteps(false);
   };
+  const [activeStep, setActiveStep] = React.useState(0);
+  const [completed, setCompleted] = React.useState({});
+
+  const totalSteps = () => {
+    return steps.length;
+  };
+
+  const completedSteps = () => {
+    return Object.keys(completed).length;
+  };
+
+  const isLastStep = () => {
+    return activeStep === totalSteps() - 1;
+  };
+
+  const allStepsCompleted = () => {
+    return completedSteps() === totalSteps();
+  };
+
+  const handleNext = () => {
+    const newActiveStep =
+      isLastStep() && !allStepsCompleted()
+        ? // It's the last step, but not all steps have been completed,
+          // find the first step that has been completed
+          steps.findIndex((step, i) => !(i in completed))
+        : activeStep + 1;
+    setActiveStep(newActiveStep);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleStep = (step) => () => {
+    setActiveStep(step);
+  };
+
+  const handleComplete = () => {
+    const newCompleted = completed;
+    newCompleted[activeStep] = true;
+    setCompleted(newCompleted);
+    handleNext();
+  };
+
   return (
     <>
       <Box sx={{ width: "100%", margin: "auto" }}>
         <Typography
-          sx={{ fontSize: "36px", fontWeight: "700", marginTop: "20px", fontFamily:"Poppins" }}
+          sx={{
+            fontSize: "36px",
+            fontWeight: "700",
+            marginTop: "20px",
+            fontFamily: "Poppins",
+          }}
         >
           Dashboard
         </Typography>
@@ -33,172 +86,61 @@ export default function StepsSection() {
           >
             <Box>
               <Box sx={{ width: "90%", margin: "auto" }}>
-                <Grid container spacing={3}>
-                  <Grid item xs={12} sm={6} md={6} lg={3} xl={3}>
-                    <Box sx={{ display: "flex" }}>
-                      <Box sx={{ textAlign: "center" }}>
+                <Box sx={{ width: "100%", paddingTop: "40px" }}>
+                  <Stepper nonLinear activeStep={activeStep}>
+                    {steps.map((label, index) => (
+                      <Step key={label} completed={completed[index]}>
+                        <StepButton color="inherit" onClick={handleStep(index)}>
+                          {label}
+                        </StepButton>
+                      </Step>
+                    ))}
+                  </Stepper>
+                  <div>
+                    {allStepsCompleted() ? (
+                      <React.Fragment>
                         <Box
-                          component="img"
-                          alt="Your logo."
-                          src={step1}
-                        />
-                        <Typography
-                          sx={{
-                            fontSize: "20px",
-                            fontWeight: "500",
-                            color: "white",
-                            fontFamily:"Poppins"
-                          }}
+                          sx={{ display: "flex", flexDirection: "row", pt: 2 }}
                         >
-                          Confirm Email
-                        </Typography>
-                        <Box
-                          component="img"
-                          sx={{
-                            marginTop: "5px",
-                          }}
-                          alt="Your logo."
-                          src={completedStep}
-                        />
-                      </Box>
-                      <Box>
-                        <Box
-                          component="img"
-                          sx={{
-                            height: "30px",
-                            width: "60px",
-                            marginLeft: "20px",
-                            marginTop: "45px",
-                          }}
-                          alt="Your logo."
-                          src={arrow}
-                        />
-                      </Box>
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} sm={6} md={6} lg={3} xl={3}>
-                    <Box sx={{ display: "flex" }}>
-                      <Box sx={{ textAlign: "center" }}>
-                        <Box
-                          component="img"
-                          alt="Your logo."
-                          src={step2}
-                        />
-                        <Typography
-                          sx={{
-                            fontSize: "20px",
-                            fontWeight: "500",
-                            color: "white",
-                            fontFamily:"Poppins"
-                          }}
-                        >
-                          Add Marketplace
-                        </Typography>
-                        <Box
-                          component="img"
-                          sx={{
-                            marginTop: "5px",
-                          }}
-                          alt="Your logo."
-                          src={completedStep}
-                        />
-                      </Box>
-                      <Box>
-                        <Box
-                          component="img"
-                          sx={{
-                            height: "30px",
-                            width: "60px",
-                            marginLeft: "20px",
-                            marginTop: "45px",
-                          }}
-                          alt="Your logo."
-                          src={arrow}
-                        />
-                      </Box>
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} sm={6} md={6} lg={3} xl={3}>
-                    <Box sx={{ display: "flex" }}>
-                      <Box sx={{ textAlign: "center" }}>
-                        <Box
-                          component="img"
-                          alt="Your logo."
-                          src={step3}
-                        />
-                        <Typography
-                          sx={{
-                            fontSize: "20px",
-                            fontWeight: "500",
-                            color: "white",
-                            fontFamily:"Poppins"
-                          }}
-                        >
-                          Create Package Insert
-                        </Typography>
-                        <Typography
-                          sx={{
-                            fontSize: "18px",
-                            fontWeight: "600",
-                            color: "#7569C8",
-                            marginTop: "5px",
-                            fontFamily:"Poppins"
-                          }}
-                        >
-                          Set Up
-                        </Typography>
-                      </Box>
-                      <Box>
-                        <Box
-                          component="img"
-                          sx={{
-                            height: "30px",
-                            width: "60px",
-                            marginLeft: "20px",
-                            marginTop: "45px",
-                          }}
-                          alt="Your logo."
-                          src={arrow}
-                        />
-                      </Box>
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} sm={6} md={6} lg={3} xl={3}>
-                    <Box sx={{ textAlign: "center" }}>
-                      <Box
-                        component="img"
-                        alt="Your logo."
-                        src={step4}
-                      />
-                      <Typography
-                        sx={{
-                          fontSize: "20px",
-                          fontWeight: "500",
-                          color: "white",
-                          fontFamily:"Poppins"
-                        }}
-                      >
-                        Upload Promotional Codes
-                      </Typography>
-                      <Typography
-                        sx={{
-                          fontSize: "18px",
-                          fontWeight: "600",
-                          color: "#7569C8",
-                          marginTop: "5px",
-                          fontFamily:"Poppins"
-                        }}
-                      >
-                        <Box
-                          onClick={onClickFinishSetup}
-                          sx={{ cursor: "pointer" }}
-                        >
-                          Set Up
+                          <Box sx={{ flex: "1 1 auto" }} />
+                          <Button onClick={onClickFinishSetup}>Done</Button>
                         </Box>
-                      </Typography>
-                    </Box>
-                  </Grid>
-                </Grid>
+                      </React.Fragment>
+                    ) : (
+                      <React.Fragment>
+                        <Box
+                          sx={{ display: "flex", flexDirection: "row", pt: 2 }}
+                        >
+                          <Button
+                            color="inherit"
+                            disabled={activeStep === 0}
+                            onClick={handleBack}
+                            sx={{ mr: 1 }}
+                          >
+                            Back
+                          </Button>
+                          <Box sx={{ flex: "1 1 auto" }} />
+
+                          {activeStep !== steps.length &&
+                            (completed[activeStep] ? (
+                              <Typography
+                                variant="caption"
+                                sx={{ display: "inline-block" }}
+                              >
+                                Step {activeStep + 1} already completed
+                              </Typography>
+                            ) : (
+                              <Button onClick={handleComplete}>
+                                {completedSteps() === totalSteps() - 1
+                                  ? "Finish"
+                                  : "Complete Step"}
+                              </Button>
+                            ))}
+                        </Box>
+                      </React.Fragment>
+                    )}
+                  </div>
+                </Box>
               </Box>
             </Box>
           </Box>
