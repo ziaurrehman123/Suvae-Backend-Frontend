@@ -86,7 +86,7 @@ export default function StepsSection() {
           >
             <Box>
               <Box sx={{ width: "90%", margin: "auto" }}>
-                <Box sx={{ width: "100%", paddingTop: "40px" }}>
+                <Box sx={{ width: "100%", paddingTop: "60px" }}>
                   <Stepper nonLinear activeStep={activeStep}>
                     {steps.map((label, index) => (
                       <Step key={label} completed={completed[index]}>
