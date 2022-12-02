@@ -197,7 +197,7 @@ export default function Analytics() {
     let temp_datas = [];
     if (duration < 8) {
       // display date
-      for (let i = 0; i < duration; i++) {
+      for (let i = 0; i <= duration; i++) {
         const label = dayjs(startDate).add(i, "day").format(dateFormat);
         temp_labels.push(label)
       }
@@ -247,7 +247,7 @@ export default function Analytics() {
 
     temp_datas = [
       {
-        name: "UnVerified",
+        name: "Unverified",
         data: temp_labels.map(() => faker.datatype.number({ min: 0, max: 50 })),
       },
       {
