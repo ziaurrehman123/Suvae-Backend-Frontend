@@ -163,7 +163,7 @@ export default function Analytics() {
 
   const [datas, setDatas] = useState([
     {
-      name: "Unverified",
+      name: "UnVerified",
       data: months.map(() => faker.datatype.number({ min: 0, max: 50 })),
     },
     {
