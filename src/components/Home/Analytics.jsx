@@ -153,7 +153,7 @@ export default function Analytics() {
       },
       markers:{},
       colors:[
-        '#FFA500', '#A020F0'
+        '#FDA700', '#7335FD'
       ],
       fill: {
         opacity: 1
@@ -163,11 +163,11 @@ export default function Analytics() {
 
   const [datas, setDatas] = useState([
     {
-      name: "Dataset 1",
+      name: "Unverified",
       data: months.map(() => faker.datatype.number({ min: 0, max: 50 })),
     },
     {
-      name: "Dataset 2",
+      name: "Verified",
       data: months.map(() => faker.datatype.number({ min: 0, max: 50 })),
     }
   ])
@@ -202,7 +202,7 @@ export default function Analytics() {
         temp_labels.push(label)
       }
       temp_options.xaxis = {
-        type: "datetime",
+        type: "category",
         categories: temp_labels
       }
     }
@@ -247,11 +247,11 @@ export default function Analytics() {
 
     temp_datas = [
       {
-        name: "Dataset 1",
+        name: "UnVerified",
         data: temp_labels.map(() => faker.datatype.number({ min: 0, max: 50 })),
       },
       {
-        name: "Dataset 2",
+        name: "Verified",
         data: temp_labels.map(() => faker.datatype.number({ min: 0, max: 50 })),
       }
     ]
