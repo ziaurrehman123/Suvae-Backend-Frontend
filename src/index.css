@@ -151,3 +151,23 @@ span.MuiStepLabel-label.css-1hv8oq8-MuiStepLabel-label {
  color: #8AD1C7 !important;
 
 }
+.asidebar1:hover{ 
+  transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+.asidebarBtn:hover{
+  background-color: #5541D8;
+  color:white
+}
+
+.css-v2ofb9-MuiSvgIcon-root {
+
+  color: #8B8FA3 !important ;
+
+}
+
+.css-1j693yp-MuiSvgIcon-root {
+  color: #8B8FA3 !important ;
+
+}

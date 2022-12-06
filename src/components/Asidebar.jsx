@@ -1,29 +1,34 @@
 import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
-import { Box, Link } from "@mui/material";
+import { Box, Link, Button } from "@mui/material";
 import logo from "../assets/images/logo.png";
 import home from "../assets/images/home.png";
 import products from "../assets/images/products.png";
 import dashboard from "../assets/images/dashboard.png";
 import setting from "../assets/images/setting.png";
 import { useLocation } from "react-router-dom";
+import OtherHousesOutlinedIcon from '@mui/icons-material/OtherHousesOutlined';
+import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
+import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 
 export default function Asidebar() {
   let location = useLocation();
   const [showAsidebar1, setShowAsidebar1] = useState(false);
   const [showAsidebar2, setShowAsidebar2] = useState(true);
   const openFirstAsidebar = () => {
-    setShowAsidebar1(false);
+    setShowAsidebar1(true);
     setShowAsidebar2(true);
   };
   const openSecondAsidebar = () => {
     setShowAsidebar1(true);
-    setShowAsidebar2(false);
+    setShowAsidebar2(true);
   };
   return (
     <>
       {showAsidebar1 ? (
         <Box
+        className="asidebar1"
           sx={{
             width: "230px",
             backgroundColor: "#444444",
@@ -53,11 +58,13 @@ export default function Asidebar() {
             </Typography>
           </Box>
           <Box sx={{ marginTop: "10px" }}>
+       
             <Link href="/" sx={{ color: "white", textDecoration: "none" }}>
               <Box
+              className="asidebarBtn"
                 sx={{
                   display: "flex",
-                  paddingBottom: "7px",
+                  paddingBottom: "12px",
                   paddingTop: "4px",
                   width: "90%",
                   margin: "auto",
@@ -65,20 +72,12 @@ export default function Asidebar() {
                 }}
                 backgroundColor={location.pathname === "/" ? "#5541D8" : ""}
               >
-                <Box
-                  component="img"
-                  sx={{
-                    height: "35px",
-                    width: "35px",
-                    marginLeft: "20px",
-                    marginTop: "5px",
-                  }}
-                  alt="Your logo."
-                  src={home}
-                />
+                <OtherHousesOutlinedIcon sx={{marginLeft: "20px",
+                    marginTop: "5px",fontSize:"32px", }} color={location.pathname === "/" ? "white" : "secondary"}/>
                 <Typography
+                className="asidebarBtnText"
                   sx={{
-                    color: "white",
+                   
                     fontSize: "18px",
                     fontWeight: "600",
                     marginTop: "10px",
@@ -97,10 +96,11 @@ export default function Asidebar() {
               sx={{ color: "white", textDecoration: "none" }}
             >
               <Box
+               className="asidebarBtn"
                 sx={{
                   display: "flex",
-                  paddingBottom: "7px",
-                  paddingTop: "4px",
+                  paddingBottom: "11px",
+                  paddingTop: "5px",
                   width: "90%",
                   margin: "auto",
                   borderRadius: "10px",
@@ -109,18 +109,10 @@ export default function Asidebar() {
                   location.pathname === "/products" ? "#5541D8" : ""
                 }
               >
-                <Box
-                  component="img"
-                  sx={{
-                    height: "35px",
-                    width: "35px",
-                    marginLeft: "20px",
-                    marginTop: "5px",
-                  }}
-                  alt="Your logo."
-                  src={products}
-                />
+                <Inventory2OutlinedIcon className="btnIcon" sx={{marginLeft: "20px",
+                    marginTop: "5px",fontSize:"32px"}}   color={location.pathname === "/products" ? "white" : "secondary"} />
                 <Typography
+                className="asidebarBtnText"
                   sx={{
                     fontSize: "18px",
                     fontWeight: "600",
@@ -142,6 +134,7 @@ export default function Asidebar() {
               sx={{ color: "white", textDecoration: "none" }}
             >
               <Box
+              className="asidebarBtn"
                 sx={{
                   display: "flex",
                   paddingBottom: "7px",
@@ -154,22 +147,16 @@ export default function Asidebar() {
                   location.pathname === "/dashboard" ? "#5541D8" : ""
                 }
               >
-                <Box
-                  component="img"
-                  sx={{
-                    height: "35px",
-                    width: "35px",
-                    marginLeft: "20px",
-                    marginTop: "5px",
-                  }}
-                  alt="Your logo."
-                  src={dashboard}
-                />
+                <DashboardOutlinedIcon className="btnIcon" sx={{marginLeft: "20px",
+                    marginTop: "5px",fontSize:"36px",}} color={
+                      location.pathname === "/dashboard" ? "white" : "secondary"
+                    } />
                 <Typography
+                className="asidebarBtnText"
                   sx={{
-                    fontSize: "18px",
+                    fontSize: "16px",
                     fontWeight: "600",
-                    marginTop: "0px",
+                    marginTop: "2px",
                     marginLeft: "20px",
                   }}
                   color={
@@ -187,10 +174,11 @@ export default function Asidebar() {
               sx={{ color: "white", textDecoration: "none" }}
             >
               <Box
+              className="asidebarBtn"
                 sx={{
                   display: "flex",
-                  paddingBottom: "7px",
-                  paddingTop: "4px",
+                  paddingBottom: "11px",
+                  paddingTop: "5px",
                   width: "90%",
                   margin: "auto",
                   borderRadius: "10px",
@@ -199,22 +187,14 @@ export default function Asidebar() {
                   location.pathname === "/setting" ? "#5541D8" : ""
                 }
               >
-                <Box
-                  component="img"
-                  sx={{
-                    height: "35px",
-                    width: "35px",
-                    marginLeft: "20px",
-                    marginTop: "5px",
-                  }}
-                  alt="Your logo."
-                  src={setting}
-                />
+                <SettingsOutlinedIcon className="btnIcon" className="btnIcon" sx={{marginLeft: "20px",
+                    marginTop: "5px",fontSize:"32px"}}color={location.pathname === "/setting" ? "white" : "secondary"}  />
                 <Typography
+                className="asidebarBtnText"
                   sx={{
                     fontSize: "18px",
                     fontWeight: "600",
-                    marginTop: "10px",
+                    marginTop: "5px",
                     marginLeft: "20px",
                   }}
                   color={location.pathname === "/setting" ? "white" : "#8B8FA3"}

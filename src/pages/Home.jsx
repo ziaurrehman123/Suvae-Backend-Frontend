@@ -7,10 +7,14 @@ import StatsSection from "../components/Home/StatsSection";
 import Analytics from "../components/Home/Analytics";
 import SearchSection from "../components/Home/SearchSection";
 import ProductsTable from "../components/Home/ProductsTable";
+import MobileView from "../components/MobileView";
+
 
 export default function Home() {
   return (
     <>
+    {window.screen.width >= 768 ?
+    <Box>
       <Header />
       <Box sx={{ display: "flex", width: "100%" }}>
         <Box
@@ -32,6 +36,10 @@ export default function Home() {
           <ProductsTable />
         </Box>
       </Box>
+      </Box>
+:
+    <MobileView />
+}
     </>
   );
 }
