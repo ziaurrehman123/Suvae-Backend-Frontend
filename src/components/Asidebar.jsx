@@ -57,7 +57,7 @@ export default function Asidebar() {
               Suvae
             </Typography>
           </Box>
-          <Box sx={{ marginTop: "10px" }}>
+          <Box sx={{ marginTop: "15px" }}>
        
             <Link href="/" sx={{ color: "white", textDecoration: "none" }}>
               <Box
@@ -73,7 +73,7 @@ export default function Asidebar() {
                 backgroundColor={location.pathname === "/" ? "#5541D8" : ""}
               >
                 <OtherHousesOutlinedIcon sx={{marginLeft: "20px",
-                    marginTop: "5px",fontSize:"32px", }} color={location.pathname === "/" ? "white" : "secondary"}/>
+                    marginTop: "5px",fontSize:"36px", }} color={location.pathname === "/" ? "white" : "secondary"}/>
                 <Typography
                 className="asidebarBtnText"
                   sx={{
@@ -90,7 +90,7 @@ export default function Asidebar() {
               </Box>
             </Link>
           </Box>
-          <Box sx={{ marginTop: "10px" }}>
+          <Box sx={{ marginTop: "15px" }}>
             <Link
               href="/products"
               sx={{ color: "white", textDecoration: "none" }}
@@ -110,13 +110,13 @@ export default function Asidebar() {
                 }
               >
                 <Inventory2OutlinedIcon className="btnIcon" sx={{marginLeft: "20px",
-                    marginTop: "5px",fontSize:"32px"}}   color={location.pathname === "/products" ? "white" : "secondary"} />
+                    marginTop: "5px",fontSize:"36px"}}   color={location.pathname === "/products" ? "white" : "secondary"} />
                 <Typography
                 className="asidebarBtnText"
                   sx={{
                     fontSize: "18px",
                     fontWeight: "600",
-                    marginTop: "6px",
+                    marginTop: "9px",
                     marginLeft: "20px",
                   }}
                   color={
@@ -128,7 +128,7 @@ export default function Asidebar() {
               </Box>
             </Link>
           </Box>
-          <Box sx={{ marginTop: "10px" }}>
+          <Box sx={{ marginTop: "15px" }}>
             <Link
               href="/dashboard"
               sx={{ color: "white", textDecoration: "none" }}
@@ -156,7 +156,7 @@ export default function Asidebar() {
                   sx={{
                     fontSize: "16px",
                     fontWeight: "600",
-                    marginTop: "2px",
+                    marginTop: "0px",
                     marginLeft: "20px",
                   }}
                   color={
@@ -168,7 +168,7 @@ export default function Asidebar() {
               </Box>
             </Link>
           </Box>
-          <Box sx={{ marginTop: "10px" }}>
+          <Box sx={{ marginTop: "15px" }}>
             <Link
               href="/setting"
               sx={{ color: "white", textDecoration: "none" }}
@@ -188,13 +188,13 @@ export default function Asidebar() {
                 }
               >
                 <SettingsOutlinedIcon className="btnIcon" className="btnIcon" sx={{marginLeft: "20px",
-                    marginTop: "5px",fontSize:"32px"}}color={location.pathname === "/setting" ? "white" : "secondary"}  />
+                    marginTop: "5px",fontSize:"36px"}}color={location.pathname === "/setting" ? "white" : "secondary"}  />
                 <Typography
                 className="asidebarBtnText"
                   sx={{
                     fontSize: "18px",
                     fontWeight: "600",
-                    marginTop: "5px",
+                    marginTop: "9px",
                     marginLeft: "20px",
                   }}
                   color={location.pathname === "/setting" ? "white" : "#8B8FA3"}

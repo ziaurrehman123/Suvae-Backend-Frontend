@@ -28,7 +28,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       marginLeft: "32px",
     },
-    color: "#7335FD",
+    color: "#8B8FA3",
+    "&:hover": {
+      color: "#7335FD",
+    },
   },
   searchBox: {
     paddingTop: 10,
@@ -36,6 +39,9 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 20,
     paddingBottom: 5,
     borderRadius: 10,
+  },
+  searchInputMainBox:{
+    width:"95%", margin:"auto"
   },
   searchInputBox: {
     width: "40%",
@@ -53,8 +59,10 @@ export default function SearchSection() {
         sx={{
           paddingTop: "20px",
           paddingBottom: "1px",
+
         }}
       >
+        <Box className={classes.searchInputMainBox}>
         <Box className={classes.searchInputBox}>
           <Box
             sx={{
@@ -68,13 +76,14 @@ export default function SearchSection() {
               id="outlined-basic"
               variant="outlined"
               size="small"
-              placeholder="Search all"
+              placeholder="Search"
             />
             <SearchIcon
               className={classes.searchIconStyle}
               sx={{ fontSize: 45 }}
             />
           </Box>
+        </Box>
         </Box>
       </Box>
     </div>

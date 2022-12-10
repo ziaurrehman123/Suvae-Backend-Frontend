@@ -16,12 +16,18 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "20px",
   },
   infoiconStyle: {
-    color: "#7335FD",
+    color: "#8B8FA3",
     marginLeft: "20px",
     marginTop: "4px",
+    "&:hover": {
+      color: "#7335FD",
+    },
   },
   statInnerBox: {
     display: "flex", marginTop: "10px"
+  },
+  boxInnerWidth:{
+    width:"85%", margin:"auto"
   }
 }));
 
@@ -32,11 +38,13 @@ export default function StatsSection() {
       <Box sx={{ marginTop: "20px" }}>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
+            
             <Box
               className={classes.statBox}
             >
+              <Box className={classes.boxInnerWidth}>
               <Grid container>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                <Grid item xs={6} sm={6} md={6} lg={8} xl={8}>
                   <Box className={classes.statInnerBox}>
                     <Typography
                       sx={{
@@ -58,7 +66,7 @@ export default function StatsSection() {
                     </Tooltip>
                   </Box>
                 </Grid>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                <Grid item xs={6} sm={6} md={6} lg={4} xl={4}>
                   <Box sx={{ textAlign: "right" }}>
                     <Typography sx={{ fontSize: "36px", fontWeight: "600" }}>
                       04
@@ -67,13 +75,15 @@ export default function StatsSection() {
                 </Grid>
               </Grid>
             </Box>
+            </Box>
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
             <Box
               className={classes.statBox}
             >
+               <Box className={classes.boxInnerWidth}>
               <Grid container>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                <Grid item xs={6} sm={6} md={6} lg={8} xl={8}>
                   <Box className={classes.statInnerBox}>
                     <Typography
                       sx={{
@@ -95,7 +105,7 @@ export default function StatsSection() {
                     </Tooltip>
                   </Box>
                 </Grid>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                <Grid item xs={6} sm={6} md={6} lg={4} xl={4}>
                   <Box sx={{ textAlign: "right" }}>
                     <Typography sx={{ fontSize: "36px", fontWeight: "600" }}>
                       29
@@ -104,13 +114,15 @@ export default function StatsSection() {
                 </Grid>
               </Grid>
             </Box>
+            </Box>
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
             <Box
               className={classes.statBox}
             >
+              <Box className={classes.boxInnerWidth}>
               <Grid container>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                <Grid item xs={6} sm={6} md={6} lg={8} xl={8}>
                   <Box className={classes.statInnerBox}>
                     <Typography
                       sx={{
@@ -132,7 +144,7 @@ export default function StatsSection() {
                     </Tooltip>
                   </Box>
                 </Grid>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                <Grid item xs={6} sm={6} md={6} lg={4} xl={4}>
                   <Box sx={{ textAlign: "right" }}>
                     <Typography sx={{ fontSize: "36px", fontWeight: "600" }}>
                       2h 49m
@@ -140,6 +152,7 @@ export default function StatsSection() {
                   </Box>
                 </Grid>
               </Grid>
+              </Box>
             </Box>
           </Grid>
         </Grid>
