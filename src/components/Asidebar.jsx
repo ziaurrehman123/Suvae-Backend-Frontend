@@ -17,12 +17,12 @@ export default function Asidebar() {
   const [showAsidebar1, setShowAsidebar1] = useState(false);
   const [showAsidebar2, setShowAsidebar2] = useState(true);
   const openFirstAsidebar = () => {
-    setShowAsidebar1(true);
+    setShowAsidebar1(false);
     setShowAsidebar2(true);
   };
   const openSecondAsidebar = () => {
     setShowAsidebar1(true);
-    setShowAsidebar2(true);
+    setShowAsidebar2(false);
   };
   return (
     <>
