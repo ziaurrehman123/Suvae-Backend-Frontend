@@ -11,6 +11,7 @@ import OtherHousesOutlinedIcon from '@mui/icons-material/OtherHousesOutlined';
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import {Animated} from "react-animated-css";
 
 export default function Asidebar() {
   let location = useLocation();
@@ -27,6 +28,7 @@ export default function Asidebar() {
   return (
     <>
       {showAsidebar1 ? (
+        <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}>
         <Box
         className="asidebar1"
           sx={{
@@ -205,6 +207,7 @@ export default function Asidebar() {
             </Link>
           </Box>
         </Box>
+        </Animated> 
       ) : null}
       {showAsidebar2 ? (
         <Box
