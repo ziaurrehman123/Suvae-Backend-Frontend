@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
-import { Box, Link, Button } from "@mui/material";
+import { Box, Link } from "@mui/material";
 import logo from "../assets/images/logo.png";
 import home from "../assets/images/home.png";
 import products from "../assets/images/products.png";

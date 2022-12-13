@@ -102,7 +102,7 @@ export default function ProductsTable() {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
-  const [value, setValue] = React.useState(2);
+
   return (
     <>
       <Box>
@@ -232,9 +232,6 @@ export default function ProductsTable() {
                       name="simple-controlled"
                       value={2}
                       readOnly
-                      onChange={(event, newValue) => {
-                        setValue(newValue);
-                      }}
                       size="large"
                     />
                     <Button
@@ -335,9 +332,6 @@ export default function ProductsTable() {
                       name="simple-controlled"
                       value={4}
                       readOnly
-                      onChange={(event, newValue) => {
-                        setValue(newValue);
-                      }}
                       size="large"
                     />
                     <Button
@@ -437,9 +431,6 @@ export default function ProductsTable() {
                       name="simple-controlled"
                       value={3}
                       readOnly
-                      onChange={(event, newValue) => {
-                        setValue(newValue);
-                      }}
                       size="large"
                     />
                     <Button
@@ -539,9 +530,6 @@ export default function ProductsTable() {
                       name="simple-controlled"
                       value={2}
                       readOnly
-                      onChange={(event, newValue) => {
-                        setValue(newValue);
-                      }}
                       size="large"
                     />
                     <Button
