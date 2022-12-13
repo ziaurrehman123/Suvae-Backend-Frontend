@@ -28,7 +28,7 @@ export default function Asidebar() {
   return (
     <>
       {showAsidebar1 ? (
-        <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}>
+        <Animated animationIn="fadeInLeft" animationOut="fadeOut" isVisible={true}>
         <Box
         className="asidebar1"
           sx={{
