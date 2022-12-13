@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ab7db7bc.css",
+    "main.js": "/static/js/main.22b4972f.js",
+    "static/media/heroImage.png": "/static/media/heroImage.827969c2e3d842ede7dd.png",
+    "static/media/formBg.png": "/static/media/formBg.4f9b190e1548906f558a.png",
+    "static/media/bg.png": "/static/media/bg.72307434ca83c1a13ae7.png",
+    "static/media/footerBg.png": "/static/media/footerBg.b5b910c081d9bde2bd93.png",
+    "static/media/lightBg.png": "/static/media/lightBg.367a6a4308140ed22520.png",
+    "static/media/merriweather-all-400-normal.woff": "/static/media/merriweather-all-400-normal.5e7a0e6a9b864b89292d.woff",
+    "static/media/merriweather-latin-400-normal.woff2": "/static/media/merriweather-latin-400-normal.e009f21405b4d7e89367.woff2",
+    "static/media/merriweather-cyrillic-ext-400-normal.woff2": "/static/media/merriweather-cyrillic-ext-400-normal.2a880e22b1b888ab5465.woff2",
+    "static/media/merriweather-latin-ext-400-normal.woff2": "/static/media/merriweather-latin-ext-400-normal.4657f5ab02d5923d223f.woff2",
+    "static/media/mobileView.png": "/static/media/mobileView.ff8eeb14ffdbdd834d52.png",
+    "static/media/merriweather-cyrillic-400-normal.woff2": "/static/media/merriweather-cyrillic-400-normal.fde0b55efc50742fb57f.woff2",
+    "static/media/layout.png": "/static/media/layout.f3073fea5b0075afacd5.png",
+    "static/media/merriweather-vietnamese-400-normal.woff2": "/static/media/merriweather-vietnamese-400-normal.1c4607f612e73642c77e.woff2",
+    "static/media/help1.svg": "/static/media/help1.f2cdfc60ff95f7eaafc3a82155ae31b2.svg",
+    "index.html": "/index.html",
+    "main.ab7db7bc.css.map": "/static/css/main.ab7db7bc.css.map",
+    "main.22b4972f.js.map": "/static/js/main.22b4972f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab7db7bc.css",
+    "static/js/main.22b4972f.js"
+  ]
+}
