@@ -40,9 +40,6 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 5,
     borderRadius: 10,
   },
-  searchInputMainBox:{
-    width:"95%", margin:"auto"
-  },
   searchInputBox: {
     width: "40%",
     [theme.breakpoints.down("sm")]: {
@@ -62,7 +59,7 @@ export default function SearchSection() {
 
         }}
       >
-        <Box className={classes.searchInputMainBox}>
+        <Box>
         <Box className={classes.searchInputBox}>
           <Box
             sx={{

@@ -246,17 +246,8 @@ export default function Asidebar() {
             borderLeft={location.pathname === "/" ? "3px solid #7335FD" : ""}
             backgroundColor={location.pathname === "/" ? "black" : ""}
           >
-            <Box
-              component="img"
-              sx={{
-                height: "35px",
-                width: "35px",
-                marginLeft: "20px",
-                marginTop: "5px",
-              }}
-              alt="Your logo."
-              src={home}
-            />
+             <OtherHousesOutlinedIcon sx={{marginLeft: "20px",
+                    marginTop: "5px",fontSize:"40px", color:"#8B8FA3" }} />
           </Box>
           <Box
             sx={{
@@ -269,16 +260,8 @@ export default function Asidebar() {
             }
             backgroundColor={location.pathname === "/products" ? "black" : ""}
           >
-            <Box
-              component="img"
-              sx={{
-                height: "35px",
-                width: "35px",
-                marginLeft: "20px",
-                marginTop: "5px",
-              }}
-              alt="Your logo."
-              src={products}
+             <Inventory2OutlinedIcon className="btnIcon" sx={{marginLeft: "20px",
+                    marginTop: "5px",fontSize:"40px", color:"#8B8FA3"}}
             />
           </Box>
           <Box
@@ -292,16 +275,8 @@ export default function Asidebar() {
             }
             backgroundColor={location.pathname === "/dashboard" ? "black" : ""}
           >
-            <Box
-              component="img"
-              sx={{
-                height: "35px",
-                width: "35px",
-                marginLeft: "20px",
-                marginTop: "5px",
-              }}
-              alt="Your logo."
-              src={dashboard}
+              <DashboardOutlinedIcon className="btnIcon" sx={{marginLeft: "20px",
+                    marginTop: "5px",fontSize:"40px", color:"#8B8FA3"}}
             />
           </Box>
           <Box
@@ -315,16 +290,8 @@ export default function Asidebar() {
             }
             backgroundColor={location.pathname === "/setting" ? "black" : ""}
           >
-            <Box
-              component="img"
-              sx={{
-                height: "35px",
-                width: "35px",
-                marginLeft: "20px",
-                marginTop: "5px",
-              }}
-              alt="Your logo."
-              src={setting}
+              <SettingsOutlinedIcon className="btnIcon" sx={{marginLeft: "20px",
+                    marginTop: "5px",fontSize:"40px", color:"#8B8FA3"}}
             />
           </Box>
         </Box>
