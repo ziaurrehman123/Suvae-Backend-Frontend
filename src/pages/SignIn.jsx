@@ -6,13 +6,14 @@ import MobileView from "../components/MobileView";
 export default function SignIn() {
   return (
     <div>
-      {window.screen.width >= 768 ? (
+      <Box className="mobileView">
+        <MobileView />
+      </Box>
+      <Box className="mainPage">
         <Box>
           <SignInComponent />
         </Box>
-      ) : (
-        <MobileView />
-      )}
+      </Box>
     </div>
   );
 }

@@ -10,7 +10,10 @@ import MobileView from "../components/MobileView";
 export default function RewardOnEmail() {
   return (
     <>
-      {window.screen.width >= 768 ? (
+      <Box className="mobileView">
+        <MobileView />
+      </Box>
+      <Box className="mainPage">
         <Box>
           <Box>
             <Box
@@ -30,9 +33,7 @@ export default function RewardOnEmail() {
           <QuestionComp />
           <Footer />
         </Box>
-      ) : (
-        <MobileView />
-      )}
+      </Box>
     </>
   );
 }

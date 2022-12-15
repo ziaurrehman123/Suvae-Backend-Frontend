@@ -9,37 +9,37 @@ import SearchSection from "../components/Home/SearchSection";
 import ProductsTable from "../components/Home/ProductsTable";
 import MobileView from "../components/MobileView";
 
-
 export default function Home() {
   return (
     <>
-    <Box className="mainPage">
-      <Header />
-      <Box sx={{ display: "flex", width: "100%" }}>
-        <Box
-          sx={{ width: { xs: "16%", sm: "10%", md: "8%", lg: "7%", xl: "5%" } }}
-        >
-          <Asidebar />
-        </Box>
-        <Box
-          sx={{
-            width: { xs: "79%", sm: "85%", md: "87%", lg: "88%", xl: "90%" },
-            margin: "auto",
-            marginTop: "-10px",
-          }}
-        >
-          <StepsSection />
-          <StatsSection />
-          <Analytics />
-          <SearchSection />
-          <ProductsTable />
+      <Box className="mobileView">
+        <MobileView />
+      </Box>
+      <Box className="mainPage">
+        <Header />
+        <Box sx={{ display: "flex", width: "100%" }}>
+          <Box
+            sx={{
+              width: { xs: "16%", sm: "10%", md: "8%", lg: "7%", xl: "5%" },
+            }}
+          >
+            <Asidebar />
+          </Box>
+          <Box
+            sx={{
+              width: { xs: "79%", sm: "85%", md: "87%", lg: "88%", xl: "90%" },
+              margin: "auto",
+              marginTop: "-10px",
+            }}
+          >
+            <StepsSection />
+            <StatsSection />
+            <Analytics />
+            <SearchSection />
+            <ProductsTable />
+          </Box>
         </Box>
       </Box>
-      </Box>
-<Box className="mobileView">
-    <MobileView />
-    </Box>
-
     </>
   );
 }

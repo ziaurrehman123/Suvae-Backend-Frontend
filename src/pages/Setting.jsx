@@ -8,7 +8,10 @@ import MobileView from "../components/MobileView";
 export default function Setting() {
   return (
     <>
-      {window.screen.width >= 768 ? (
+      <Box className="mobileView">
+        <MobileView />
+      </Box>
+      <Box className="mainPage">
         <Box>
           <Header />
           <Box sx={{ display: "flex", width: "100%" }}>
@@ -36,9 +39,7 @@ export default function Setting() {
             </Box>
           </Box>
         </Box>
-      ) : (
-        <MobileView />
-      )}
+      </Box>
     </>
   );
 }
