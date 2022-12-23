@@ -2,11 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import { Box } from "@mui/material";
 import Asidebar from "../components/Asidebar";
-import StepsSection from "../components/Home/StepsSection";
-import StatsSection from "../components/Home/StatsSection";
-import Analytics from "../components/Home/Analytics";
-import SearchSection from "../components/Home/SearchSection";
-import ProductsTable from "../components/Home/ProductsTable";
+import HeadingSection from "../components/Home/HeadingSection";
 import MobileView from "../components/MobileView";
 
 export default function Home() {
@@ -32,11 +28,8 @@ export default function Home() {
               marginTop: "-10px",
             }}
           >
-            <StepsSection />
-            <StatsSection />
-            <Analytics />
-            <SearchSection />
-            <ProductsTable />
+            <HeadingSection />
+          
           </Box>
         </Box>
       </Box>

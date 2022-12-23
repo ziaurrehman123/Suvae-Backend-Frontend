@@ -189,6 +189,7 @@ span.MuiStepLabel-label.css-1hv8oq8-MuiStepLabel-label {
 .mainPage{
   display: block;
 }
+
 @media screen and (max-width: 786px) {
   .mobileView{
     display: block;
