@@ -15,9 +15,7 @@ code {
 canvas {
   height: 401px !important;
 }
-.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiPaper-root.MuiMenu-paper.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
-  width: 23%;
-}
+
 .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -93,7 +91,8 @@ div#menu-appbar1 {
 }
 input[type="text"] {
   padding: 11px;
-  font-weight: 600;
+  color:"rgba(139, 143, 163, 1)";
+  font-size: 16px;
 }
 .daterangepicker .ranges li.active {
   background-color: #7335FD;
@@ -188,6 +187,119 @@ span.MuiStepLabel-label.css-1hv8oq8-MuiStepLabel-label {
 }
 .mainPage{
   display: block;
+}
+.ddl-select {
+  visibility:hidden;
+}
+.ddl {
+  position:relative;
+  height:50px;
+  width:100%;
+  text-align:initial;
+}
+.ddl::after {
+  content:'';
+  position:absolute;
+  top:19px;
+  right:20px;
+  width:12px;
+  height:2px;
+  background:#fff;
+  z-index:99;
+  transform:rotate(-40deg);
+  transition:0.5s;
+}
+.ddl::before {
+  content:'';
+  position:absolute;
+  top:19px;
+  right:28px;
+  width:12px;
+  height:2px;
+  background:#fff;
+  z-index:99;
+  transform:rotate(40deg);
+  transition:0.5s;
+}
+.ddl.active::after{
+  right:28px;
+}
+.ddl.active::before{
+  right:20px;
+}
+.ddl-input {
+  position:absolute;
+  top:0;
+  left:0;
+  width:80%;
+  height:34%;
+  cursor:pointer;
+  border-radius:12px;
+  padding:10px 20px;
+  color:white;
+  outline:none;
+  background:rgba(253, 0, 0, 1);
+  border:1px solid #e9e9e9;
+}
+.ddl-input1 {
+  position:absolute;
+  top:0;
+  left:0;
+  width:80%;
+  height:34%;
+  cursor:pointer;
+  border-radius:12px;
+  padding:10px 20px;
+  color:white;
+  outline:none;
+  background:#FDA700  ;
+  border:1px solid #e9e9e9;
+}
+ 
+input#ddl_list::placeholder {
+  color: white;
+}
+
+input#ddl_list1::placeholder {
+  color: white;
+}
+
+.ddl.active .ddl-options {
+  visibility:visible;
+  opacity:1;
+}
+.ddl .ddl-options {
+  position: relative;;
+  width:100%;
+  top:55px;
+  background:#fff;
+  border-radius:10px;
+  opacity:0;
+  transition:0.25s;
+  z-index: 1;
+  border-top:5px solid #212cbd;
+  box-shadow: 0 0 5px rgba(0,0,0,0.10);
+}
+.ddl .ddl-options > div {
+  padding: 10px 20px;
+  cursor:pointer;
+}
+.ddl .ddl-options > div:hover {
+  background: var(--bs-primary);
+}
+
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiPaper-root.MuiMenu-paper.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+  border-top: 5px solid #7335FD;
+  border-radius: 7px;
+}
+
+
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiSelect-icon.MuiSelect-iconOutlined.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
+  color: white;
+}
+.adminStatusSelect{
+  background-color: #FD0000;
 }
 
 @media screen and (max-width: 786px) {

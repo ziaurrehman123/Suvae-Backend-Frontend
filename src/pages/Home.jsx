@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 import Asidebar from "../components/Asidebar";
 import HeadingSection from "../components/Home/HeadingSection";
 import MobileView from "../components/MobileView";
+import ProductsTable from "../components/Home/ProductsTable";
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
             }}
           >
             <HeadingSection />
-          
+            <ProductsTable />
           </Box>
         </Box>
       </Box>

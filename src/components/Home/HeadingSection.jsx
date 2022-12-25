@@ -4,7 +4,7 @@ import { Typography, Box } from "@mui/material";
 export default function HeadingSection() {
   return (
     <>
-      <Box sx={{ width: "100%", margin: "auto" }}>
+      <Box sx={{ width: "100%", margin: "auto", paddingBottom: "30px" }}>
         <Typography
           sx={{
             fontSize: "36px",
