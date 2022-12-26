@@ -302,6 +302,12 @@ svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiSelect-icon.MuiSelect-iconOutli
   background-color: #FD0000;
 }
 
+.css-113qkos-MuiSwitch-root .MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track {
+  background-color: #7335FD !important;
+  opacity: 1;
+  border: 0;
+}
+
 @media screen and (max-width: 786px) {
   .mobileView{
     display: block;
