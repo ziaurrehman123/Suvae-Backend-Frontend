@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
 const style = {
   position: "absolute",
   top: "50%",
-  borderTop:"5px solid #7335FD",
+  borderTop: "5px solid #7335FD",
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 500,
@@ -191,7 +191,9 @@ export default function ProductsTable() {
                         className="logoutMenuu"
                       >
                         <MenuItem>
-                          <Box sx={{paddingLeft:"10px", paddingRight:"30px"}}>
+                          <Box
+                            sx={{ paddingLeft: "10px", paddingRight: "30px" }}
+                          >
                             <Typography
                               sx={{ fontWeight: "600", fontSize: "12px" }}
                             >
@@ -207,80 +209,89 @@ export default function ProductsTable() {
                             ></Box>
                             <Grid container spacing={2}>
                               <Grid item xs={6}>
-                                <Box sx={{paddingLeft:"0px", paddingRight:"80px"}}>
-                                  
-                                <FormControl>
-                                  <FormLabel
-                                    id="demo-radio-buttons-group-label"
-                                    sx={{ fontSize: "12px" }}
-                                  >
-                                    Review Status
-                                  </FormLabel>
-                                  <RadioGroup
-                                    aria-labelledby="demo-radio-buttons-group-label"
-                                    defaultValue="All"
-                                    name="radio-buttons-group"
-                                  >
-                                    <FormControlLabel
-                                      value="All"
-                                      control={<Radio size="small" />}
-                                      label="All"
-                                    />
-                                    <FormControlLabel
-                                      value="Verified"
-                                      control={<Radio size="small" />}
-                                      label="Verified"
-                                    />
-                                    <FormControlLabel
-                                      value="Pending"
-                                      control={<Radio size="small" />}
-                                      label="Pending"
-                                    />
-                                  </RadioGroup>
-                                </FormControl>
+                                <Box
+                                  sx={{
+                                    paddingLeft: "0px",
+                                    paddingRight: "80px",
+                                  }}
+                                >
+                                  <FormControl>
+                                    <FormLabel
+                                      id="demo-radio-buttons-group-label"
+                                      sx={{ fontSize: "12px" }}
+                                    >
+                                      Review Status
+                                    </FormLabel>
+                                    <RadioGroup
+                                      aria-labelledby="demo-radio-buttons-group-label"
+                                      defaultValue="All"
+                                      name="radio-buttons-group"
+                                    >
+                                      <FormControlLabel
+                                        value="All"
+                                        control={<Radio size="small" />}
+                                        label="All"
+                                      />
+                                      <FormControlLabel
+                                        value="Verified"
+                                        control={<Radio size="small" />}
+                                        label="Verified"
+                                      />
+                                      <FormControlLabel
+                                        value="Pending"
+                                        control={<Radio size="small" />}
+                                        label="Pending"
+                                      />
+                                    </RadioGroup>
+                                  </FormControl>
                                 </Box>
                               </Grid>
                               <Grid item xs={6}>
-                              <Box sx={{paddingLeft:"20px", paddingRight:"20px"}}>
-                                <FormControl>
-                                  <FormLabel
-                                    id="demo-radio-buttons-group-label"
-                                    sx={{ fontSize: "12px" }}
-                                  >
-                                    Admin Status
-                                  </FormLabel>
-                                  <RadioGroup
-                                    aria-labelledby="demo-radio-buttons-group-label"
-                                    defaultValue="All"
-                                    name="radio-buttons-group"
-                                  >
-                                    <FormControlLabel
-                                      value="All"
-                                      control={<Radio size="small" />}
-                                      label="All"
-                                    />
-                                    <FormControlLabel
-                                      value="Red"
-                                      control={<Radio size="small" />}
-                                      label="Red"
-                                    />
-                                    <FormControlLabel
-                                      value="Orange"
-                                      control={<Radio size="small" />}
-                                      label="Orange"
-                                    />
-                                    <FormControlLabel
-                                      value="Blue"
-                                      control={<Radio size="small" />}
-                                      label="Blue"
-                                    />
-                                    <FormControlLabel
-                                      value="Purple"
-                                      control={<Radio size="small" />}
-                                      label="Purple"
-                                    />
-                                  </RadioGroup>
-                                </FormControl>
+                                <Box
+                                  sx={{
+                                    paddingLeft: "20px",
+                                    paddingRight: "20px",
+                                  }}
+                                >
+                                  <FormControl>
+                                    <FormLabel
+                                      id="demo-radio-buttons-group-label"
+                                      sx={{ fontSize: "12px" }}
+                                    >
+                                      Admin Status
+                                    </FormLabel>
+                                    <RadioGroup
+                                      aria-labelledby="demo-radio-buttons-group-label"
+                                      defaultValue="All"
+                                      name="radio-buttons-group"
+                                    >
+                                      <FormControlLabel
+                                        value="All"
+                                        control={<Radio size="small" />}
+                                        label="All"
+                                      />
+                                      <FormControlLabel
+                                        value="Red"
+                                        control={<Radio size="small" />}
+                                        label="Red"
+                                      />
+                                      <FormControlLabel
+                                        value="Orange"
+                                        control={<Radio size="small" />}
+                                        label="Orange"
+                                      />
+                                      <FormControlLabel
+                                        value="Blue"
+                                        control={<Radio size="small" />}
+                                        label="Blue"
+                                      />
+                                      <FormControlLabel
+                                        value="Purple"
+                                        control={<Radio size="small" />}
+                                        label="Purple"
+                                      />
+                                    </RadioGroup>
+                                  </FormControl>
                                 </Box>
                               </Grid>
                             </Grid>
@@ -379,7 +390,15 @@ export default function ProductsTable() {
                         value={valueReview}
                         onChange={handleChange}
                         className="adminStatusSelect"
-                        sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 }, backgroundColor:"", borderRadius:"45px", height:"40px", color:"white", textAlign:"left" }}
+                        sx={{
+                          boxShadow: "none",
+                          ".MuiOutlinedInput-notchedOutline": { border: 0 },
+                          backgroundColor: "",
+                          borderRadius: "45px",
+                          height: "40px",
+                          color: "white",
+                          textAlign: "left",
+                        }}
                       >
                         <MenuItem value={10}>Admin 1</MenuItem>
                         <MenuItem value={20}>Admin 2</MenuItem>
@@ -391,12 +410,19 @@ export default function ProductsTable() {
                 <TableCell>
                   <Box sx={{ textAlign: "center" }}>
                     <FormControl fullWidth>
-                      <Select 
+                      <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
                         value={valueStatus}
                         onChange={handleChange1}
-                        sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 }, backgroundColor:"#FDA700", borderRadius:"45px", height:"40px", color:"white" }}
+                        sx={{
+                          boxShadow: "none",
+                          ".MuiOutlinedInput-notchedOutline": { border: 0 },
+                          backgroundColor: "#FDA700",
+                          borderRadius: "45px",
+                          height: "40px",
+                          color: "white",
+                        }}
                       >
                         <MenuItem value={10}>Pending</MenuItem>
                         <MenuItem value={20}>Completed</MenuItem>
@@ -441,7 +467,15 @@ export default function ProductsTable() {
                         value={valueReview}
                         onChange={handleChange}
                         className="adminStatusSelect"
-                        sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 }, backgroundColor:"", borderRadius:"45px", height:"40px", color:"white", textAlign:"left" }}
+                        sx={{
+                          boxShadow: "none",
+                          ".MuiOutlinedInput-notchedOutline": { border: 0 },
+                          backgroundColor: "",
+                          borderRadius: "45px",
+                          height: "40px",
+                          color: "white",
+                          textAlign: "left",
+                        }}
                       >
                         <MenuItem value={10}>Admin 1</MenuItem>
                         <MenuItem value={20}>Admin 2</MenuItem>
@@ -453,12 +487,19 @@ export default function ProductsTable() {
                 <TableCell>
                   <Box sx={{ textAlign: "center" }}>
                     <FormControl fullWidth>
-                      <Select 
+                      <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
                         value={valueStatus}
                         onChange={handleChange1}
-                        sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 }, backgroundColor:"#FDA700", borderRadius:"45px", height:"40px", color:"white" }}
+                        sx={{
+                          boxShadow: "none",
+                          ".MuiOutlinedInput-notchedOutline": { border: 0 },
+                          backgroundColor: "#FDA700",
+                          borderRadius: "45px",
+                          height: "40px",
+                          color: "white",
+                        }}
                       >
                         <MenuItem value={10}>Pending</MenuItem>
                         <MenuItem value={20}>Completed</MenuItem>
@@ -503,7 +544,15 @@ export default function ProductsTable() {
                         value={valueReview}
                         onChange={handleChange}
                         className="adminStatusSelect"
-                        sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 }, backgroundColor:"", borderRadius:"45px", height:"40px", color:"white", textAlign:"left" }}
+                        sx={{
+                          boxShadow: "none",
+                          ".MuiOutlinedInput-notchedOutline": { border: 0 },
+                          backgroundColor: "",
+                          borderRadius: "45px",
+                          height: "40px",
+                          color: "white",
+                          textAlign: "left",
+                        }}
                       >
                         <MenuItem value={10}>Admin 1</MenuItem>
                         <MenuItem value={20}>Admin 2</MenuItem>
@@ -515,12 +564,19 @@ export default function ProductsTable() {
                 <TableCell>
                   <Box sx={{ textAlign: "center" }}>
                     <FormControl fullWidth>
-                      <Select 
+                      <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
                         value={valueStatus}
                         onChange={handleChange1}
-                        sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 }, backgroundColor:"#FDA700", borderRadius:"45px", height:"40px", color:"white" }}
+                        sx={{
+                          boxShadow: "none",
+                          ".MuiOutlinedInput-notchedOutline": { border: 0 },
+                          backgroundColor: "#FDA700",
+                          borderRadius: "45px",
+                          height: "40px",
+                          color: "white",
+                        }}
                       >
                         <MenuItem value={10}>Pending</MenuItem>
                         <MenuItem value={20}>Completed</MenuItem>
@@ -565,7 +621,15 @@ export default function ProductsTable() {
                         value={valueReview}
                         onChange={handleChange}
                         className="adminStatusSelect"
-                        sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 }, backgroundColor:"", borderRadius:"45px", height:"40px", color:"white", textAlign:"left" }}
+                        sx={{
+                          boxShadow: "none",
+                          ".MuiOutlinedInput-notchedOutline": { border: 0 },
+                          backgroundColor: "",
+                          borderRadius: "45px",
+                          height: "40px",
+                          color: "white",
+                          textAlign: "left",
+                        }}
                       >
                         <MenuItem value={10}>Admin 1</MenuItem>
                         <MenuItem value={20}>Admin 2</MenuItem>
@@ -577,12 +641,19 @@ export default function ProductsTable() {
                 <TableCell>
                   <Box sx={{ textAlign: "center" }}>
                     <FormControl fullWidth>
-                      <Select 
+                      <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
                         value={valueStatus}
                         onChange={handleChange1}
-                        sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 }, backgroundColor:"#FDA700", borderRadius:"45px", height:"40px", color:"white" }}
+                        sx={{
+                          boxShadow: "none",
+                          ".MuiOutlinedInput-notchedOutline": { border: 0 },
+                          backgroundColor: "#FDA700",
+                          borderRadius: "45px",
+                          height: "40px",
+                          color: "white",
+                        }}
                       >
                         <MenuItem value={10}>Pending</MenuItem>
                         <MenuItem value={20}>Completed</MenuItem>
@@ -592,7 +663,6 @@ export default function ProductsTable() {
                   </Box>
                 </TableCell>
               </TableRow>
-             
             </TableBody>
           </Table>
           <Box sx={{ width: "97%", margin: "auto", paddingTop: "20px" }}>
@@ -640,20 +710,44 @@ export default function ProductsTable() {
             </Typography>
           </Box>
           <Divider />
-          <Box sx={{width:"90%", margin:"auto", paddingBottom:"30px"}}>
-          <Typography
-            sx={{
-              paddingTop: "20px",
-              fontSize: "16px",
-            }}
-          >
-            URL
-          </Typography>
-          <TextField id="outlined-basic" variant="outlined" placeholder="Optional"/>
-          <Box sx={{textAlign:"center", marginTop:"10px"}}>
-          <Button variant="outlined" sx={{ color:"#7335FD", textTransform:"capitalize", border:"1px solid #7335FD", margin:"10px"}}>Cancel</Button>
-          <Button variant="contained" sx={{backgroundColor:"#7335FD", color:"white", textTransform:"capitalize", margin:"10px"}}>Confirm</Button>
-          </Box>
+          <Box sx={{ width: "90%", margin: "auto", paddingBottom: "30px" }}>
+            <Typography
+              sx={{
+                paddingTop: "20px",
+                fontSize: "16px",
+              }}
+            >
+              URL
+            </Typography>
+            <TextField
+              id="outlined-basic"
+              variant="outlined"
+              placeholder="Optional"
+            />
+            <Box sx={{ textAlign: "center", marginTop: "10px" }}>
+              <Button
+                variant="outlined"
+                sx={{
+                  color: "#7335FD",
+                  textTransform: "capitalize",
+                  border: "1px solid #7335FD",
+                  margin: "10px",
+                }}
+              >
+                Cancel
+              </Button>
+              <Button
+                variant="contained"
+                sx={{
+                  backgroundColor: "#7335FD",
+                  color: "white",
+                  textTransform: "capitalize",
+                  margin: "10px",
+                }}
+              >
+                Confirm
+              </Button>
+            </Box>
           </Box>
         </Box>
       </Modal>
@@ -698,11 +792,31 @@ export default function ProductsTable() {
           >
             This action cannot be reverted.
           </Typography>
-          <Box sx={{width:"90%", margin:"auto", paddingBottom:"30px"}}>
-          <Box sx={{textAlign:"center", marginTop:"10px"}}>
-          <Button variant="outlined" sx={{ color:"#7335FD", textTransform:"capitalize", border:"1px solid #7335FD", margin:"10px"}}>Cancel</Button>
-          <Button variant="contained" sx={{backgroundColor:"#FF0000", color:"white", textTransform:"capitalize", margin:"10px"}}>Confirm</Button>
-          </Box>
+          <Box sx={{ width: "90%", margin: "auto", paddingBottom: "30px" }}>
+            <Box sx={{ textAlign: "center", marginTop: "10px" }}>
+              <Button
+                variant="outlined"
+                sx={{
+                  color: "#7335FD",
+                  textTransform: "capitalize",
+                  border: "1px solid #7335FD",
+                  margin: "10px",
+                }}
+              >
+                Cancel
+              </Button>
+              <Button
+                variant="contained"
+                sx={{
+                  backgroundColor: "#FF0000",
+                  color: "white",
+                  textTransform: "capitalize",
+                  margin: "10px",
+                }}
+              >
+                Confirm
+              </Button>
+            </Box>
           </Box>
         </Box>
       </Modal>

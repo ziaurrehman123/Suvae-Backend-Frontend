@@ -5,8 +5,8 @@ import {
   TableHead,
   TableBody,
   Table,
-  InputLabel, 
-  Select, 
+  InputLabel,
+  Select,
   MenuItem,
   Button,
   TableCell,
@@ -75,16 +75,16 @@ const useStyles = makeStyles((theme) => ({
     width: "50px",
     marginRight: "10px",
   },
-  flagsBox:{
-    display:"flex",
+  flagsBox: {
+    display: "flex",
     [theme.breakpoints.down("sm")]: {
-      display:"inline-block",
+      display: "inline-block",
     },
   },
-  flagsBoxContent:{
-    marginTop:"0px",
+  flagsBoxContent: {
+    marginTop: "0px",
     [theme.breakpoints.down("sm")]: {
-      marginTop:"5px",
+      marginTop: "5px",
     },
   },
 }));
@@ -130,10 +130,10 @@ export default function ClientsTable() {
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
-  const handleConfirmButton =()=>{
+  const handleConfirmButton = () => {
     setOpen1(false);
     setOpen2(false);
-  }
+  };
 
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
@@ -142,7 +142,7 @@ export default function ClientsTable() {
 
   return (
     <>
-      <Box sx={{marginTop:"30px"}}>
+      <Box sx={{ marginTop: "30px" }}>
         <TableContainer
           component={Paper}
           className={classes.tableInnerContent}
@@ -360,148 +360,148 @@ export default function ClientsTable() {
                 </Grid>
               </Box>
               <Box sx={{ marginTop: "30px", marginBottom: "10px" }}>
-                <Box sx={{marginBottom:"20px"}}>
-                <Grid container spacing={2}>
-                  <Grid item xs={4}>
-                    <Typography
-                      sx={{
-                        textAlign: "center",
-                        fontSize: "17px",
-                        color: "black",
-                        fontWeight: "600",
-                      }}
-                    >
-                      Balance (0.00)
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={4}>
-                    <Box sx={{ textAlign: "center" }}>
-                    <Button
-                        variant="contained"
+                <Box sx={{ marginBottom: "20px" }}>
+                  <Grid container spacing={2}>
+                    <Grid item xs={4}>
+                      <Typography
                         sx={{
-                          backgroundColor: "#7335FD",
-                          paddingLeft: "40px",
-                          fontSize:"15px",
-                          fontWeight:"600",
-                          paddingRight: "40px",
-                          textTransform: "capitalize",
+                          textAlign: "center",
+                          fontSize: "17px",
+                          color: "black",
+                          fontWeight: "600",
                         }}
-                        onClick={handleOpen3}
                       >
-                        Manage
-                      </Button>
-                    </Box>
+                        Balance (0.00)
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={4}>
+                      <Box sx={{ textAlign: "center" }}>
+                        <Button
+                          variant="contained"
+                          sx={{
+                            backgroundColor: "#7335FD",
+                            paddingLeft: "40px",
+                            fontSize: "15px",
+                            fontWeight: "600",
+                            paddingRight: "40px",
+                            textTransform: "capitalize",
+                          }}
+                          onClick={handleOpen3}
+                        >
+                          Manage
+                        </Button>
+                      </Box>
+                    </Grid>
+                    <Grid item xs={4}></Grid>
                   </Grid>
-                  <Grid item xs={4}></Grid>
-                </Grid>
                 </Box>
-                <Box sx={{marginBottom:"20px"}}>
-                <Grid container spacing={2}>
-                  <Grid item xs={4}>
-                    <Typography
-                      sx={{
-                        textAlign: "center",
-                        fontSize: "17px",
-                        color: "black",
-                        fontWeight: "600",
-                      }}
-                    >
-                      Balance (0.00)
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={4}>
-                    <Box sx={{ textAlign: "center" }}>
-                      <Button
-                        variant="contained"
+                <Box sx={{ marginBottom: "20px" }}>
+                  <Grid container spacing={2}>
+                    <Grid item xs={4}>
+                      <Typography
                         sx={{
-                          backgroundColor: "#7335FD",
-                          paddingLeft: "40px",
-                          fontSize:"15px",
-                          fontWeight:"600",
-                          paddingRight: "40px",
-                          textTransform: "capitalize",
+                          textAlign: "center",
+                          fontSize: "17px",
+                          color: "black",
+                          fontWeight: "600",
                         }}
-                        onClick={handleOpen3}
                       >
-                        Manage
-                      </Button>
-                    </Box>
+                        Balance (0.00)
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={4}>
+                      <Box sx={{ textAlign: "center" }}>
+                        <Button
+                          variant="contained"
+                          sx={{
+                            backgroundColor: "#7335FD",
+                            paddingLeft: "40px",
+                            fontSize: "15px",
+                            fontWeight: "600",
+                            paddingRight: "40px",
+                            textTransform: "capitalize",
+                          }}
+                          onClick={handleOpen3}
+                        >
+                          Manage
+                        </Button>
+                      </Box>
+                    </Grid>
+                    <Grid item xs={4}></Grid>
                   </Grid>
-                  <Grid item xs={4}></Grid>
-                </Grid>
                 </Box>
-                <Box sx={{marginBottom:"20px"}}>
-                <Grid container spacing={2}>
-                  <Grid item xs={4}>
-                    <Typography
-                      sx={{
-                        textAlign: "center",
-                        fontSize: "17px",
-                        color: "black",
-                        fontWeight: "600",
-                      }}
-                    >
-                      Balance (0.00)
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={4}>
-                    <Box sx={{ textAlign: "center" }}>
-                      <Button
-                        variant="contained"
+                <Box sx={{ marginBottom: "20px" }}>
+                  <Grid container spacing={2}>
+                    <Grid item xs={4}>
+                      <Typography
                         sx={{
-                          backgroundColor: "#7335FD",
-                          paddingLeft: "40px",
-                          fontSize:"15px",
-                          fontWeight:"600",
-                          paddingRight: "40px",
-                          textTransform: "capitalize",
+                          textAlign: "center",
+                          fontSize: "17px",
+                          color: "black",
+                          fontWeight: "600",
                         }}
-                        onClick={handleOpen3}
                       >
-                        Manage
-                      </Button>
-                    </Box>
+                        Balance (0.00)
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={4}>
+                      <Box sx={{ textAlign: "center" }}>
+                        <Button
+                          variant="contained"
+                          sx={{
+                            backgroundColor: "#7335FD",
+                            paddingLeft: "40px",
+                            fontSize: "15px",
+                            fontWeight: "600",
+                            paddingRight: "40px",
+                            textTransform: "capitalize",
+                          }}
+                          onClick={handleOpen3}
+                        >
+                          Manage
+                        </Button>
+                      </Box>
+                    </Grid>
+                    <Grid item xs={4}></Grid>
                   </Grid>
-                  <Grid item xs={4}></Grid>
-                </Grid>
                 </Box>
-                <Box sx={{marginBottom:"20px"}}>
-                <Grid container spacing={2}>
-                  <Grid item xs={4}>
-                    <Typography
-                      sx={{
-                        textAlign: "center",
-                        fontSize: "17px",
-                        color: "black",
-                        fontWeight: "600",
-                      }}
-                    >
-                      Balance (0.00)
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={4}>
-                    <Box sx={{ textAlign: "center" }}>
-                      <Button
-                        variant="contained"
+                <Box sx={{ marginBottom: "20px" }}>
+                  <Grid container spacing={2}>
+                    <Grid item xs={4}>
+                      <Typography
                         sx={{
-                          backgroundColor: "#FF0000",
-                          paddingLeft: "40px",
-                          fontSize:"15px",
-                          fontWeight:"600",
-                          paddingRight: "40px",
-                          textTransform: "capitalize",
+                          textAlign: "center",
+                          fontSize: "17px",
+                          color: "black",
+                          fontWeight: "600",
                         }}
-                        onClick={handleOpen1}
                       >
-                        Send
-                      </Button>
-                    </Box>
+                        Balance (0.00)
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={4}>
+                      <Box sx={{ textAlign: "center" }}>
+                        <Button
+                          variant="contained"
+                          sx={{
+                            backgroundColor: "#FF0000",
+                            paddingLeft: "40px",
+                            fontSize: "15px",
+                            fontWeight: "600",
+                            paddingRight: "40px",
+                            textTransform: "capitalize",
+                          }}
+                          onClick={handleOpen1}
+                        >
+                          Send
+                        </Button>
+                      </Box>
+                    </Grid>
+                    <Grid item xs={4}></Grid>
                   </Grid>
-                  <Grid item xs={4}></Grid>
-                </Grid>
                 </Box>
-                
-                <Box sx={{ marginTop: "40px", marginBottom:"20px" }}>
+
+                <Box sx={{ marginTop: "40px", marginBottom: "20px" }}>
                   <Grid container spacing={0}>
                     <Grid item xs={6}>
                       <Button
@@ -542,304 +542,303 @@ export default function ClientsTable() {
           </Box>
         </Modal>
         <Modal
-        open={open2}
-        onClose={handleClose2}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <Box
-            sx={{
-              paddingBottom: "20px",
-              paddingTop: "20px",
-              paddingLeft: "20px",
-              paddingRight: "20px",
-            }}
-          >
-            <Box sx={{ textAlign: "right" }}>
-              <CloseIcon onClick={handleClose2} style={{ cursor: "pointer" }} />
-            </Box>
+          open={open2}
+          onClose={handleClose2}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Box
+              sx={{
+                paddingBottom: "20px",
+                paddingTop: "20px",
+                paddingLeft: "20px",
+                paddingRight: "20px",
+              }}
+            >
+              <Box sx={{ textAlign: "right" }}>
+                <CloseIcon
+                  onClick={handleClose2}
+                  style={{ cursor: "pointer" }}
+                />
+              </Box>
 
+              <Typography
+                id="modal-modal-title"
+                sx={{
+                  textAlign: "center",
+                  marginTop: "-30px",
+                  fontSize: "20px",
+                  fontWeight: "600",
+                }}
+              >
+                Delete Account?
+              </Typography>
+            </Box>
+            <Divider />
             <Typography
-              id="modal-modal-title"
               sx={{
                 textAlign: "center",
-                marginTop: "-30px",
+                paddingTop: "20px",
                 fontSize: "20px",
-                fontWeight: "600",
               }}
             >
-              Delete Account?
+              This will delete all data associated with this Client.
             </Typography>
-          </Box>
-          <Divider />
-          <Typography
-            sx={{
-              textAlign: "center",
-              paddingTop: "20px",
-              fontSize: "20px",
-            }}
-          >
-            This will delete all data associated with this Client. 
-          </Typography>
-          <Box sx={{width:"90%", margin:"auto", paddingBottom:"30px"}}>
-          <Box sx={{textAlign:"center", marginTop:"10px"}}>
-          <Button variant="outlined" sx={{ color:"#7335FD", textTransform:"capitalize", border:"1px solid #7335FD", margin:"10px"}}>Cancel</Button>
-          <Button variant="contained" sx={{backgroundColor:"#7335FD", color:"white", textTransform:"capitalize", margin:"10px", fontWeight:"600"}} onClick={handleConfirmButton}>Confirm</Button>
-          </Box>
-          </Box>
-        </Box>
-      </Modal>
-      <Modal
-        open={open3}
-        onClose={handleClose3}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style1}>
-      
-        
-          <Box>
-       
-        <Box>
-          <TableContainer
-            component={Paper}
-            
-          >
-            <Box sx={{padding:"20px"}}>
-            <Typography
-              sx={{
-                fontSize: "18px",
-                fontWeight: "600",
-                color: "#7335FD",
-                paddingBottom: "20px",
-              }}
-            >
-              Amazon Seller Accounts
-            </Typography>
-            <Table aria-label="simple table" sx={{ overflowX: "hidden" }}>
-              <TableHead sx={{ backgroundColor: "#F6F7F8" }}>
-                <TableRow>
-                  <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
-                    No
-                  </TableCell>
-                  <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
-                    Account Name
-                  </TableCell>
-                  <TableCell sx={{ fontSize: "16px", color: "#8B8FA3" }}>
-                    Market
-                  </TableCell>
-                  <TableCell
-                    sx={{ fontSize: "16px", color: "#8B8FA3" }}
-                  ></TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                <TableRow>
-                  <TableCell>1</TableCell>
-                  <TableCell>Newt</TableCell>
-                  <TableCell>
-                    <Box
-                      className={classes.flagsBox}
-                      
-                    >
-                      <Box
-                        className={classes.flagsBoxContent}
-                      >
-                        <img
-                          src={`${flag1}`}
-                          alt="flag1"
-                          style={{ marginRight: "10px" }}
-                        />
-                      </Box>
-                      <Box
-                         className={classes.flagsBoxContent}
-                      >
-                        <img
-                          src={`${flag2}`}
-                          alt="flag2"
-                          style={{ marginRight: "10px" }}
-                        />
-                      </Box>
-                      <Box
-                          className={classes.flagsBoxContent}
-                      >
-                        <img
-                          src={`${flag3}`}
-                          alt="flag3"
-                          style={{ marginRight: "10px" }}
-                        />
-                      </Box>
-                    </Box>
-                  </TableCell>
-                  <TableCell>
-                    {" "}
-                    <Box sx={{ width: "100%", marginRight: "auto" }}>
-                      <FormControl fullWidth>
-                        <InputLabel id="demo-simple-select-label"></InputLabel>
-                        <Select
-                          labelId="demo-simple-select-label"
-                          id="demo-simple-select"
-                          value={age}
-                          className={classes.selectBtnStyle}
-                        >
-                          <MenuItem>Account Details</MenuItem>
-                          <MenuItem>Delete Account</MenuItem>
-                        </Select>
-                      </FormControl>
-                    </Box>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>2</TableCell>
-                  <TableCell>Avisso</TableCell>
-                  <TableCell>
-                  <Box
-                      className={classes.flagsBox}
-                    >
-                      <Box
-                        className={classes.flagsBoxContent}
-                      >
-                        <img
-                          src={`${flag1}`}
-                          alt="flag1"
-                          style={{ marginRight: "10px" }}
-                        />
-                      </Box>
-                      <Box
-                       className={classes.flagsBoxContent}
-                      >
-                        <img
-                          src={`${flag2}`}
-                          alt="flag2"
-                          style={{ marginRight: "10px" }}
-                        />
-                      </Box>
-                      <Box
-                        className={classes.flagsBoxContent}
-                      >
-                        <img
-                          src={`${flag3}`}
-                          alt="flag3"
-                          style={{ marginRight: "10px" }}
-                        />
-                      </Box>
-                    </Box>
-                  </TableCell>
-                  <TableCell>
-                    <Box sx={{ width: "100%", marginRight: "auto" }}>
-                      <FormControl fullWidth>
-                        <InputLabel id="demo-simple-select-label"></InputLabel>
-                        <Select
-                          labelId="demo-simple-select-label"
-                          id="demo-simple-select"
-                          value={age}
-                          // onChange={handleChange}
-                          className={classes.selectBtnStyle}
-                        >
-                          <MenuItem>Account Details</MenuItem>
-                          <MenuItem>Delete Account</MenuItem>
-                        </Select>
-                      </FormControl>
-                    </Box>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>3</TableCell>
-                  <TableCell>Europe Avviso</TableCell>
-                  <TableCell>
-                  <Box
-                      className={classes.flagsBox}
-                    >
-                      <Box
-                        className={classes.flagsBoxContent}
-                      >
-                        <img
-                          src={`${flag4}`}
-                          alt="flag4"
-                          style={{ marginRight: "10px" }}
-                        />
-                      </Box>
-                      <Box
-                        className={classes.flagsBoxContent}
-                      >
-                        <img
-                          src={`${flag5}`}
-                          alt="flag5"
-                          style={{ marginRight: "10px" }}
-                        />
-                      </Box>
-                      <Box
-                         className={classes.flagsBoxContent}
-                      >
-                        <img
-                          src={`${flag6}`}
-                          alt="flag6"
-                          style={{ marginRight: "10px" }}
-                        />
-                      </Box>
-                      <Box
-                         className={classes.flagsBoxContent}
-                      >
-                        <img
-                          src={`${flag7}`}
-                          alt="flag7"
-                          style={{ marginRight: "10px" }}
-                        />
-                      </Box>
-                      <Box
-                        className={classes.flagsBoxContent}
-                      >
-                        <img
-                          src={`${flag8}`}
-                          alt="flag8"
-                          style={{ marginRight: "10px" }}
-                        />
-                      </Box>
-                    </Box>
-                  </TableCell>
-                  <TableCell>
-                    <Box sx={{ width: "100%", marginRight: "auto" }}>
-                      <FormControl fullWidth>
-                        <InputLabel id="demo-simple-select-label"></InputLabel>
-                        <Select
-                          labelId="demo-simple-select-label"
-                          id="demo-simple-select"
-                          value={age}
-                          // onChange={handleChange}
-                         className={classes.selectBtnStyle}
-                        >
-                          <MenuItem>Account Details</MenuItem>
-                          <MenuItem>Delete Account</MenuItem>
-                        </Select>
-                      </FormControl>
-                    </Box>
-                  </TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-            <Box sx={{textAlign:"center", marginTop:"20px"}}>
-            <Button
-                          variant="outlined"
-                          sx={{
-                            color: "#7335FD",
-                            textTransform: "capitalize",
-                            border: "1px solid #7335FD",
-                            paddingLeft: "50px",
-                            paddingRight: "50px",
-                            fontWeight: "600",
-                          }}
-                          onClick={handleClose3}
-                        >
-                          Close
-                        </Button>
-                        </Box>
+            <Box sx={{ width: "90%", margin: "auto", paddingBottom: "30px" }}>
+              <Box sx={{ textAlign: "center", marginTop: "10px" }}>
+                <Button
+                  variant="outlined"
+                  sx={{
+                    color: "#7335FD",
+                    textTransform: "capitalize",
+                    border: "1px solid #7335FD",
+                    margin: "10px",
+                  }}
+                >
+                  Cancel
+                </Button>
+                <Button
+                  variant="contained"
+                  sx={{
+                    backgroundColor: "#7335FD",
+                    color: "white",
+                    textTransform: "capitalize",
+                    margin: "10px",
+                    fontWeight: "600",
+                  }}
+                  onClick={handleConfirmButton}
+                >
+                  Confirm
+                </Button>
+              </Box>
             </Box>
-          </TableContainer>
-        </Box>
-      </Box>
-        </Box>
-      </Modal>
+          </Box>
+        </Modal>
+        <Modal
+          open={open3}
+          onClose={handleClose3}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style1}>
+            <Box>
+              <Box>
+                <TableContainer component={Paper}>
+                  <Box sx={{ padding: "20px" }}>
+                    <Typography
+                      sx={{
+                        fontSize: "18px",
+                        fontWeight: "600",
+                        color: "#7335FD",
+                        paddingBottom: "20px",
+                      }}
+                    >
+                      Amazon Seller Accounts
+                    </Typography>
+                    <Table
+                      aria-label="simple table"
+                      sx={{ overflowX: "hidden" }}
+                    >
+                      <TableHead sx={{ backgroundColor: "#F6F7F8" }}>
+                        <TableRow>
+                          <TableCell
+                            sx={{ fontSize: "16px", color: "#8B8FA3" }}
+                          >
+                            No
+                          </TableCell>
+                          <TableCell
+                            sx={{ fontSize: "16px", color: "#8B8FA3" }}
+                          >
+                            Account Name
+                          </TableCell>
+                          <TableCell
+                            sx={{ fontSize: "16px", color: "#8B8FA3" }}
+                          >
+                            Market
+                          </TableCell>
+                          <TableCell
+                            sx={{ fontSize: "16px", color: "#8B8FA3" }}
+                          ></TableCell>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        <TableRow>
+                          <TableCell>1</TableCell>
+                          <TableCell>Newt</TableCell>
+                          <TableCell>
+                            <Box className={classes.flagsBox}>
+                              <Box className={classes.flagsBoxContent}>
+                                <img
+                                  src={`${flag1}`}
+                                  alt="flag1"
+                                  style={{ marginRight: "10px" }}
+                                />
+                              </Box>
+                              <Box className={classes.flagsBoxContent}>
+                                <img
+                                  src={`${flag2}`}
+                                  alt="flag2"
+                                  style={{ marginRight: "10px" }}
+                                />
+                              </Box>
+                              <Box className={classes.flagsBoxContent}>
+                                <img
+                                  src={`${flag3}`}
+                                  alt="flag3"
+                                  style={{ marginRight: "10px" }}
+                                />
+                              </Box>
+                            </Box>
+                          </TableCell>
+                          <TableCell>
+                            {" "}
+                            <Box sx={{ width: "100%", marginRight: "auto" }}>
+                              <FormControl fullWidth>
+                                <InputLabel id="demo-simple-select-label"></InputLabel>
+                                <Select
+                                  labelId="demo-simple-select-label"
+                                  id="demo-simple-select"
+                                  value={age}
+                                  className={classes.selectBtnStyle}
+                                >
+                                  <MenuItem>Account Details</MenuItem>
+                                  <MenuItem>Delete Account</MenuItem>
+                                </Select>
+                              </FormControl>
+                            </Box>
+                          </TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell>2</TableCell>
+                          <TableCell>Avisso</TableCell>
+                          <TableCell>
+                            <Box className={classes.flagsBox}>
+                              <Box className={classes.flagsBoxContent}>
+                                <img
+                                  src={`${flag1}`}
+                                  alt="flag1"
+                                  style={{ marginRight: "10px" }}
+                                />
+                              </Box>
+                              <Box className={classes.flagsBoxContent}>
+                                <img
+                                  src={`${flag2}`}
+                                  alt="flag2"
+                                  style={{ marginRight: "10px" }}
+                                />
+                              </Box>
+                              <Box className={classes.flagsBoxContent}>
+                                <img
+                                  src={`${flag3}`}
+                                  alt="flag3"
+                                  style={{ marginRight: "10px" }}
+                                />
+                              </Box>
+                            </Box>
+                          </TableCell>
+                          <TableCell>
+                            <Box sx={{ width: "100%", marginRight: "auto" }}>
+                              <FormControl fullWidth>
+                                <InputLabel id="demo-simple-select-label"></InputLabel>
+                                <Select
+                                  labelId="demo-simple-select-label"
+                                  id="demo-simple-select"
+                                  value={age}
+                                  // onChange={handleChange}
+                                  className={classes.selectBtnStyle}
+                                >
+                                  <MenuItem>Account Details</MenuItem>
+                                  <MenuItem>Delete Account</MenuItem>
+                                </Select>
+                              </FormControl>
+                            </Box>
+                          </TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell>3</TableCell>
+                          <TableCell>Europe Avviso</TableCell>
+                          <TableCell>
+                            <Box className={classes.flagsBox}>
+                              <Box className={classes.flagsBoxContent}>
+                                <img
+                                  src={`${flag4}`}
+                                  alt="flag4"
+                                  style={{ marginRight: "10px" }}
+                                />
+                              </Box>
+                              <Box className={classes.flagsBoxContent}>
+                                <img
+                                  src={`${flag5}`}
+                                  alt="flag5"
+                                  style={{ marginRight: "10px" }}
+                                />
+                              </Box>
+                              <Box className={classes.flagsBoxContent}>
+                                <img
+                                  src={`${flag6}`}
+                                  alt="flag6"
+                                  style={{ marginRight: "10px" }}
+                                />
+                              </Box>
+                              <Box className={classes.flagsBoxContent}>
+                                <img
+                                  src={`${flag7}`}
+                                  alt="flag7"
+                                  style={{ marginRight: "10px" }}
+                                />
+                              </Box>
+                              <Box className={classes.flagsBoxContent}>
+                                <img
+                                  src={`${flag8}`}
+                                  alt="flag8"
+                                  style={{ marginRight: "10px" }}
+                                />
+                              </Box>
+                            </Box>
+                          </TableCell>
+                          <TableCell>
+                            <Box sx={{ width: "100%", marginRight: "auto" }}>
+                              <FormControl fullWidth>
+                                <InputLabel id="demo-simple-select-label"></InputLabel>
+                                <Select
+                                  labelId="demo-simple-select-label"
+                                  id="demo-simple-select"
+                                  value={age}
+                                  // onChange={handleChange}
+                                  className={classes.selectBtnStyle}
+                                >
+                                  <MenuItem>Account Details</MenuItem>
+                                  <MenuItem>Delete Account</MenuItem>
+                                </Select>
+                              </FormControl>
+                            </Box>
+                          </TableCell>
+                        </TableRow>
+                      </TableBody>
+                    </Table>
+                    <Box sx={{ textAlign: "center", marginTop: "20px" }}>
+                      <Button
+                        variant="outlined"
+                        sx={{
+                          color: "#7335FD",
+                          textTransform: "capitalize",
+                          border: "1px solid #7335FD",
+                          paddingLeft: "50px",
+                          paddingRight: "50px",
+                          fontWeight: "600",
+                        }}
+                        onClick={handleClose3}
+                      >
+                        Close
+                      </Button>
+                    </Box>
+                  </Box>
+                </TableContainer>
+              </Box>
+            </Box>
+          </Box>
+        </Modal>
       </Box>
     </>
   );
