@@ -142,7 +142,7 @@ export default function ClientsTable() {
 
   return (
     <>
-      <Box>
+      <Box sx={{marginTop:"30px"}}>
         <TableContainer
           component={Paper}
           className={classes.tableInnerContent}
