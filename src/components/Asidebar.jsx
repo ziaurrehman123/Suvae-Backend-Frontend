@@ -152,16 +152,16 @@ export default function Asidebar() {
                 <Typography
                 className="asidebarBtnText"
                   sx={{
-                    fontSize: "16px",
+                    fontSize: "18px",
                     fontWeight: "600",
-                    marginTop: "0px",
+                    marginTop: "9px",
                     marginLeft: "20px",
                   }}
                   color={
                     location.pathname === "/dashboard" ? "white" : "#8B8FA3"
                   }
                 >
-                  Package Insert Gallery
+                 Clients
                 </Typography>
               </Box>
             </Link>
