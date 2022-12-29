@@ -117,11 +117,11 @@ export default function ProductsTable() {
 
   const handleChange = (event) => {
     setValueReview(event.target.value);
-    // handleOpen();
+    handleOpen();
   };
   const handleChange1 = (event) => {
     setValueStatus(event.target.value);
-    // handleOpen2();
+    handleOpen2();
   };
 
   const handleChangePage = (event, newPage) => {
